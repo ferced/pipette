@@ -84,8 +84,21 @@ def questions_for(field, n_sent):
 
 
 def method_doc():
-    """The public description of the method, rendered on /method."""
-    return {
+    """The public description of the method, rendered on /about#method."""
+    from . import summarize
+
+    doc = {
+        "summary": {
+            "model": summarize.MODEL,
+            "rules": summarize.SYSTEM,
+            "checks": [
+                f"Every English sentence must be supported by the abstract sentences it cites (Jev, probability at least {summarize.SUPPORT_MIN}).",
+                f"Every Spanish sentence must say the same thing as its English sentence (Jev, probability at least {summarize.TRANSLATION_MIN}).",
+                "Sentences that fail are removed; a summary needs at least two surviving sentences to be published.",
+                "Only papers in the daily edition with an openly licensed abstract get a summary.",
+            ],
+            "min_sentences": summarize.MIN_SENTENCES,
+        },
         "model": jev.MODEL,
         "questions": {k: v for k, v in QUESTION_TEXT.items()},
         "scales": {"appeal": APPEAL, "advance": ADVANCE, "level": LEVEL},
@@ -95,6 +108,9 @@ def method_doc():
                    "then at most 3 papers per field and 2 per topic in the daily edition, "
                    "with the best paper of every field considered first.",
     }
+    if not summarize.enabled():
+        doc.pop("summary")
+    return doc
 
 
 def _r(x, n=2):

@@ -1,4 +1,14 @@
 import type { Item, Lang, Paper } from "./types";
+
+/** "claude-opus-5" -> "Claude Opus 5" */
+export function modelName(id: string) {
+  return id
+    .replace(/-\d{8}$/, "")
+    .split("-")
+    .map((w, i, a) => (/^\d+$/.test(w) && /^\d+$/.test(a[i - 1] ?? "") ? "." + w : (i ? " " : "") + w.charAt(0).toUpperCase() + w.slice(1)))
+    .join("")
+    .replace(/ \./g, ".");
+}
 import { t } from "./i18n";
 
 /** What a list entry needs, whether it comes from a full record or a compact one. */
@@ -7,6 +17,7 @@ export type Entry = {
   field: string; topic: string; kind: string; evidence: string; appeal: number; advance: number;
   level: number; hype: number; practical: number; key: string | null; code: boolean; pub: boolean;
   date: string; url?: string; rank?: number;
+  summary?: { en: string[]; es: string[]; model: string };
 };
 
 export function fromPaper(p: Paper): Entry {
@@ -15,6 +26,9 @@ export function fromPaper(p: Paper): Entry {
     field: p.field, topic: p.topic, kind: p.j.kind, evidence: p.j.evidence, appeal: p.j.appeal, advance: p.j.advance,
     level: p.j.level, hype: p.j.hype, practical: p.j.practical, key: p.key_text, code: p.code.length > 0,
     pub: p.status === "journal" || !!p.published, date: p.date, url: p.url,
+    summary: p.summary?.sentences?.length
+      ? { en: p.summary.sentences.map((s) => s.en), es: p.summary.sentences.map((s) => s.es), model: p.summary.model }
+      : undefined,
   };
 }
 

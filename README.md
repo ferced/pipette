@@ -27,7 +27,9 @@
 
 Every day, thousands of new research papers appear, and AI is about to multiply that number. **Pipette reads every one of them each morning** (arXiv, bioRxiv, medRxiv and 58 leading journals) and publishes a short, diverse edition of the ones worth knowing about.
 
-It never rewrites science. For each paper it quotes **the sentence of the abstract that states the main result, exactly as the authors wrote it**. The labels come from [Jev](https://typesafe.ai), a decision model that cannot generate text: it only chooses among options and reports calibrated probabilities, so it has nothing to hallucinate.
+The authors' words always come first. For each paper it quotes **the sentence of the abstract that states the main result, exactly as the authors wrote it**. The labels come from [Jev](https://typesafe.ai), a decision model that cannot generate text: it only chooses among options and reports calibrated probabilities, so it has nothing to hallucinate.
+
+Papers in the daily edition also get a **plain-language summary in English and Spanish**, written by Claude from the abstract alone and shown after the authors' words, clearly labelled. Every sentence cites the abstract sentences it relies on, and Jev checks each one against them; anything unsupported is removed before publishing.
 
 <p align="center">
   <img src="docs/screenshot-edition.png" alt="Pipette's daily edition: 2,132 new papers as a field of dots, with the 20 picks highlighted" width="100%">
@@ -35,7 +37,7 @@ It never rewrites science. For each paper it quotes **the sentence of the abstra
 
 ## Principles
 
-- **Every word is the authors'.** The machine picks and labels; scientists speak.
+- **The authors' words come first.** The machine picks and labels; AI summaries are labelled, secondary and checked sentence by sentence.
 - **No ads, no tracking, no accounts.** The only cookie remembers your language. Saved papers and interests stay in your browser.
 - **Honest about what a paper is.** Preprints are marked as not yet peer-reviewed. Abstracts that claim more than they show are flagged and never make the edition.
 - **Every field gets a seat.** At most three papers per field in the daily edition.
@@ -81,6 +83,8 @@ For each paper, Pipette sends the title and the abstract (as numbered sentences)
 ```
 rank = appeal + 0.9·advance + 0.4·practical − 2.4·max(0, hype − 0.5) − 0.25·level
 ```
+
+For the edition, `ingest/pipette/summarize.py` asks Claude (`claude-opus-5`, low effort, structured output) for 3 to 5 short sentences in English and Spanish, each citing the abstract sentences it relies on. Jev then checks every sentence against its sources and every translation against its English sentence; failures are removed and a summary needs at least two surviving sentences. Summaries turn on when the Lambda has `ANTHROPIC_API_KEY`; the exact instructions are published in `method.json`.
 
 Papers flagged for overclaiming (hype ≥ 0.6) are left out of the edition, and the edition allows at most 3 papers per field and 2 per topic. A weekday means about 2,000 papers, four million input tokens and roughly **US$0.17** of model usage.
 
@@ -139,6 +143,8 @@ Open http://localhost:3000.
    JEV_API_KEY=... BUCKET=your-pipette-data ./infra/setup.sh
    ```
    After changing `ingest/`, rebuild with `ingest/package.sh` and upload with `aws lambda update-function-code`.
+   To enable AI summaries, add `ANTHROPIC_API_KEY` to the Lambda's environment, then backfill recent editions with
+   `aws lambda invoke --function-name pipette-ingest --payload '{"summarize":["2026-09-25"]}' --cli-binary-format raw-in-base64-out out.json`.
 2. **Vercel**: import `web/` as a Next.js project and set `DATA_URL` (your bucket's URL) and `JEV_API_KEY` (used only by For you). `next.config.ts` proxies `/data/*` to the bucket.
 3. Point your domain at Vercel and submit `/sitemap.xml` to Google Search Console.
 

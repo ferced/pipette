@@ -14,3 +14,5 @@ ingest/*.log
 ingest/out-run-*.log
 qa/*.json
 qa/*.log
+qa/localdata/
+qa/summary-dryrun/

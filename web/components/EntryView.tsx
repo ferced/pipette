@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FIELD, fieldName, href, topicName, t } from "@/lib/i18n";
-import { authorLine, signals, sourceUrl, type Entry } from "@/lib/entry";
+import { authorLine, modelName, signals, sourceUrl, type Entry } from "@/lib/entry";
 import type { Lang } from "@/lib/types";
 import { Drop } from "./Logo";
 import { Tex } from "./Tex";
@@ -38,6 +38,16 @@ export function EntryView({ e, lang, compact = false, extra }: { e: Entry; lang:
           <Drop size={compact ? 12 : 14} />
           <Tex as="blockquote" text={e.key} lang="en" />
         </div>
+      )}
+      {e.summary && (
+        <details className="ai-sum">
+          <summary>{d.ai_summary}</summary>
+          <p>{e.summary[lang].join(" ")}</p>
+          <p className="ai-note">
+            {d.ai_note(modelName(e.summary.model))}{" "}
+            <Link href={link}>{d.ai_sources}</Link>
+          </p>
+        </details>
       )}
       <p className="byline">
         {authorLine(e, lang)}

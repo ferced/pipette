@@ -28,7 +28,7 @@ const copy = {
     ],
     promisesH: "What we promise",
     promises: [
-      ["Every word is the authors'.", "Pipette never summarizes or rewrites a paper. The machine picks the sentence that states the main result and labels the paper. What you read was written by the scientists."],
+      ["The authors' words come first.", "Pipette never replaces what a paper says. The main result is always quoted exactly as the scientists wrote it. For the papers in the daily edition there is also a short summary in plain words, written by AI from the abstract alone, clearly labelled and shown after the authors' words. Every one of its sentences is checked against the abstract, and anything unsupported is removed."],
       ["No ads, no tracking, no accounts.", "Nobody can pay to be in the edition. There are no analytics scripts. Your saved papers and interests stay in your browser."],
       ["Honest about what a paper is.", "Preprints are marked as not yet peer-reviewed. Abstracts that claim more than they show are flagged for careful reading and never make the daily edition."],
       ["Every field gets a seat.", "No field may take more than three places in the daily edition, so a busy day in AI cannot push out ecology or mathematics."],
@@ -42,13 +42,17 @@ const copy = {
       ["Split.", "Each abstract is cut into sentences, with the mathematics kept intact."],
       ["Ask.", "Jev, a decision model built by TypeSafe, answers ten questions about every paper. Jev does not generate text: it can only choose among options we define and say how likely each one is. That is why it cannot invent anything."],
       ["Rank.", "Pipette combines the answers with a fixed formula, then builds the edition with diversity rules."],
+      ["Explain.", "For each paper in the edition, Claude writes three to five short, plain sentences in English and Spanish from the abstract alone, citing the abstract sentences behind each one. Jev then checks every sentence against the sentences it cites, and every translation against its English sentence. Whatever fails is removed."],
       ["Publish.", "The edition, the full list and one page per paper go live, along with the open data."],
     ],
     questionsH: "The questions Jev answers for every paper",
     rankingH: "The ranking rule",
+    summaryH: "The instructions for the AI summaries",
+    promiseNoAi: "Pipette never summarizes or rewrites a paper. The machine picks the sentence that states the main result and labels the paper. What you read was written by the scientists.",
     limitsH: "What Pipette cannot do",
     limits: [
       "Jev reads only the title and the abstract, not the full paper. Its labels describe what a paper claims, not whether the claim is true.",
+      "AI summaries simplify, and simplifying can lose nuance even when every sentence is supported. They are a door into the paper, not a replacement for it.",
       "Peer review, replication and time are what establish results. Pipette is a way to notice research, not a verdict on it.",
       "Jev is most accurate in English. It will sometimes get a topic wrong or miss a paper that deserved the edition. The percentages on each paper show how sure it was.",
     ],
@@ -76,7 +80,7 @@ const copy = {
     ],
     promisesH: "Lo que prometemos",
     promises: [
-      ["Cada palabra es de los autores.", "Pipette nunca resume ni reescribe un paper. La máquina elige la oración que dice el resultado principal y clasifica el paper. Lo que leés lo escribieron los científicos."],
+      ["Primero, las palabras de los autores.", "Pipette nunca reemplaza lo que dice un paper. El resultado principal siempre se cita tal como lo escribieron los científicos. Para los papers de la edición del día hay además un resumen corto en palabras simples, escrito por IA solo a partir del abstract, marcado como tal y mostrado después de las palabras de los autores. Cada una de sus oraciones se verifica contra el abstract y lo que no está respaldado se elimina."],
       ["Sin publicidad, sin rastreo, sin cuentas.", "Nadie puede pagar para aparecer en la edición. No hay scripts de analítica. Tus guardados y tus intereses quedan en tu navegador."],
       ["Honestos con lo que es cada paper.", "Los preprints se marcan como todavía no revisados por pares. Los resúmenes que afirman más de lo que muestran se señalan para leerlos con cuidado y nunca entran en la edición del día."],
       ["Cada campo tiene su lugar.", "Ningún campo puede ocupar más de tres lugares en la edición del día, así un día agitado en IA no desplaza a la ecología ni a la matemática."],
@@ -90,13 +94,17 @@ const copy = {
       ["Separar.", "Cada resumen se corta en oraciones, sin romper la matemática."],
       ["Preguntar.", "Jev, un modelo de decisión de TypeSafe, responde diez preguntas sobre cada paper. Jev no genera texto: solo puede elegir entre opciones que definimos y decir qué tan probable es cada una. Por eso no puede inventar nada."],
       ["Ordenar.", "Pipette combina las respuestas con una fórmula fija y arma la edición con reglas de diversidad."],
+      ["Explicar.", "Para cada paper de la edición, Claude escribe de tres a cinco oraciones cortas en inglés y en castellano usando solo el abstract, y cita las oraciones del abstract en las que se basa cada una. Después Jev verifica cada oración contra las que cita, y cada traducción contra su oración en inglés. Lo que no pasa se elimina."],
       ["Publicar.", "Salen la edición, la lista completa y una página por paper, junto con los datos abiertos."],
     ],
     questionsH: "Las preguntas que Jev responde sobre cada paper",
     rankingH: "La regla del ranking",
+    summaryH: "Las instrucciones para los resúmenes con IA",
+    promiseNoAi: "Pipette nunca resume ni reescribe un paper. La máquina elige la oración que dice el resultado principal y clasifica el paper. Lo que leés lo escribieron los científicos.",
     limitsH: "Lo que Pipette no puede hacer",
     limits: [
       "Jev lee solo el título y el resumen, no el paper completo. Sus etiquetas describen lo que un paper afirma, no si es verdad.",
+      "Los resúmenes con IA simplifican, y simplificar puede perder matices aunque cada oración esté respaldada. Son una puerta al paper, no un reemplazo.",
       "La revisión por pares, la replicación y el tiempo son los que confirman un resultado. Pipette sirve para enterarse, no para dar un veredicto.",
       "Jev es más preciso en inglés. A veces se va a equivocar de tema o va a dejar afuera un paper que merecía la edición. Los porcentajes de cada paper muestran qué tan seguro estaba.",
     ],
@@ -126,6 +134,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
   const [method, idx] = await Promise.all([getMethod(), getSiteIndex()]);
   const ed = idx ? await getEdition(idx.latest) : null;
   const scales = method?.scales ?? {};
+  const withSummaries = Boolean(method?.summary);
+  const promises = withSummaries ? c.promises : c.promises.map(([h, b], i) => (i === 0 ? [h, c.promiseNoAi] : [h, b]));
+  const steps = withSummaries ? c.steps : c.steps.filter(([h]) => h !== "Explain." && h !== "Explicar.");
+  const limits = withSummaries ? c.limits : c.limits.filter((l) => !l.startsWith("AI summaries") && !l.startsWith("Los resúmenes con IA"));
   const optionsFor = (k: string): string[] => {
     if (k === "kind") return KINDS.map((x) => x.d);
     if (k === "evidence") return EVIDENCE.map((x) => x.d);
@@ -145,7 +157,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         ))}
 
         <h2>{c.promisesH}</h2>
-        {c.promises.map(([h, b]) => (
+        {promises.map(([h, b]) => (
           <div className="qa" key={h}>
             <b>{h}</b>
             <div>{b}</div>
@@ -154,7 +166,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
 
         <h2 id="method">{c.methodH}</h2>
         <ol>
-          {c.steps.map(([h, b]) => (
+          {steps.map(([h, b]) => (
             <li key={h}>
               <b>{h}</b> {b}
             </li>
@@ -192,8 +204,25 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           <code lang="en">{method?.ranking}</code>
         </p>
 
+        {method?.summary && (
+          <>
+            <h2>{c.summaryH}</h2>
+            <p className="fine">
+              {lang === "es" ? "El texto exacto que recibe el modelo" : "The exact text the model receives"} ({method.summary.model}):
+            </p>
+            <pre className="rules" lang="en">{method.summary.rules}</pre>
+            <ul>
+              {method.summary.checks.map((c) => (
+                <li key={c} lang="en">
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
         <h2>{c.limitsH}</h2>
-        {c.limits.map((p) => (
+        {limits.map((p) => (
           <p key={p}>{p}</p>
         ))}
 

@@ -9,7 +9,7 @@ export async function GET() {
   const latest = idx?.latest ?? "";
   const body = `# Pipette
 
-> Pipette (${SITE}) is a free daily digest of new research papers, made by Ferced (https://ferced.com). Every morning it reads every new paper on arXiv, bioRxiv, medRxiv and 58 leading journals, labels each one with the Jev decision model (field, topic, kind of contribution, evidence, interest, claimed advance, reading level, overclaiming) and publishes a short edition of the papers worth knowing about. Pipette never rewrites or summarizes science: it quotes the sentence of each abstract that states the main result, in the authors' own words. No ads, no tracking, no accounts.
+> Pipette (${SITE}) is a free daily digest of new research papers, made by Ferced (https://ferced.com). Every morning it reads every new paper on arXiv, bioRxiv, medRxiv and 58 leading journals, labels each one with the Jev decision model (field, topic, kind of contribution, evidence, interest, claimed advance, reading level, overclaiming) and publishes a short edition of the papers worth knowing about. The authors' words always come first: Pipette quotes the sentence of each abstract that states the main result, exactly as written. Papers in the daily edition also get a short, clearly labelled plain-language summary in English and Spanish, written by Claude from the abstract only; Jev checks every sentence against the abstract sentences it cites and removes anything unsupported. No ads, no tracking, no accounts.
 
 ## Main pages
 

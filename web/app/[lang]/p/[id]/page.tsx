@@ -9,7 +9,7 @@ import { getDayIndex, getPaper } from "@/lib/data";
 import { JsonLd } from "@/components/JsonLd";
 import { EntryList } from "@/components/Listing";
 import { FERCED, WEBSITE_ID, breadcrumbs, clampText, pageMeta, url } from "@/lib/seo";
-import { fromItem } from "@/lib/entry";
+import { fromItem, modelName } from "@/lib/entry";
 import { FIELD, evidenceName, fieldName, formatDay, href, isLang, kindName, topicName, t } from "@/lib/i18n";
 import { fromPaper, permalink, signals } from "@/lib/entry";
 import { texPlain } from "@/lib/tex";
@@ -210,7 +210,7 @@ export default async function PaperPage({ params }: PageProps<"/[lang]/p/[id]">)
             <>
               <p>
                 {p.sentences.map((s, i) => (
-                  <span key={i}>
+                  <span key={i} id={`abs-${i}`} className="abs-s">
                     <Tex text={s} className={i === key ? "hl-key" : i === cav ? "hl-cav" : undefined} />{" "}
                   </span>
                 ))}
@@ -254,6 +254,37 @@ export default async function PaperPage({ params }: PageProps<"/[lang]/p/[id]">)
           )}
           </div>
         </div>
+
+        {p.summary && p.summary.sentences.length > 0 && p.sentences && (
+          <section className="ai-panel" aria-labelledby="plain">
+            <style
+              dangerouslySetInnerHTML={{
+                __html: p.summary.sentences
+                  .map(
+                    (s, k) =>
+                      `.paper:has(#ai-${k}:is(:hover,:focus)) :is(${s.sources.map((i) => `#abs-${i}`).join(",")}){background:var(--glass);box-shadow:inset 0 0 0 2px var(--ink-3)}`,
+                  )
+                  .join(""),
+              }}
+            />
+            <h2 id="plain">
+              {d.plain_words} <span className="ai-tag">{d.ai_summary}</span>
+            </h2>
+            <p className="ai-text">
+              {p.summary.sentences.map((s, k) => (
+                <span key={k}>
+                  <span id={`ai-${k}`} className="ai-s" tabIndex={0}>
+                    {s[lang]}
+                  </span>{" "}
+                </span>
+              ))}
+            </p>
+            <p className="ai-note">
+              {d.ai_panel_note(modelName(p.summary.model))}
+              {p.summary.dropped > 0 ? ` ${d.ai_dropped(p.summary.dropped)}` : ""}
+            </p>
+          </section>
+        )}
 
         <div style={{ marginTop: 30 }} className="linklist">
           <a className="btn primary" href={p.url} target="_blank" rel="noopener">

@@ -78,6 +78,7 @@ def full_record(p):
         "j": j,
         "key_text": sents[key] if key is not None and key < len(sents) else None,
         "caveat_text": sents[cav] if cav is not None and cav < len(sents) else None,
+        "summary": p.get("summary"),
     }
     if p.get("open", True):
         rec["sentences"] = sents
@@ -136,13 +137,15 @@ class Store:
             return None
 
 
-def publish_day(store, day, papers, method, tokens, log=print):
+def publish_day(store, day, papers, method, tokens, log=print, annotate=None):
     for p in papers:
         p["rank"] = rank(p)
     papers = [p for p in papers if p.get("field")]  # failed + unknown field: nothing honest to show
     edition = pick_edition(papers)
     for p in edition:
         p["pick"] = True
+    if annotate:
+        annotate(edition)  # e.g. plain-language summaries for the picks
     papers.sort(key=lambda p: -p["rank"])
 
     from concurrent.futures import ThreadPoolExecutor

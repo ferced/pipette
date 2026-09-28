@@ -97,3 +97,49 @@ class Edition(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Summaries(unittest.TestCase):
+    """The Jev checks decide what survives; the model's draft is never trusted as is."""
+
+    def setUp(self):
+        from pipette import summarize
+        self.s = summarize
+        self._ask = summarize.jev.ask
+
+    def tearDown(self):
+        self.s.jev.ask = self._ask
+
+    def fake_jev(self, support, translation):
+        def ask(state, questions):
+            answers = {}
+            for k in questions:
+                kind, i = k.rsplit("_", 1)
+                answers[k] = {"type": "noul", "noul": (support if kind == "support" else translation)[int(i)]}
+            return {"answers": answers}
+        self.s.jev.ask = ask
+
+    def test_drops_unsupported_and_mistranslated_sentences(self):
+        self.fake_jev(support=[0.9, 0.2, 0.9], translation=[0.9, 0.9, 0.1])
+        draft = [{"en": f"E{i}", "es": f"S{i}", "sources": [0]} for i in range(3)]
+        kept = self.s.keep(self.s.check(["a.", "b."], draft))
+        self.assertEqual([c["en"] for c in kept], ["E0"])
+
+    def test_ignores_sentences_citing_nothing_real(self):
+        self.fake_jev(support=[0.9], translation=[0.9])
+        draft = [{"en": "ok", "es": "ok", "sources": [1]}, {"en": "bad", "es": "mal", "sources": [7, 9]}]
+        checked = self.s.check(["a.", "b."], draft)
+        self.assertEqual([c["en"] for c in checked], ["ok"])
+
+    def test_closed_abstracts_get_no_summary(self):
+        self.assertIsNone(self.s.summarize_record({"id": "x", "title": "t", "sentences": None}))
+
+    def test_off_without_a_key(self):
+        import os
+        old = {k: os.environ.pop(k, None) for k in ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN")}
+        try:
+            self.assertEqual(self.s.summarize_records([{"id": "x"}], log=lambda *_: None), 0)
+        finally:
+            for k, v in old.items():
+                if v is not None:
+                    os.environ[k] = v

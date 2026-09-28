@@ -13,6 +13,11 @@ export type Jev = {
   caveat: number | null; caveat_c: number | null;
 };
 
+export type SummarySentence = { en: string; es: string; sources: number[]; support: number; translation: number };
+
+/** Plain-language summary written by AI from the abstract, each sentence checked by Jev. */
+export type Summary = { model: string; checked_by: string; created: string; sentences: SummarySentence[]; dropped: number };
+
 export type Paper = {
   id: string;
   src: "arxiv" | "biorxiv" | "medrxiv" | "journal";
@@ -39,6 +44,7 @@ export type Paper = {
   caveat_text: string | null;
   sentences: string[] | null;
   abstract_withheld?: boolean;
+  summary?: Summary | null;
 };
 
 /** Compact record used for lists (day index). */
@@ -74,4 +80,5 @@ export type Method = {
   questions: Record<string, string>;
   scales: Record<string, string[]>;
   ranking: string;
+  summary?: { model: string; rules: string; checks: string[]; min_sentences: number };
 };
