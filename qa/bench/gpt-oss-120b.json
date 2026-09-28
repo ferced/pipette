@@ -1,0 +1,1187 @@
+{
+ "model": "gpt-oss-120b",
+ "model_id": "openai.gpt-oss-120b-1:0",
+ "runner": "bedrock",
+ "rows": [
+  {
+   "id": "arxiv-2609.22716",
+   "field": "ai",
+   "title": "ZIL: Zero-shot Image-to-LiDAR Registration",
+   "latency": 29.4,
+   "tokens_in": 781,
+   "tokens_out": 2503,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors introduce ZIL, a foundation model for zero-shot non-synchronized image-to-LiDAR registration.\",\n      \"es\": \"Los autores presentan ZIL, un modelo fundamental para el registro de imagen a LiDAR sin entrenamiento previo y no sincronizado.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"ZIL processes an image and a LiDAR point cloud with Vision and Point Transformers and predicts both the relative camera pose and 3D coordinates.\",\n      \"es\": \"ZIL procesa una imagen y una nube de puntos LiDAR con Vision y Point Transformers y predice la pose de la cámara y coordenadas 3D.\",\n      \"sources\": [3, 4]\n    },\n    {\n      \"en\": \"They find that naive mix-data training does not enable zero-shot generalization; normalization of camera intrinsics and LiDAR vertical-axis origin is required.\",\n      \"es\": \"Descubren que el entrenamiento con datos mezclados no permite la generalización zero-shot; se necesita normalizar intrínsecos de cámara y origen vertical del LiDAR.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"Trained on 7 datasets (1.4 M LiDAR frames), ZIL beats SOTA on 5 tests, cutting translation error up to 87 % and rotation error up to 76 %.\",\n      \"es\": \"Entrenado con 7 datos (1.4 M de frames LiDAR), ZIL supera a SOTA en 5 pruebas, reduciendo error de traslación hasta 87 % y rotación hasta 76 %.\",\n      \"sources\": [6]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "The authors introduce ZIL, a foundation model for zero-shot non-synchronized image-to-LiDAR registration.",
+     "es": "Los autores presentan ZIL, un modelo fundamental para el registro de imagen a LiDAR sin entrenamiento previo y no sincronizado.",
+     "sources": [
+      2
+     ],
+     "support": 0.9,
+     "translation": 0.83
+    },
+    {
+     "en": "ZIL processes an image and a LiDAR point cloud with Vision and Point Transformers and predicts both the relative camera pose and 3D coordinates.",
+     "es": "ZIL procesa una imagen y una nube de puntos LiDAR con Vision y Point Transformers y predice la pose de la cámara y coordenadas 3D.",
+     "sources": [
+      3,
+      4
+     ],
+     "support": 0.82,
+     "translation": 0.47
+    },
+    {
+     "en": "They find that naive mix-data training does not enable zero-shot generalization; normalization of camera intrinsics and LiDAR vertical-axis origin is required.",
+     "es": "Descubren que el entrenamiento con datos mezclados no permite la generalización zero-shot; se necesita normalizar intrínsecos de cámara y origen vertical del LiDAR.",
+     "sources": [
+      5
+     ],
+     "support": 0.94,
+     "translation": 0.93
+    },
+    {
+     "en": "Trained on 7 datasets (1.4 M LiDAR frames), ZIL beats SOTA on 5 tests, cutting translation error up to 87 % and rotation error up to 76 %.",
+     "es": "Entrenado con 7 datos (1.4 M de frames LiDAR), ZIL supera a SOTA en 5 pruebas, reduciendo error de traslación hasta 87 % y rotación hasta 76 %.",
+     "sources": [
+      6
+     ],
+     "support": 0.83,
+     "translation": 0.83
+    }
+   ],
+   "kept": 3,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.24182",
+   "field": "chemistry",
+   "title": "Ferroelectric switching of odd-parity magnon spin splitting",
+   "latency": 63.6,
+   "tokens_in": 809,
+   "tokens_out": 2014,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors investigated multiferroic BiFeO3 to find evidence of odd‑parity magnon spin splitting at room temperature.\",\n      \"es\": \"Los autores investigaron el multiferroico BiFeO3 para encontrar evidencia de división de espín de magnón de paridad impar a temperatura ambiente.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"Their symmetry analysis and spin‑wave calculations show that the cycloidal chirality splits opposite‑spin magnon branches with an odd‑in‑momentum dependence, setting the sign.\",\n      \"es\": \"Su análisis de simetría y cálculos de ondas de spin muestran que la quiralidad ciclóidal divide ramas de magnón de espín opuesto con una dependencia impar en el momento, fijando el signo.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"In experiments, an injected in‑plane‑polarized spin current creates an out‑of‑plane magnon spin component that follows the predicted crystalline angular pattern and reverses with ferroelectric switching.\",\n      \"es\": \"En experimentos, una corriente de spin in‑plane polarizada inyectada genera una componente de espín de magnón fuera del plano que sigue el patrón angular cristalino predicho y se invierte con la conmutación ferroelectrica.\",\n      \"sources\": [7, 8]\n    },\n    {\n      \"en\": \"Using this programmed magnon spin, they achieved deterministic field‑free switching of a perpendicular ferromagnet and demonstrated XNOR logic‑in‑memory.\",\n      \"es\": \"Con este espín de magnón programado, lograron conmutación determinista sin campo de un ferromagneto perpendicular y demostraron lógica XNOR en memoria.\",\n      \"sources\": [9]\n    },\n    {\n      \"en\": \"These results extend odd‑parity spin splitting from electronic to bosonic collective modes and establish nonvolatile electrical control at room temperature.\",\n      \"es\": \"Estos resultados extienden la división de espín de paridad impar de estados electrónicos a modos colectivos bosónicos y establecen control eléctrico no volátil a temperatura ambiente.\",\n      \"sources\": [10]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The authors investigated multiferroic BiFeO3 to find evidence of odd‑parity magnon spin splitting at room temperature.",
+     "es": "Los autores investigaron el multiferroico BiFeO3 para encontrar evidencia de división de espín de magnón de paridad impar a temperatura ambiente.",
+     "sources": [
+      5
+     ],
+     "support": 0.8,
+     "translation": 0.97
+    },
+    {
+     "en": "Their symmetry analysis and spin‑wave calculations show that the cycloidal chirality splits opposite‑spin magnon branches with an odd‑in‑momentum dependence, setting the sign.",
+     "es": "Su análisis de simetría y cálculos de ondas de spin muestran que la quiralidad ciclóidal divide ramas de magnón de espín opuesto con una dependencia impar en el momento, fijando el signo.",
+     "sources": [
+      6
+     ],
+     "support": 0.94,
+     "translation": 0.97
+    },
+    {
+     "en": "In experiments, an injected in‑plane‑polarized spin current creates an out‑of‑plane magnon spin component that follows the predicted crystalline angular pattern and reverses with ferroelectric switching.",
+     "es": "En experimentos, una corriente de spin in‑plane polarizada inyectada genera una componente de espín de magnón fuera del plano que sigue el patrón angular cristalino predicho y se invierte con la conmutación ferroelectrica.",
+     "sources": [
+      7,
+      8
+     ],
+     "support": 0.9,
+     "translation": 0.92
+    },
+    {
+     "en": "Using this programmed magnon spin, they achieved deterministic field‑free switching of a perpendicular ferromagnet and demonstrated XNOR logic‑in‑memory.",
+     "es": "Con este espín de magnón programado, lograron conmutación determinista sin campo de un ferromagneto perpendicular y demostraron lógica XNOR en memoria.",
+     "sources": [
+      9
+     ],
+     "support": 0.9,
+     "translation": 0.94
+    },
+    {
+     "en": "These results extend odd‑parity spin splitting from electronic to bosonic collective modes and establish nonvolatile electrical control at room temperature.",
+     "es": "Estos resultados extienden la división de espín de paridad impar de estados electrónicos a modos colectivos bosónicos y establecen control eléctrico no volátil a temperatura ambiente.",
+     "sources": [
+      10
+     ],
+     "support": 0.94,
+     "translation": 0.92
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22519",
+   "field": "computing",
+   "title": "The Choreographic Genome: Amplifying the Silent Structure of Text into Dance",
+   "latency": 11.2,
+   "tokens_in": 848,
+   "tokens_out": 2277,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors built a system that turns any text into dance by first creating a codebook of 256 dance “regions” from motion data.\",\n      \"es\": \"Los autores construyeron un sistema que convierte cualquier texto en danza creando primero un libro de códigos de 256 “regiones” de movimiento.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"They map each byte of the text onto this codebook, generating a deterministic “choreographic genome” that is then smoothed into fluid full‑body movement.\",\n      \"es\": \"Mapean cada byte del texto al libro de códigos, generando un “genoma coreográfico” determinista que luego se suaviza en movimiento corporal fluido.\",\n      \"sources\": [5, 6]\n    },\n    {\n      \"en\": \"Artistic case studies—including a Shakespeare sonnet, an error log, source code, and Indigenous and Devanagari scripts—show each text creates a distinct dance.\",\n      \"es\": \"Estudios artísticos—incluyendo un soneto de Shakespeare, un registro de errores, código fuente y scripts indígenas y Devanagari—demuestran que cada texto crea una danza distinta.\",\n      \"sources\": [7]\n    },\n    {\n      \"en\": \"They also found scripts outside ASCII generate nearly three times more movement per character.\",\n      \"es\": \"También hallaron que los scripts fuera de ASCII generan casi tres veces más movimiento por carácter.\",\n      \"sources\": [7]\n    },\n    {\n      \"en\": \"The authors present this as a poetic visualization that treats ignored byte‑level structure as signal, not as a benchmark.\",\n      \"es\": \"Los autores lo presentan como una visualización poética que trata la estructura de bytes ignorada como señal, no como una referencia de rendimiento.\",\n      \"sources\": [2, 3, 8]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The authors built a system that turns any text into dance by first creating a codebook of 256 dance “regions” from motion data.",
+     "es": "Los autores construyeron un sistema que convierte cualquier texto en danza creando primero un libro de códigos de 256 “regiones” de movimiento.",
+     "sources": [
+      4
+     ],
+     "support": 0.75,
+     "translation": 0.77
+    },
+    {
+     "en": "They map each byte of the text onto this codebook, generating a deterministic “choreographic genome” that is then smoothed into fluid full‑body movement.",
+     "es": "Mapean cada byte del texto al libro de códigos, generando un “genoma coreográfico” determinista que luego se suaviza en movimiento corporal fluido.",
+     "sources": [
+      5,
+      6
+     ],
+     "support": 0.9,
+     "translation": 0.81
+    },
+    {
+     "en": "Artistic case studies—including a Shakespeare sonnet, an error log, source code, and Indigenous and Devanagari scripts—show each text creates a distinct dance.",
+     "es": "Estudios artísticos—incluyendo un soneto de Shakespeare, un registro de errores, código fuente y scripts indígenas y Devanagari—demuestran que cada texto crea una danza distinta.",
+     "sources": [
+      7
+     ],
+     "support": 0.9,
+     "translation": 0.91
+    },
+    {
+     "en": "They also found scripts outside ASCII generate nearly three times more movement per character.",
+     "es": "También hallaron que los scripts fuera de ASCII generan casi tres veces más movimiento por carácter.",
+     "sources": [
+      7
+     ],
+     "support": 0.8,
+     "translation": 0.91
+    },
+    {
+     "en": "The authors present this as a poetic visualization that treats ignored byte‑level structure as signal, not as a benchmark.",
+     "es": "Los autores lo presentan como una visualización poética que trata la estructura de bytes ignorada como señal, no como una referencia de rendimiento.",
+     "sources": [
+      2,
+      3,
+      8
+     ],
+     "support": 0.83,
+     "translation": 0.86
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.23149",
+   "field": "earth",
+   "title": "ClimTip-GML: A global bias-corrected and downscaled dataset for assessing impacts of climate tipping events",
+   "latency": 16.6,
+   "tokens_in": 791,
+   "tokens_out": 3284,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"Authors present ClimTip-GML, a bias-corrected and downscaled climate dataset for impact assessment of large-scale tipping scenarios, with eight variables at 0.25° resolution from three GCMs.\",\n      \"es\": \"Los autores presentan ClimTip‑GML, un conjunto de datos climáticos corregido y reducido para evaluar escenarios de cambio, con ocho variables a 0.25° de tres GCM.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"The dataset contains 100-year simulations of preindustrial and +2 °C warming scenarios, both with and without Amazon rainforest or AMOC tipping transitions.\",\n      \"es\": \"El conjunto incluye simulaciones de 100 años de condiciones preindustriales y de calentamiento a +2 °C, con y sin transiciones de la selva amazónica o AMOC.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"They used generative machine learning trained on reanalysis data to bias‑correct and downscale the GCM outputs, keeping physical consistency across space, time, and variables.\",\n      \"es\": \"Usaron aprendizaje automático entrenado con datos de reanálisis para corregir sesgos y reducir escala de los GCM, manteniendo consistencia física en espacio, tiempo y variables.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Validation shows the bias‑corrected data have much lower biases, better small‑scale variability, stronger multivariate correlations, and consistent long‑term responses to forcing and tipping events.\",\n      \"es\": \"La validación muestra sesgos menores, mejor variabilidad a pequeña escala, correlaciones multivariadas más fuertes y respuestas largo plazo consistentes al forzamiento y a los cambios.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"These results permit substantially improved impact assessments of Amazon rainforest and AMOC tipping, directly informing mitigation and adaptation policies.\",\n      \"es\": \"Estos resultados permiten evaluaciones de impacto mucho mejores de los cambios de la selva amazónica y AMOC, informando directamente políticas de mitigación y adaptación.\",\n      \"sources\": [5]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Authors present ClimTip-GML, a bias-corrected and downscaled climate dataset for impact assessment of large-scale tipping scenarios, with eight variables at 0.25° resolution from three GCMs.",
+     "es": "Los autores presentan ClimTip‑GML, un conjunto de datos climáticos corregido y reducido para evaluar escenarios de cambio, con ocho variables a 0.25° de tres GCM.",
+     "sources": [
+      1
+     ],
+     "support": 0.94,
+     "translation": 0.45
+    },
+    {
+     "en": "The dataset contains 100-year simulations of preindustrial and +2 °C warming scenarios, both with and without Amazon rainforest or AMOC tipping transitions.",
+     "es": "El conjunto incluye simulaciones de 100 años de condiciones preindustriales y de calentamiento a +2 °C, con y sin transiciones de la selva amazónica o AMOC.",
+     "sources": [
+      2
+     ],
+     "support": 0.74,
+     "translation": 0.65
+    },
+    {
+     "en": "They used generative machine learning trained on reanalysis data to bias‑correct and downscale the GCM outputs, keeping physical consistency across space, time, and variables.",
+     "es": "Usaron aprendizaje automático entrenado con datos de reanálisis para corregir sesgos y reducir escala de los GCM, manteniendo consistencia física en espacio, tiempo y variables.",
+     "sources": [
+      3
+     ],
+     "support": 0.94,
+     "translation": 0.8
+    },
+    {
+     "en": "Validation shows the bias‑corrected data have much lower biases, better small‑scale variability, stronger multivariate correlations, and consistent long‑term responses to forcing and tipping events.",
+     "es": "La validación muestra sesgos menores, mejor variabilidad a pequeña escala, correlaciones multivariadas más fuertes y respuestas largo plazo consistentes al forzamiento y a los cambios.",
+     "sources": [
+      4
+     ],
+     "support": 0.88,
+     "translation": 0.69
+    },
+    {
+     "en": "These results permit substantially improved impact assessments of Amazon rainforest and AMOC tipping, directly informing mitigation and adaptation policies.",
+     "es": "Estos resultados permiten evaluaciones de impacto mucho mejores de los cambios de la selva amazónica y AMOC, informando directamente políticas de mitigación y adaptación.",
+     "sources": [
+      5
+     ],
+     "support": 0.95,
+     "translation": 0.78
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.15.751910",
+   "field": "ecology",
+   "title": "Single-nucleus profiling of social behaviour in a mutualistic reef fish",
+   "latency": 12.1,
+   "tokens_in": 718,
+   "tokens_out": 2194,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"They created the first single‑nucleus transcriptome atlas of the cleaner wrasse telencephalon, profiling about 67,000 nuclei.\",\n      \"es\": \"Crearon el primer atlas de transcriptoma de núcleo único del telencéfalo del pez limpiador, perfilando alrededor de 67 000 núcleos.\",\n      \"sources\": [2, 3]\n    },\n    {\n      \"en\": \"The atlas identified conserved cell types, including a cholinergic‑GABAergic neuron population linked to social behavior and cells resembling mammalian striatal medium spiny and hippocampal neurons.\",\n      \"es\": \"El atlas identificó tipos celulares conservados, incluida una población de neuronas colinérgicas‑GABAérgicas vinculada al comportamiento social y células semejantes a neuronas estriatales de espín medio y del hipocampo de mamíferos.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Comparing interacting and observing fish, they found expanded radial glial subclusters in interactors, while observers showed gene signatures for motivation and preparedness.\",\n      \"es\": \"Al comparar peces que interactúan y los que observan, hallaron expansión de glía radial en interactuantes, mientras observadores mostraron firmas genéticas de motivación y preparación.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"The atlas reveals evolutionarily conserved cellular and molecular substrates that may govern complex social behavior across vertebrates.\",\n      \"es\": \"El atlas revela sustratos celulares y moleculares evolutivamente conservados que pueden gobernar el comportamiento social complejo en vertebrados.\",\n      \"sources\": [5]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "They created the first single‑nucleus transcriptome atlas of the cleaner wrasse telencephalon, profiling about 67,000 nuclei.",
+     "es": "Crearon el primer atlas de transcriptoma de núcleo único del telencéfalo del pez limpiador, perfilando alrededor de 67 000 núcleos.",
+     "sources": [
+      2,
+      3
+     ],
+     "support": 0.93,
+     "translation": 0.84
+    },
+    {
+     "en": "The atlas identified conserved cell types, including a cholinergic‑GABAergic neuron population linked to social behavior and cells resembling mammalian striatal medium spiny and hippocampal neurons.",
+     "es": "El atlas identificó tipos celulares conservados, incluida una población de neuronas colinérgicas‑GABAérgicas vinculada al comportamiento social y células semejantes a neuronas estriatales de espín medio y del hipocampo de mamíferos.",
+     "sources": [
+      3
+     ],
+     "support": 0.93,
+     "translation": 0.93
+    },
+    {
+     "en": "Comparing interacting and observing fish, they found expanded radial glial subclusters in interactors, while observers showed gene signatures for motivation and preparedness.",
+     "es": "Al comparar peces que interactúan y los que observan, hallaron expansión de glía radial en interactuantes, mientras observadores mostraron firmas genéticas de motivación y preparación.",
+     "sources": [
+      4
+     ],
+     "support": 0.91,
+     "translation": 0.7
+    },
+    {
+     "en": "The atlas reveals evolutionarily conserved cellular and molecular substrates that may govern complex social behavior across vertebrates.",
+     "es": "El atlas revela sustratos celulares y moleculares evolutivamente conservados que pueden gobernar el comportamiento social complejo en vertebrados.",
+     "sources": [
+      5
+     ],
+     "support": 0.97,
+     "translation": 0.96
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22594",
+   "field": "engineering",
+   "title": "Characterizing Wildlife Response to Biomimetic and Conventional Underwater Vehicles",
+   "latency": 31.0,
+   "tokens_in": 801,
+   "tokens_out": 1939,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors compared fish disturbance caused by a conventional thruster-driven AUV, a sea‑turtle‑inspired flipper‑driven AUV, and a diver.\",\n      \"es\": \"Los autores compararon la perturbación de peces provocada por un AUV convencional de hélice, un AUV biomimético con aletas de tortuga marina y un buzo.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Experiments were run on a Caribbean reef hotspot, and video frames were analyzed with computer vision to locate fish and assess behavior changes.\",\n      \"es\": \"Los experimentos se realizaron en un arrecife del Caribe, y las imágenes se analizaron con visión por computadora para localizar peces y estudiar cambios de comportamiento.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Both AUVs produced measurable fish behavior changes, but after correcting for multiple comparisons no significant difference between the robots remained.\",\n      \"es\": \"Ambos AUV provocaron cambios medibles en el comportamiento de los peces, pero tras la corrección por comparaciones múltiples no quedó diferencia significativa entre ellos.\",\n      \"sources\": [5, 6]\n    },\n    {\n      \"en\": \"Diver transects elicited stronger fish responses than AUV transects, yet the diver sample is small and has confounds, so the finding is preliminary.\",\n      \"es\": \"Los transectos de buzos provocaron respuestas de peces más fuertes que los de AUV, pero la muestra es pequeña y tiene confusos, así que es preliminar.\",\n      \"sources\": [7, 8]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "The authors compared fish disturbance caused by a conventional thruster-driven AUV, a sea‑turtle‑inspired flipper‑driven AUV, and a diver.",
+     "es": "Los autores compararon la perturbación de peces provocada por un AUV convencional de hélice, un AUV biomimético con aletas de tortuga marina y un buzo.",
+     "sources": [
+      3
+     ],
+     "support": 0.88,
+     "translation": 0.7
+    },
+    {
+     "en": "Experiments were run on a Caribbean reef hotspot, and video frames were analyzed with computer vision to locate fish and assess behavior changes.",
+     "es": "Los experimentos se realizaron en un arrecife del Caribe, y las imágenes se analizaron con visión por computadora para localizar peces y estudiar cambios de comportamiento.",
+     "sources": [
+      4
+     ],
+     "support": 0.8,
+     "translation": 0.68
+    },
+    {
+     "en": "Both AUVs produced measurable fish behavior changes, but after correcting for multiple comparisons no significant difference between the robots remained.",
+     "es": "Ambos AUV provocaron cambios medibles en el comportamiento de los peces, pero tras la corrección por comparaciones múltiples no quedó diferencia significativa entre ellos.",
+     "sources": [
+      5,
+      6
+     ],
+     "support": 0.95,
+     "translation": 0.87
+    },
+    {
+     "en": "Diver transects elicited stronger fish responses than AUV transects, yet the diver sample is small and has confounds, so the finding is preliminary.",
+     "es": "Los transectos de buzos provocaron respuestas de peces más fuertes que los de AUV, pero la muestra es pequeña y tiene confusos, así que es preliminar.",
+     "sources": [
+      7,
+      8
+     ],
+     "support": 0.75,
+     "translation": 0.85
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.14.751595",
+   "field": "health",
+   "title": "Visualizing micro- nanoplastics in the human brain: Early evidence for roles in microvascular pathology",
+   "latency": 15.0,
+   "tokens_in": 860,
+   "tokens_out": 1413,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The researchers prepared plastics‑enriched pellets from human brain tissue and examined them with pyrolysis GC/MS, electron microscopy, and confocal laser scanning microscopy.\",\n      \"es\": \"Los investigadores prepararon pellets enriquecidos en plásticos a partir de tejido cerebral humano y los examinaron con pirólisis GC/MS, microscopía electrónica y microscopía confocal de escaneo láser.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Py‑GC/MS identified ten different plastics, and fluorescent particles were found in every brain pellet.\",\n      \"es\": \"El piróGC/MS identificó diez plásticos diferentes y se encontraron partículas fluorescentes en todos los pellets cerebrales.\",\n      \"sources\": [4, 7]\n    },\n    {\n      \"en\": \"Many particles on arteriole and venule walls showed emission spectra like polyethylene and polypropylene, matching the previously observed glossy deposits.\",\n      \"es\": \"Muchas partículas en las paredes de arteriolas y vénulas mostraron espectros de emisión similares al polietileno y al polipropileno, coincidiendo con los depósitos brillantes observados previamente.\",\n      \"sources\": [11, 12]\n    },\n    {\n      \"en\": \"Control tests of storage buffer, water, and empty slide areas detected no plastics, confirming the particles are not experimental artifacts.\",\n      \"es\": \"Las pruebas de control del buffer de almacenamiento, agua y áreas de portaobjetos vacíos no detectaron plásticos, confirmando que las partículas no son artefactos experimentales.\",\n      \"sources\": [10]\n    },\n    {\n      \"en\": \"The study shows synthetic polymers fluoresce in brain sections, opening possibilities to investigate links between plastics and pathology.\",\n      \"es\": \"El estudio muestra que los polímeros sintéticos fluorescen en secciones cerebrales, abriendo la posibilidad de investigar la relación entre plásticos y patología.\",\n      \"sources\": [13, 14]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The researchers prepared plastics‑enriched pellets from human brain tissue and examined them with pyrolysis GC/MS, electron microscopy, and confocal laser scanning microscopy.",
+     "es": "Los investigadores prepararon pellets enriquecidos en plásticos a partir de tejido cerebral humano y los examinaron con pirólisis GC/MS, microscopía electrónica y microscopía confocal de escaneo láser.",
+     "sources": [
+      3
+     ],
+     "support": 0.36,
+     "translation": 0.92
+    },
+    {
+     "en": "Py‑GC/MS identified ten different plastics, and fluorescent particles were found in every brain pellet.",
+     "es": "El piróGC/MS identificó diez plásticos diferentes y se encontraron partículas fluorescentes en todos los pellets cerebrales.",
+     "sources": [
+      4,
+      7
+     ],
+     "support": 0.9,
+     "translation": 0.94
+    },
+    {
+     "en": "Many particles on arteriole and venule walls showed emission spectra like polyethylene and polypropylene, matching the previously observed glossy deposits.",
+     "es": "Muchas partículas en las paredes de arteriolas y vénulas mostraron espectros de emisión similares al polietileno y al polipropileno, coincidiendo con los depósitos brillantes observados previamente.",
+     "sources": [
+      11,
+      12
+     ],
+     "support": 0.77,
+     "translation": 0.87
+    },
+    {
+     "en": "Control tests of storage buffer, water, and empty slide areas detected no plastics, confirming the particles are not experimental artifacts.",
+     "es": "Las pruebas de control del buffer de almacenamiento, agua y áreas de portaobjetos vacíos no detectaron plásticos, confirmando que las partículas no son artefactos experimentales.",
+     "sources": [
+      10
+     ],
+     "support": 0.31,
+     "translation": 0.9
+    },
+    {
+     "en": "The study shows synthetic polymers fluoresce in brain sections, opening possibilities to investigate links between plastics and pathology.",
+     "es": "El estudio muestra que los polímeros sintéticos fluorescen en secciones cerebrales, abriendo la posibilidad de investigar la relación entre plásticos y patología.",
+     "sources": [
+      13,
+      14
+     ],
+     "support": 0.62,
+     "translation": 0.83
+    }
+   ],
+   "kept": 2,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.25964",
+   "field": "life",
+   "title": "Simulation and Analysis of Solute Transport in Multi-Lymphangion Lymphatic Vessels",
+   "latency": 7.0,
+   "tokens_in": 871,
+   "tokens_out": 1430,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"Authors develop a particle-based simulation framework of solute transport through a 3D chain of valve-separated vessel segments (lymphangions).\",\n      \"es\": \"Los autores desarrollan un marco de simulación basado en partículas para el transporte de solutos a través de una cadena 3D de segmentos vasculares separados por válvulas (linfángiones).\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"They simulate solute concentration over space and time and qualitatively compare the dynamics to existing in‑vivo measurements of fluorescent tracer propagation.\",\n      \"es\": \"Simulan la concentración de soluto en espacio y tiempo y comparan cualitativamente la dinámica con mediciones in vivo existentes de trazador fluorescente.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Simulations reveal bursty solute concentrations caused by valve gating, matching an in‑vivo observed characteristic.\",\n      \"es\": \"Las simulaciones muestran concentraciones de soluto en ráfagas provocadas por la apertura de válvulas, coincidiendo con una característica observada in vivo.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"Within one pumping cycle, the timing of concentration peaks depends on valve synchronization rather than release time, while diffusivity and receiver location affect peak sharpness.\",\n      \"es\": \"En un ciclo de bombeo, el momento de los picos de concentración depende de la sincronización de las válvulas más que del momento de liberación, mientras que la difusividad y la posición del receptor determinan la nitidez del pico.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"The framework offers a first quantitative basis for modeling solute transport in the lymphatic system and suggests concrete molecular communication application scenarios.\",\n      \"es\": \"El marco brinda una primera base cuantitativa para modelar el transporte de solutos en el sistema linfático y sugiere escenarios concretos de comunicación molecular.\",\n      \"sources\": [7]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Authors develop a particle-based simulation framework of solute transport through a 3D chain of valve-separated vessel segments (lymphangions).",
+     "es": "Los autores desarrollan un marco de simulación basado en partículas para el transporte de solutos a través de una cadena 3D de segmentos vasculares separados por válvulas (linfángiones).",
+     "sources": [
+      3
+     ],
+     "support": 0.96,
+     "translation": 0.96
+    },
+    {
+     "en": "They simulate solute concentration over space and time and qualitatively compare the dynamics to existing in‑vivo measurements of fluorescent tracer propagation.",
+     "es": "Simulan la concentración de soluto en espacio y tiempo y comparan cualitativamente la dinámica con mediciones in vivo existentes de trazador fluorescente.",
+     "sources": [
+      4
+     ],
+     "support": 0.96,
+     "translation": 0.89
+    },
+    {
+     "en": "Simulations reveal bursty solute concentrations caused by valve gating, matching an in‑vivo observed characteristic.",
+     "es": "Las simulaciones muestran concentraciones de soluto en ráfagas provocadas por la apertura de válvulas, coincidiendo con una característica observada in vivo.",
+     "sources": [
+      5
+     ],
+     "support": 0.91,
+     "translation": 0.74
+    },
+    {
+     "en": "Within one pumping cycle, the timing of concentration peaks depends on valve synchronization rather than release time, while diffusivity and receiver location affect peak sharpness.",
+     "es": "En un ciclo de bombeo, el momento de los picos de concentración depende de la sincronización de las válvulas más que del momento de liberación, mientras que la difusividad y la posición del receptor determinan la nitidez del pico.",
+     "sources": [
+      6
+     ],
+     "support": 0.94,
+     "translation": 0.94
+    },
+    {
+     "en": "The framework offers a first quantitative basis for modeling solute transport in the lymphatic system and suggests concrete molecular communication application scenarios.",
+     "es": "El marco brinda una primera base cuantitativa para modelar el transporte de solutos en el sistema linfático y sugiere escenarios concretos de comunicación molecular.",
+     "sources": [
+      7
+     ],
+     "support": 0.95,
+     "translation": 0.95
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.25894",
+   "field": "math",
+   "title": "Relegation, promotion and the components of scoring in water polo",
+   "latency": 21.1,
+   "tokens_in": 757,
+   "tokens_out": 4660,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors built a Bayesian hierarchical model that splits scoring into even‑strength, man‑up and penalty parts, models opportunities and conversions, and lets abilities evolve season.\",\n      \"es\": \"Los autores construyeron modelo bayesiano que separa la anotación en juego normal, ventaja numérica y penales, modela oportunidades y conversiones, y permite que habilidades evolucionen.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Using the model on 940 matches, they identified relegated club by round nine, before league table, and forecasted the play‑out field better than the table.\",\n      \"es\": \"Con modelo en 940 partidos, identificaron al club descendido en la novena ronda, antes de tabla, y pronosticaron mejor grupo del play‑out que tabla.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"The analysis also shows that the play‑out outcome is essentially a 50‑50 chance, like a coin toss.\",\n      \"es\": \"El análisis también muestra que el resultado del play‑out es esencialmente una probabilidad de 50 %, como lanzar una moneda.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"When evaluating promoted clubs, they found that knowing a club was promoted improves forecast accuracy, while the specific prior method used does not add benefit.\",\n      \"es\": \"Al evaluar clubes ascendidos, descubrieron que saber que un club fue promovido mejora precisión del pronóstico, mientras que el método de prior no aporta beneficio.\",\n      \"sources\": [3, 7]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "The authors built a Bayesian hierarchical model that splits scoring into even‑strength, man‑up and penalty parts, models opportunities and conversions, and lets abilities evolve season.",
+     "es": "Los autores construyeron modelo bayesiano que separa la anotación en juego normal, ventaja numérica y penales, modela oportunidades y conversiones, y permite que habilidades evolucionen.",
+     "sources": [
+      4
+     ],
+     "support": 0.93,
+     "translation": 0.69
+    },
+    {
+     "en": "Using the model on 940 matches, they identified relegated club by round nine, before league table, and forecasted the play‑out field better than the table.",
+     "es": "Con modelo en 940 partidos, identificaron al club descendido en la novena ronda, antes de tabla, y pronosticaron mejor grupo del play‑out que tabla.",
+     "sources": [
+      6
+     ],
+     "support": 0.92,
+     "translation": 0.85
+    },
+    {
+     "en": "The analysis also shows that the play‑out outcome is essentially a 50‑50 chance, like a coin toss.",
+     "es": "El análisis también muestra que el resultado del play‑out es esencialmente una probabilidad de 50 %, como lanzar una moneda.",
+     "sources": [
+      6
+     ],
+     "support": 0.91,
+     "translation": 0.94
+    },
+    {
+     "en": "When evaluating promoted clubs, they found that knowing a club was promoted improves forecast accuracy, while the specific prior method used does not add benefit.",
+     "es": "Al evaluar clubes ascendidos, descubrieron que saber que un club fue promovido mejora precisión del pronóstico, mientras que el método de prior no aporta beneficio.",
+     "sources": [
+      3,
+      7
+     ],
+     "support": 0.72,
+     "translation": 0.91
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.17.751377",
+   "field": "neuro",
+   "title": "Chemogenetic activation of hypothalamic oxytocin neurons reorients face exploration toward the eyes in macaques",
+   "latency": 8.2,
+   "tokens_in": 808,
+   "tokens_out": 1884,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The researchers used excitatory DREADDs to selectively activate oxytocin neurons in the paraventricular and supraoptic nuclei of macaques.\",\n      \"es\": \"Los investigadores usaron DREADDs excitatorios para activar selectivamente neuronas de oxitocina en los núcleos paraventricular y supraóptico de macacos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"They measured face exploration with a finger‑controlled viewing window that tracks digit movements as a proxy for gaze.\",\n      \"es\": \"Midieron la exploración facial con una ventana de visión controlada por el dedo que rastrea los movimientos del dedo como proxy de la mirada.\",\n      \"sources\": [3, 4]\n    },\n    {\n      \"en\": \"Activating the oxytocin neurons shifted the animals’ exploration toward the eyes, increasing eye‑directed consistency and time spent looking at eyes.\",\n      \"es\": \"Activar las neuronas de oxitocina desvió la exploración de los animales hacia los ojos, aumentando la consistencia y el tiempo mirando los ojos.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"Immunohistochemistry confirmed that DREADDs were expressed only in oxytocin neurons, providing causal evidence that these neurons regulate social visual orienting.\",\n      \"es\": \"La inmunohistoquímica confirmó que los DREADDs se expresaron solo en neuronas de oxitocina, proporcionando evidencia causal de que estas neuronas regulan la orientación visual social.\",\n      \"sources\": [6, 7]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "The researchers used excitatory DREADDs to selectively activate oxytocin neurons in the paraventricular and supraoptic nuclei of macaques.",
+     "es": "Los investigadores usaron DREADDs excitatorios para activar selectivamente neuronas de oxitocina en los núcleos paraventricular y supraóptico de macacos.",
+     "sources": [
+      2
+     ],
+     "support": 0.95,
+     "translation": 0.94
+    },
+    {
+     "en": "They measured face exploration with a finger‑controlled viewing window that tracks digit movements as a proxy for gaze.",
+     "es": "Midieron la exploración facial con una ventana de visión controlada por el dedo que rastrea los movimientos del dedo como proxy de la mirada.",
+     "sources": [
+      3,
+      4
+     ],
+     "support": 0.87,
+     "translation": 0.89
+    },
+    {
+     "en": "Activating the oxytocin neurons shifted the animals’ exploration toward the eyes, increasing eye‑directed consistency and time spent looking at eyes.",
+     "es": "Activar las neuronas de oxitocina desvió la exploración de los animales hacia los ojos, aumentando la consistencia y el tiempo mirando los ojos.",
+     "sources": [
+      5
+     ],
+     "support": 0.9,
+     "translation": 0.82
+    },
+    {
+     "en": "Immunohistochemistry confirmed that DREADDs were expressed only in oxytocin neurons, providing causal evidence that these neurons regulate social visual orienting.",
+     "es": "La inmunohistoquímica confirmó que los DREADDs se expresaron solo en neuronas de oxitocina, proporcionando evidencia causal de que estas neuronas regulan la orientación visual social.",
+     "sources": [
+      6,
+      7
+     ],
+     "support": 0.87,
+     "translation": 0.93
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22579",
+   "field": "physics",
+   "title": "Gliders on Aperiodic Monotilings: Cellular Automata on the Hat and Spectre",
+   "latency": 3.9,
+   "tokens_in": 741,
+   "tokens_out": 1358,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"They generated patches of the hat and spectre monotiles using finite-state transducers, so each experiment could be reproduced from a small record.\",\n      \"es\": \"Generaron parches de los monotiles hat y spectre usando transductores de estado finito, de modo que cada experimento podía reproducirse a partir de un registro pequeño.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"In edge‑adjacency semi‑totalistic rule sets, exhaustive and evolutionary searches found only mortal travelers and no gliders.\",\n      \"es\": \"En conjuntos de reglas semi‑totalistas de adyacencia de aristas, búsquedas exhaustivas y evolutivas solo encontraron viajeros mortales y ningún glider.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"By expanding to vertex‑neighborhood and priority‑table rules, evolutionary search uncovered gliders on both monotilings that moved one million rings at constant speed and heading.\",\n      \"es\": \"Al ampliar a reglas de vecindad de vértices y de tabla de prioridades, la búsqueda evolutiva descubrió gliders en ambos monotiles que se desplazaron un millón de anillos a velocidad y dirección constantes.\",\n      \"sources\": [3, 4]\n    },\n    {\n      \"en\": \"The gliders’ headings are quantized to millidegrees on a six‑spoke compass, and an ablation test shows both rule‑space extensions are each required.\",\n      \"es\": \"Las direcciones de los gliders se cuantizan a miligrados en una brújula de seis puntas, y una ablación muestra que ambas extensiones del espacio de reglas son cada una necesarias.\",\n      \"sources\": [5, 6]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "They generated patches of the hat and spectre monotiles using finite-state transducers, so each experiment could be reproduced from a small record.",
+     "es": "Generaron parches de los monotiles hat y spectre usando transductores de estado finito, de modo que cada experimento podía reproducirse a partir de un registro pequeño.",
+     "sources": [
+      1
+     ],
+     "support": 0.48,
+     "translation": 0.96
+    },
+    {
+     "en": "In edge‑adjacency semi‑totalistic rule sets, exhaustive and evolutionary searches found only mortal travelers and no gliders.",
+     "es": "En conjuntos de reglas semi‑totalistas de adyacencia de aristas, búsquedas exhaustivas y evolutivas solo encontraron viajeros mortales y ningún glider.",
+     "sources": [
+      2
+     ],
+     "support": 0.95,
+     "translation": 0.95
+    },
+    {
+     "en": "By expanding to vertex‑neighborhood and priority‑table rules, evolutionary search uncovered gliders on both monotilings that moved one million rings at constant speed and heading.",
+     "es": "Al ampliar a reglas de vecindad de vértices y de tabla de prioridades, la búsqueda evolutiva descubrió gliders en ambos monotiles que se desplazaron un millón de anillos a velocidad y dirección constantes.",
+     "sources": [
+      3,
+      4
+     ],
+     "support": 0.89,
+     "translation": 0.88
+    },
+    {
+     "en": "The gliders’ headings are quantized to millidegrees on a six‑spoke compass, and an ablation test shows both rule‑space extensions are each required.",
+     "es": "Las direcciones de los gliders se cuantizan a miligrados en una brújula de seis puntas, y una ablación muestra que ambas extensiones del espacio de reglas son cada una necesarias.",
+     "sources": [
+      5,
+      6
+     ],
+     "support": 0.84,
+     "translation": 0.92
+    }
+   ],
+   "kept": 3,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22549",
+   "field": "society",
+   "title": "AI-written admissions essays are widespread but penalized",
+   "latency": 4.4,
+   "tokens_in": 739,
+   "tokens_out": 1290,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"They analyzed nearly 7,500 applications submitted between 2020 and 2025 to a large public policy master’s program in the United States.\",\n      \"es\": \"Analizaron casi 7 500 solicitudes presentadas entre 2020 y 2025 para un amplio programa de maestría en políticas públicas en Estados Unidos.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"In the 2025 admissions cycle, most applicants submitted at least one essay that was primarily AI‑generated, even though the program explicitly prohibited AI use.\",\n      \"es\": \"En el ciclo de admisiones de 2025, la mayoría de los solicitantes entregó al menos un ensayo generado principalmente por IA, a pesar de que el programa prohibía explícitamente su uso.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"The introduction of ChatGPT in November 2022 was associated with higher writing quality in the submitted essays.\",\n      \"es\": \"La introducción de ChatGPT en noviembre de 2022 se asoció con una mayor calidad de redacción en los ensayos presentados.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"However, applicants who used AI‑written essays were admitted less often than comparable applicants who did not use AI.\",\n      \"es\": \"Sin embargo, los solicitantes que usaron ensayos escritos por IA fueron admitidos con menos frecuencia que solicitantes comparables que no usaron IA.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"An experiment with admissions officers showed they often recognized AI writing and gave lower ratings to essays they believed were AI‑generated.\",\n      \"es\": \"Un experimento con oficiales de admisión mostró que a menudo reconocen la escritura de IA y otorgan calificaciones más bajas a los ensayos que creen fueron generados por IA.\",\n      \"sources\": [5]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "They analyzed nearly 7,500 applications submitted between 2020 and 2025 to a large public policy master’s program in the United States.",
+     "es": "Analizaron casi 7 500 solicitudes presentadas entre 2020 y 2025 para un amplio programa de maestría en políticas públicas en Estados Unidos.",
+     "sources": [
+      1
+     ],
+     "support": 0.97,
+     "translation": 0.91
+    },
+    {
+     "en": "In the 2025 admissions cycle, most applicants submitted at least one essay that was primarily AI‑generated, even though the program explicitly prohibited AI use.",
+     "es": "En el ciclo de admisiones de 2025, la mayoría de los solicitantes entregó al menos un ensayo generado principalmente por IA, a pesar de que el programa prohibía explícitamente su uso.",
+     "sources": [
+      2
+     ],
+     "support": 0.89,
+     "translation": 0.95
+    },
+    {
+     "en": "The introduction of ChatGPT in November 2022 was associated with higher writing quality in the submitted essays.",
+     "es": "La introducción de ChatGPT en noviembre de 2022 se asoció con una mayor calidad de redacción en los ensayos presentados.",
+     "sources": [
+      3
+     ],
+     "support": 0.87,
+     "translation": 0.96
+    },
+    {
+     "en": "However, applicants who used AI‑written essays were admitted less often than comparable applicants who did not use AI.",
+     "es": "Sin embargo, los solicitantes que usaron ensayos escritos por IA fueron admitidos con menos frecuencia que solicitantes comparables que no usaron IA.",
+     "sources": [
+      4
+     ],
+     "support": 0.92,
+     "translation": 0.97
+    },
+    {
+     "en": "An experiment with admissions officers showed they often recognized AI writing and gave lower ratings to essays they believed were AI‑generated.",
+     "es": "Un experimento con oficiales de admisión mostró que a menudo reconocen la escritura de IA y otorgan calificaciones más bajas a los ensayos que creen fueron generados por IA.",
+     "sources": [
+      5
+     ],
+     "support": 0.94,
+     "translation": 0.96
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22433",
+   "field": "space",
+   "title": "Direct imaging of sub-parsec binary SMBHs in the central galaxy of the NGC 5044 group",
+   "latency": 6.1,
+   "tokens_in": 841,
+   "tokens_out": 1499,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"Authors used VLBA observations of NGC 5044, the central galaxy of the X‑ray brightest galaxy group.\",\n      \"es\": \"Los autores usaron observaciones con el VLBA de NGC 5044, la galaxia central del grupo de galaxias más brillante en rayos X.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"VLBA images at 4.9–23.6 GHz show two compact, flat‑spectrum, variable radio cores 0.38 pc apart, the tightest directly imaged binary AGN by an order of magnitude.\",\n      \"es\": \"Las imágenes del VLBA de 4.9 a 23.6 GHz muestran dos núcleos compactos, de espectro plano y variables, separados 0.38 pc, el binario AGN directamente imaged más estrecho por un orden de magnitud.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"The discovery suggests the older outbursts may have been powered by jets from the secondary core, without invoking any reorientation of the primary jet axis.\",\n      \"es\": \"El descubrimiento sugiere que los estallidos más antiguos podrían haber sido impulsados por chorros del núcleo secundario, sin requerir una reorientación del eje del chorro primario.\",\n      \"sources\": [7]\n    },\n    {\n      \"en\": \"Comparison with other systems indicates massive, cluster‑central elliptical galaxies are promising targets for finding binary supermassive black holes.\",\n      \"es\": \"La comparación con otros sistemas indica que las galaxias elípticas masivas, centrales de cúmulos, son objetivos prometedores para buscar pares de agujeros negros supermasivos.\",\n      \"sources\": [8]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "Authors used VLBA observations of NGC 5044, the central galaxy of the X‑ray brightest galaxy group.",
+     "es": "Los autores usaron observaciones con el VLBA de NGC 5044, la galaxia central del grupo de galaxias más brillante en rayos X.",
+     "sources": [
+      4
+     ],
+     "support": 0.86,
+     "translation": 0.94
+    },
+    {
+     "en": "VLBA images at 4.9–23.6 GHz show two compact, flat‑spectrum, variable radio cores 0.38 pc apart, the tightest directly imaged binary AGN by an order of magnitude.",
+     "es": "Las imágenes del VLBA de 4.9 a 23.6 GHz muestran dos núcleos compactos, de espectro plano y variables, separados 0.38 pc, el binario AGN directamente imaged más estrecho por un orden de magnitud.",
+     "sources": [
+      6
+     ],
+     "support": 0.88,
+     "translation": 0.8
+    },
+    {
+     "en": "The discovery suggests the older outbursts may have been powered by jets from the secondary core, without invoking any reorientation of the primary jet axis.",
+     "es": "El descubrimiento sugiere que los estallidos más antiguos podrían haber sido impulsados por chorros del núcleo secundario, sin requerir una reorientación del eje del chorro primario.",
+     "sources": [
+      7
+     ],
+     "support": 0.97,
+     "translation": 0.95
+    },
+    {
+     "en": "Comparison with other systems indicates massive, cluster‑central elliptical galaxies are promising targets for finding binary supermassive black holes.",
+     "es": "La comparación con otros sistemas indica que las galaxias elípticas masivas, centrales de cúmulos, son objetivos prometedores para buscar pares de agujeros negros supermasivos.",
+     "sources": [
+      8
+     ],
+     "support": 0.91,
+     "translation": 0.91
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.24391",
+   "field": "ai",
+   "title": "NAVIR: Neuromorphic Audio-Visual Speech Recognition for Robust Human-Robot Interaction on Edge Hardware",
+   "latency": 28.3,
+   "tokens_in": 907,
+   "tokens_out": 6615,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors present NAVIR, an end-to-end audio-visual speech recognizer built for the BrainChip Akida neuromorphic processor, which only supports sequential 2-D convolutions.\",\n      \"es\": \"Los autores presentan NAVIR, un reconocedor de habla audio-visual extremo a extremo creado para el procesador neuromórfico BrainChip Akida, que solo admite convoluciones 2-D secuenciales.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"The pipeline uses three AkidaNet modules—a per-frame visual encoder, a temporal video encoder, and a spectrogram audio encoder—plus a lightweight predictor head and beam-search decoding.\",\n      \"es\": \"La tubería usa tres módulos AkidaNet: un codificador visual y temporal y un codificador de audio espectrograma, más un predictor y decodificación de haz.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Models are trained with connectionist temporal classification on noise-augmented audio and then fine-tuned using quantization-aware training.\",\n      \"es\": \"Los modelos se entrenan con clasificación temporal conexionista sobre audio con ruido añadido y luego se afinan mediante entrenamiento consciente de cuantización.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"On the GRID benchmark, the audio-visual model achieved 14.0% and 3.3% WER, better than 22.5% and 11.8% for audio-only baselines.\",\n      \"es\": \"En el benchmark GRID, el modelo audio-visual alcanzó 14.0% y 3.3% de WER, mejor que 22.5% y 11.8% de los baselines solo de audio.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"The spiking implementation uses 13-times less energy than an ANN and 5-times lower energy per inference than a Raspberry Pi, while achieving 14.5 inferences per second.\",\n      \"es\": \"La implementación spiking usa 13-veces menos energía que una ANN y 5-veces menos energía por inferencia que una Raspberry Pi, mientras logra 14.5 inferencias por segundo.\",\n      \"sources\": [6, 7]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The authors present NAVIR, an end-to-end audio-visual speech recognizer built for the BrainChip Akida neuromorphic processor, which only supports sequential 2-D convolutions.",
+     "es": "Los autores presentan NAVIR, un reconocedor de habla audio-visual extremo a extremo creado para el procesador neuromórfico BrainChip Akida, que solo admite convoluciones 2-D secuenciales.",
+     "sources": [
+      2
+     ],
+     "support": 0.9,
+     "translation": 0.93
+    },
+    {
+     "en": "The pipeline uses three AkidaNet modules—a per-frame visual encoder, a temporal video encoder, and a spectrogram audio encoder—plus a lightweight predictor head and beam-search decoding.",
+     "es": "La tubería usa tres módulos AkidaNet: un codificador visual y temporal y un codificador de audio espectrograma, más un predictor y decodificación de haz.",
+     "sources": [
+      3
+     ],
+     "support": 0.94,
+     "translation": 0.31
+    },
+    {
+     "en": "Models are trained with connectionist temporal classification on noise-augmented audio and then fine-tuned using quantization-aware training.",
+     "es": "Los modelos se entrenan con clasificación temporal conexionista sobre audio con ruido añadido y luego se afinan mediante entrenamiento consciente de cuantización.",
+     "sources": [
+      4
+     ],
+     "support": 0.96,
+     "translation": 0.94
+    },
+    {
+     "en": "On the GRID benchmark, the audio-visual model achieved 14.0% and 3.3% WER, better than 22.5% and 11.8% for audio-only baselines.",
+     "es": "En el benchmark GRID, el modelo audio-visual alcanzó 14.0% y 3.3% de WER, mejor que 22.5% y 11.8% de los baselines solo de audio.",
+     "sources": [
+      5
+     ],
+     "support": 0.92,
+     "translation": 0.93
+    },
+    {
+     "en": "The spiking implementation uses 13-times less energy than an ANN and 5-times lower energy per inference than a Raspberry Pi, while achieving 14.5 inferences per second.",
+     "es": "La implementación spiking usa 13-veces menos energía que una ANN y 5-veces menos energía por inferencia que una Raspberry Pi, mientras logra 14.5 inferencias por segundo.",
+     "sources": [
+      6,
+      7
+     ],
+     "support": 0.84,
+     "translation": 0.85
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.25075",
+   "field": "chemistry",
+   "title": "Multimodal Visual Sensing of Temperature and Pressure: From Spectroscopic Readout to Multiple Linear Regression-Enhanced RGB Analysis",
+   "latency": 12.5,
+   "tokens_in": 791,
+   "tokens_out": 2230,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"They introduced a concentration-tunable KGaGeO4:Bi3+,Eu3+ platform whose sensing can be directed to temperature or pressure by adjusting dopant balance.\",\n      \"es\": \"Introdujeron una plataforma KGaGeO4:Bi3+,Eu3+ con concentración ajustable cuya función de detección puede dirigirse a temperatura o presión al modificar el equilibrio de dopantes.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"The material shows distinct Bi3+ and Eu3+ emissions that respond differently to temperature and pressure, allowing readout via ratiometric luminescence, chromaticity, and visible color changes.\",\n      \"es\": \"El material muestra emisiones distintas de Bi3+ y Eu3+ que responden de forma diferente a la temperatura y la presión, permitiendo lecturas mediante luminiscencia ratiométrica, cromaticidad y cambios visibles de color.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"They converted the observed color changes into quantitative temperature and pressure maps using RGB imaging combined with multiple linear regression (MLR).\",\n      \"es\": \"Convirtieron los cambios de color observados en mapas cuantitativos de temperatura y presión usando imágenes RGB combinadas con regresión lineal múltiple (MLR).\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Using multiple color channels, MLR raised the maximum relative thermal sensitivity from about 1% K⁻¹ to 8.8% K⁻¹ and pressure sensitivity from 169% GPa⁻¹ to nearly 721% GPa⁻¹.\",\n      \"es\": \"Al usar varios canales de color, la MLR aumentó la sensibilidad térmica relativa máxima de aproximadamente 1 % K⁻¹ a 8,8 % K⁻¹ y la sensibilidad a presión de 169 % GPa⁻¹ a casi 721 % GPa⁻¹.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"This is the first use of MLR‑assisted RGB analysis for quantitative luminescence pressure sensing, showing how material design and analysis can give multifunctional optical sensors.\",\n      \"es\": \"Esta es la primera aplicación de análisis RGB asistido por MLR para la detección cuantitativa de presión mediante luminiscencia, mostrando cómo el diseño del material y el análisis pueden proporcionar sensores ópticos multifuncionales.\",\n      \"sources\": [5, 6]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "They introduced a concentration-tunable KGaGeO4:Bi3+,Eu3+ platform whose sensing can be directed to temperature or pressure by adjusting dopant balance.",
+     "es": "Introdujeron una plataforma KGaGeO4:Bi3+,Eu3+ con concentración ajustable cuya función de detección puede dirigirse a temperatura o presión al modificar el equilibrio de dopantes.",
+     "sources": [
+      1
+     ],
+     "support": 0.95,
+     "translation": 0.9
+    },
+    {
+     "en": "The material shows distinct Bi3+ and Eu3+ emissions that respond differently to temperature and pressure, allowing readout via ratiometric luminescence, chromaticity, and visible color changes.",
+     "es": "El material muestra emisiones distintas de Bi3+ y Eu3+ que responden de forma diferente a la temperatura y la presión, permitiendo lecturas mediante luminiscencia ratiométrica, cromaticidad y cambios visibles de color.",
+     "sources": [
+      2
+     ],
+     "support": 0.9,
+     "translation": 0.94
+    },
+    {
+     "en": "They converted the observed color changes into quantitative temperature and pressure maps using RGB imaging combined with multiple linear regression (MLR).",
+     "es": "Convirtieron los cambios de color observados en mapas cuantitativos de temperatura y presión usando imágenes RGB combinadas con regresión lineal múltiple (MLR).",
+     "sources": [
+      3
+     ],
+     "support": 0.95,
+     "translation": 0.95
+    },
+    {
+     "en": "Using multiple color channels, MLR raised the maximum relative thermal sensitivity from about 1% K⁻¹ to 8.8% K⁻¹ and pressure sensitivity from 169% GPa⁻¹ to nearly 721% GPa⁻¹.",
+     "es": "Al usar varios canales de color, la MLR aumentó la sensibilidad térmica relativa máxima de aproximadamente 1 % K⁻¹ a 8,8 % K⁻¹ y la sensibilidad a presión de 169 % GPa⁻¹ a casi 721 % GPa⁻¹.",
+     "sources": [
+      4
+     ],
+     "support": 0.97,
+     "translation": 0.95
+    },
+    {
+     "en": "This is the first use of MLR‑assisted RGB analysis for quantitative luminescence pressure sensing, showing how material design and analysis can give multifunctional optical sensors.",
+     "es": "Esta es la primera aplicación de análisis RGB asistido por MLR para la detección cuantitativa de presión mediante luminiscencia, mostrando cómo el diseño del material y el análisis pueden proporcionar sensores ópticos multifuncionales.",
+     "sources": [
+      5,
+      6
+     ],
+     "support": 0.85,
+     "translation": 0.89
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.24134",
+   "field": "computing",
+   "title": "Monet: Measuring the Ecosystem of Open-Source Text-to-Image Models Tailored for Harmful Services",
+   "latency": 9.6,
+   "tokens_in": 833,
+   "tokens_out": 2679,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors conduct the first systematic, ecosystem-level measurement of harmful text-to-image models they call Monets.\",\n      \"es\": \"Los autores realizan la primera medición sistemática a nivel de ecosistema de modelos de texto-a-imagen dañinos que denominan Monets.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"They create a taxonomy of ten harmful service categories and find 23,947 Monets on eight hubs, the most popular over 19 million downloads.\",\n      \"es\": \"Crean una taxonomía de diez categorías de servicios dañinos y encuentran 23 947 Monets en ocho hubs, el más popular supera 19 millones de descargas.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Forty-point-seven-six percent of Monets are mirrored across hubs, and 11.99% stay accessible after bans via cross-platform archiving and other evasion tactics.\",\n      \"es\": \"El 40,76 % de los Monets se replica entre hubs, y el 11,99 % permanece accesible tras prohibiciones mediante archivado cruzado y otras tácticas de evasión.\",\n      \"sources\": [5, 6]\n    },\n    {\n      \"en\": \"Monets support commercial campaigns, including one with 668 models and 914 commissions, and a gray-market service, reaching users through GitHub and APIs, raising child-safety concerns.\",\n      \"es\": \"Los Monets impulsan campañas comerciales, con 668 modelos y 914 comisiones, y un servicio que llega a usuarios vía GitHub y APIs, generando riesgos infantiles.\",\n      \"sources\": [7]\n    },\n    {\n      \"en\": \"These findings show platform-siloed defenses are limited and highlight the need for cross-platform threat intelligence, coordinated governance, and technical safeguards.\",\n      \"es\": \"Estos hallazgos demuestran que las defensas aisladas por plataforma son limitadas y resaltan la necesidad de inteligencia de amenazas cruzada, gobernanza coordinada y salvaguardas técnicas.\",\n      \"sources\": [8]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The authors conduct the first systematic, ecosystem-level measurement of harmful text-to-image models they call Monets.",
+     "es": "Los autores realizan la primera medición sistemática a nivel de ecosistema de modelos de texto-a-imagen dañinos que denominan Monets.",
+     "sources": [
+      3
+     ],
+     "support": 0.61,
+     "translation": 0.93
+    },
+    {
+     "en": "They create a taxonomy of ten harmful service categories and find 23,947 Monets on eight hubs, the most popular over 19 million downloads.",
+     "es": "Crean una taxonomía de diez categorías de servicios dañinos y encuentran 23 947 Monets en ocho hubs, el más popular supera 19 millones de descargas.",
+     "sources": [
+      4
+     ],
+     "support": 0.95,
+     "translation": 0.94
+    },
+    {
+     "en": "Forty-point-seven-six percent of Monets are mirrored across hubs, and 11.99% stay accessible after bans via cross-platform archiving and other evasion tactics.",
+     "es": "El 40,76 % de los Monets se replica entre hubs, y el 11,99 % permanece accesible tras prohibiciones mediante archivado cruzado y otras tácticas de evasión.",
+     "sources": [
+      5,
+      6
+     ],
+     "support": 0.95,
+     "translation": 0.91
+    },
+    {
+     "en": "Monets support commercial campaigns, including one with 668 models and 914 commissions, and a gray-market service, reaching users through GitHub and APIs, raising child-safety concerns.",
+     "es": "Los Monets impulsan campañas comerciales, con 668 modelos y 914 comisiones, y un servicio que llega a usuarios vía GitHub y APIs, generando riesgos infantiles.",
+     "sources": [
+      7
+     ],
+     "support": 0.88,
+     "translation": 0.38
+    },
+    {
+     "en": "These findings show platform-siloed defenses are limited and highlight the need for cross-platform threat intelligence, coordinated governance, and technical safeguards.",
+     "es": "Estos hallazgos demuestran que las defensas aisladas por plataforma son limitadas y resaltan la necesidad de inteligencia de amenazas cruzada, gobernanza coordinada y salvaguardas técnicas.",
+     "sources": [
+      8
+     ],
+     "support": 0.97,
+     "translation": 0.96
+    }
+   ],
+   "kept": 3,
+   "publishable": true
+  },
+  {
+   "id": "doi-10.1038_s41586-026-11040-2",
+   "field": "earth",
+   "title": "Agricultural liming is a carbon sink in the Mississippi River Basin",
+   "latency": 6.9,
+   "tokens_in": 841,
+   "tokens_out": 2385,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors compiled century‑scale records of agricultural liming and anthropogenic acidity inputs for the Mississippi River Basin.\",\n      \"es\": \"Los autores recopilaron registros de escala centenaria de la cal agrícola y de las entradas de acidez antropogénica para la cuenca del río Mississippi.\",\n      \"sources\": [0, 2]\n    },\n    {\n      \"en\": \"They found liming acted as a net carbon sink over the past century, removing about 0.44 GtCO₂.\",\n      \"es\": \"Encontraron que la cal agrícola actuó como un sumidero neto de carbono durante el siglo pasado, eliminando aproximadamente 0,44 GtCO₂.\",\n      \"sources\": [3, 8]\n    },\n    {\n      \"en\": \"River alkalinity data suggest roughly 90 % of the ideal removal potential was realized at the basin scale.\",\n      \"es\": \"Los datos de alcalinidad del río sugieren que aproximadamente el 90 % del potencial ideal de eliminación se realizó a escala de cuenca.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"A decadal lag occurred because soil cation exchange and solute transport delay CO₂ uptake, and net removal follows an initial emissions pulse.\",\n      \"es\": \"Se observó un retraso decadal debido al intercambio catiónico del suelo y al transporte de solutos, y la eliminación neta sigue a un pulso inicial de emisiones.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"The authors note accounting misattributes emissions to lime rather than acidity inputs, so better pH management could cut emissions while improving yields and soil health.\",\n      \"es\": \"Los autores señalan que la contabilidad actual atribuye erróneamente las emisiones a la cal en lugar de a las entradas de acidez, por lo que una mejor gestión del pH del suelo podría reducir emisiones y mejorar los rendimientos y la salud del suelo.\",\n      \"sources\": [5, 6, 7]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The authors compiled century‑scale records of agricultural liming and anthropogenic acidity inputs for the Mississippi River Basin.",
+     "es": "Los autores recopilaron registros de escala centenaria de la cal agrícola y de las entradas de acidez antropogénica para la cuenca del río Mississippi.",
+     "sources": [
+      0,
+      2
+     ],
+     "support": 0.5,
+     "translation": 0.93
+    },
+    {
+     "en": "They found liming acted as a net carbon sink over the past century, removing about 0.44 GtCO₂.",
+     "es": "Encontraron que la cal agrícola actuó como un sumidero neto de carbono durante el siglo pasado, eliminando aproximadamente 0,44 GtCO₂.",
+     "sources": [
+      3,
+      8
+     ],
+     "support": 0.52,
+     "translation": 0.67
+    },
+    {
+     "en": "River alkalinity data suggest roughly 90 % of the ideal removal potential was realized at the basin scale.",
+     "es": "Los datos de alcalinidad del río sugieren que aproximadamente el 90 % del potencial ideal de eliminación se realizó a escala de cuenca.",
+     "sources": [
+      3
+     ],
+     "support": 0.91,
+     "translation": 0.74
+    },
+    {
+     "en": "A decadal lag occurred because soil cation exchange and solute transport delay CO₂ uptake, and net removal follows an initial emissions pulse.",
+     "es": "Se observó un retraso decadal debido al intercambio catiónico del suelo y al transporte de solutos, y la eliminación neta sigue a un pulso inicial de emisiones.",
+     "sources": [
+      4
+     ],
+     "support": 0.29,
+     "translation": 0.85
+    },
+    {
+     "en": "The authors note accounting misattributes emissions to lime rather than acidity inputs, so better pH management could cut emissions while improving yields and soil health.",
+     "es": "Los autores señalan que la contabilidad actual atribuye erróneamente las emisiones a la cal en lugar de a las entradas de acidez, por lo que una mejor gestión del pH del suelo podría reducir emisiones y mejorar los rendimientos y la salud del suelo.",
+     "sources": [
+      5,
+      6,
+      7
+     ],
+     "support": 0.81,
+     "translation": 0.85
+    }
+   ],
+   "kept": 2,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.21.753189",
+   "field": "ecology",
+   "title": "Rising water is an underappreciated driver of forest mortality",
+   "latency": 16.8,
+   "tokens_in": 780,
+   "tokens_out": 4685,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"Authors used ~1 m resolution aerial imagery and deep learning to track over 260 million dead trees in the US Great Lakes and ocean coasts from 2012‑2023.\",\n      \"es\": \"Los autores usaron imágenes aéreas de ~1 m y aprendizaje profundo para contar más de 260 millones de árboles muertos en EE. UU. de 2012‑2023.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Within 10 km of coasts, more than half of mortality was in just 10% of forests, in high‑elevation inland wetlands and low‑lying forests prone to inundation.\",\n      \"es\": \"Dentro de 10 km de la costa, la mitad de la mortalidad se concentró en el 10 % de los bosques, en humedales y bosques bajos inundables.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Mortality rates doubled over a decade near expanding freshwater lakes and inland wetlands experiencing intensifying precipitation.\",\n      \"es\": \"Las tasas de mortalidad se duplicaron en una década cerca de lagos de agua dulce en expansión y humedales interiores con precipitación intensificada.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"In low‑lying coastal forests, mortality tripled where salinization compounded inundation.\",\n      \"es\": \"En bosques costeros bajos, la mortalidad se triplicó donde la salinización agravó la inundación.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"The authors conclude rising water levels drive forest death and that climate impact assessments should be reevaluated for carbon‑rich forests.\",\n      \"es\": \"Los autores concluyen que el aumento del nivel del agua impulsa la muerte forestal y que se deben reevaluar los impactos climáticos en bosques carbonosos.\",\n      \"sources\": [6]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Authors used ~1 m resolution aerial imagery and deep learning to track over 260 million dead trees in the US Great Lakes and ocean coasts from 2012‑2023.",
+     "es": "Los autores usaron imágenes aéreas de ~1 m y aprendizaje profundo para contar más de 260 millones de árboles muertos en EE. UU. de 2012‑2023.",
+     "sources": [
+      3
+     ],
+     "support": 0.95,
+     "translation": 0.15
+    },
+    {
+     "en": "Within 10 km of coasts, more than half of mortality was in just 10% of forests, in high‑elevation inland wetlands and low‑lying forests prone to inundation.",
+     "es": "Dentro de 10 km de la costa, la mitad de la mortalidad se concentró en el 10 % de los bosques, en humedales y bosques bajos inundables.",
+     "sources": [
+      4
+     ],
+     "support": 0.93,
+     "translation": 0.59
+    },
+    {
+     "en": "Mortality rates doubled over a decade near expanding freshwater lakes and inland wetlands experiencing intensifying precipitation.",
+     "es": "Las tasas de mortalidad se duplicaron en una década cerca de lagos de agua dulce en expansión y humedales interiores con precipitación intensificada.",
+     "sources": [
+      5
+     ],
+     "support": 0.94,
+     "translation": 0.94
+    },
+    {
+     "en": "In low‑lying coastal forests, mortality tripled where salinization compounded inundation.",
+     "es": "En bosques costeros bajos, la mortalidad se triplicó donde la salinización agravó la inundación.",
+     "sources": [
+      5
+     ],
+     "support": 0.95,
+     "translation": 0.91
+    },
+    {
+     "en": "The authors conclude rising water levels drive forest death and that climate impact assessments should be reevaluated for carbon‑rich forests.",
+     "es": "Los autores concluyen que el aumento del nivel del agua impulsa la muerte forestal y que se deben reevaluar los impactos climáticos en bosques carbonosos.",
+     "sources": [
+      6
+     ],
+     "support": 0.89,
+     "translation": 0.79
+    }
+   ],
+   "kept": 3,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.23950",
+   "field": "engineering",
+   "title": "ORION-CMR: On-scanner Reporting with Integrated Foundation Model for End-to-End Cardiac MRI Analysis and Interpretation",
+   "latency": 8.0,
+   "tokens_in": 810,
+   "tokens_out": 1791,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"The authors created ORION-CMR, a scanner-native end-to-end cardiac MRI foundation model evaluated clinically.\",\n      \"es\": \"Los autores crearon ORION‑CMR, un modelo fundacional de resonancia magnética cardíaca de extremo a extremo nativo del escáner, evaluado clínicamente.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"It was pretrained on 12,896,733 CMR images from 9,258 studies, can classify sequences, assess ventricular function, detect LGE, classify diseases, and generate reports in ~90 seconds.\",\n      \"es\": \"Se entrenó con 12,896,733 imágenes CMR de 9,258 estudios y puede clasificar secuencias, evaluar función ventricular, detectar LGE, clasificar enfermedades y generar informes en ~90 segundos.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"The system was tested on public benchmarks and on 68 multi-vendor subjects with normal exams, congenital heart disease, dilated cardiomyopathy, and myocardial infarction.\",\n      \"es\": \"El sistema se probó en referencias públicas y en 68 sujetos de varios fabricantes con exámenes normales, enfermedad cardíaca congénita, miocardiopatía dilatada e infarto de miocardio.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"ORION-CMR outperformed supervised baselines and the prior CMR-FM, achieving state-of-the-art performance for LGE classification and scar segmentation.\",\n      \"es\": \"ORION‑CMR superó a las líneas base supervisadas y al modelo CMR‑FM previo, logrando rendimiento de última generación en clasificación LGE y segmentación de cicatrices.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"Clinical evaluation gave an AUC of 0.96 for normal-versus-abnormal, 0.88 for multiclass disease, and reports matched expert interpretation 81.4% of the time.\",\n      \"es\": \"La evaluación clínica obtuvo un AUC de 0.96 para normal versus anormal, 0.88 para clasificación multiclase, y los informes coincidieron 81.4 % con la interpretación experta.\",\n      \"sources\": [6]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The authors created ORION-CMR, a scanner-native end-to-end cardiac MRI foundation model evaluated clinically.",
+     "es": "Los autores crearon ORION‑CMR, un modelo fundacional de resonancia magnética cardíaca de extremo a extremo nativo del escáner, evaluado clínicamente.",
+     "sources": [
+      2
+     ],
+     "support": 0.77,
+     "translation": 0.97
+    },
+    {
+     "en": "It was pretrained on 12,896,733 CMR images from 9,258 studies, can classify sequences, assess ventricular function, detect LGE, classify diseases, and generate reports in ~90 seconds.",
+     "es": "Se entrenó con 12,896,733 imágenes CMR de 9,258 estudios y puede clasificar secuencias, evaluar función ventricular, detectar LGE, clasificar enfermedades y generar informes en ~90 segundos.",
+     "sources": [
+      3
+     ],
+     "support": 0.95,
+     "translation": 0.91
+    },
+    {
+     "en": "The system was tested on public benchmarks and on 68 multi-vendor subjects with normal exams, congenital heart disease, dilated cardiomyopathy, and myocardial infarction.",
+     "es": "El sistema se probó en referencias públicas y en 68 sujetos de varios fabricantes con exámenes normales, enfermedad cardíaca congénita, miocardiopatía dilatada e infarto de miocardio.",
+     "sources": [
+      4
+     ],
+     "support": 0.93,
+     "translation": 0.9
+    },
+    {
+     "en": "ORION-CMR outperformed supervised baselines and the prior CMR-FM, achieving state-of-the-art performance for LGE classification and scar segmentation.",
+     "es": "ORION‑CMR superó a las líneas base supervisadas y al modelo CMR‑FM previo, logrando rendimiento de última generación en clasificación LGE y segmentación de cicatrices.",
+     "sources": [
+      5
+     ],
+     "support": 0.96,
+     "translation": 0.96
+    },
+    {
+     "en": "Clinical evaluation gave an AUC of 0.96 for normal-versus-abnormal, 0.88 for multiclass disease, and reports matched expert interpretation 81.4% of the time.",
+     "es": "La evaluación clínica obtuvo un AUC de 0.96 para normal versus anormal, 0.88 para clasificación multiclase, y los informes coincidieron 81.4 % con la interpretación experta.",
+     "sources": [
+      6
+     ],
+     "support": 0.96,
+     "translation": 0.96
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "doi-10.1038_s41586-026-11058-6",
+   "field": "health",
+   "title": "The anthropogenic fingerprint on emerging infectious diseases",
+   "latency": 5.9,
+   "tokens_in": 846,
+   "tokens_out": 1393,
+   "raw": "{\n  \"sentences\": [\n    {\n      \"en\": \"Authors compiled 58,319 outbreak records for 32 diseases and tested 16 social and environmental drivers, adjusting for detection/reporting bias.\",\n      \"es\": \"Los autores recopilaron 58 319 registros de brotes de 32 enfermedades y evaluaron 16 impulsores sociales y ambientales, ajustando por sesgos de detección y reporte.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"They found outbreak risk is highest where people and livestock live next to forests and fragmented ecosystems.\",\n      \"es\": \"Encontraron que el riesgo de brotes es mayor donde personas y ganado viven junto a bosques y ecosistemas fragmentados.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"For vector‑borne diseases like dengue, Lyme disease and zoonotic arboviruses, mosaic landscapes and long‑term precipitation decline have strong impacts.\",\n      \"es\": \"Para enfermedades transmitidas por vectores como dengue, enfermedad de Lyme y arbovirus zoonóticos, los paisajes en mosaico y la disminución a largo plazo de la precipitación tienen fuertes impactos.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Directly transmitted zoonoses such as Ebola and mpox share few common drivers, and most anthropogenic pressures affect diseases differently.\",\n      \"es\": \"Las zoonosis de transmisión directa como Ébola y viruela del mono comparten pocos impulsores comunes, y la mayoría de presiones antropogénicas afectan a las enfermedades de manera diferente.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"Outbreak reporting drops by a median 32% (range 1.2–96.7%) for each extra hour travel to a health facility.\",\n      \"es\": \"Los reportes de brotes disminuyen un 32 % mediano (rango 1.2–96.7 %) por cada hora adicional de viaje a un centro de salud.\",\n      \"sources\": [6]\n    }\n  ]\n}",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Authors compiled 58,319 outbreak records for 32 diseases and tested 16 social and environmental drivers, adjusting for detection/reporting bias.",
+     "es": "Los autores recopilaron 58 319 registros de brotes de 32 enfermedades y evaluaron 16 impulsores sociales y ambientales, ajustando por sesgos de detección y reporte.",
+     "sources": [
+      2
+     ],
+     "support": 0.95,
+     "translation": 0.95
+    },
+    {
+     "en": "They found outbreak risk is highest where people and livestock live next to forests and fragmented ecosystems.",
+     "es": "Encontraron que el riesgo de brotes es mayor donde personas y ganado viven junto a bosques y ecosistemas fragmentados.",
+     "sources": [
+      3
+     ],
+     "support": 0.92,
+     "translation": 0.94
+    },
+    {
+     "en": "For vector‑borne diseases like dengue, Lyme disease and zoonotic arboviruses, mosaic landscapes and long‑term precipitation decline have strong impacts.",
+     "es": "Para enfermedades transmitidas por vectores como dengue, enfermedad de Lyme y arbovirus zoonóticos, los paisajes en mosaico y la disminución a largo plazo de la precipitación tienen fuertes impactos.",
+     "sources": [
+      4
+     ],
+     "support": 0.66,
+     "translation": 0.94
+    },
+    {
+     "en": "Directly transmitted zoonoses such as Ebola and mpox share few common drivers, and most anthropogenic pressures affect diseases differently.",
+     "es": "Las zoonosis de transmisión directa como Ébola y viruela del mono comparten pocos impulsores comunes, y la mayoría de presiones antropogénicas afectan a las enfermedades de manera diferente.",
+     "sources": [
+      5
+     ],
+     "support": 0.93,
+     "translation": 0.95
+    },
+    {
+     "en": "Outbreak reporting drops by a median 32% (range 1.2–96.7%) for each extra hour travel to a health facility.",
+     "es": "Los reportes de brotes disminuyen un 32 % mediano (rango 1.2–96.7 %) por cada hora adicional de viaje a un centro de salud.",
+     "sources": [
+      6
+     ],
+     "support": 0.95,
+     "translation": 0.93
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  }
+ ]
+}

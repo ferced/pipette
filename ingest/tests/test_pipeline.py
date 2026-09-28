@@ -121,15 +121,21 @@ class Summaries(unittest.TestCase):
 
     def test_drops_unsupported_and_mistranslated_sentences(self):
         self.fake_jev(support=[0.9, 0.2, 0.9], translation=[0.9, 0.9, 0.1])
-        draft = [{"en": f"E{i}", "es": f"S{i}", "sources": [0]} for i in range(3)]
+        draft = [{"en": f"English {c}", "es": f"Spanish {c}", "sources": [0]} for c in "xyz"]
         kept = self.s.keep(self.s.check(["a.", "b."], draft))
-        self.assertEqual([c["en"] for c in kept], ["E0"])
+        self.assertEqual([c["en"] for c in kept], ["English x"])
 
     def test_ignores_sentences_citing_nothing_real(self):
         self.fake_jev(support=[0.9], translation=[0.9])
         draft = [{"en": "ok", "es": "ok", "sources": [1]}, {"en": "bad", "es": "mal", "sources": [7, 9]}]
         checked = self.s.check(["a.", "b."], draft)
         self.assertEqual([c["en"] for c in checked], ["ok"])
+
+    def test_numbers_must_appear_in_the_abstract(self):
+        abstract = "We tested 1,200 mice. Survival rose by 12.5% over 3 weeks."
+        self.assertTrue(self.s.numbers_ok("They tested 1200 mice for 3 weeks.", abstract))
+        self.assertFalse(self.s.numbers_ok("Survival rose by 15%.", abstract))
+        self.assertTrue(self.s.numbers_ok("Survival rose.", abstract))
 
     def test_closed_abstracts_get_no_summary(self):
         self.assertIsNone(self.s.summarize_record({"id": "x", "title": "t", "sentences": None}))

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qué IA usar para los resúmenes de Pipette</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bench:#eef2f0;--glass:#f8faf9;--ink:#14201c;--ink2:#4a5a54;--ink3:#75857f;--line:#d3dcd8;--pink:#c2186b;--soft:#f8e0eb}
+*{box-sizing:border-box} body{margin:0;background:var(--bench);color:var(--ink);font-family:'Atkinson Hyperlegible Next',system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2.2rem;letter-spacing:-.02em;margin:0 0 8px;line-height:1.15} h2{font-size:1.35rem;margin:46px 0 12px;letter-spacing:-.01em} h3{margin:24px 0 8px;font-size:1.05rem}
+p,li{max-width:48em} .lead{font-size:1.12rem;color:var(--ink2)} .fine{font-size:.88rem;color:var(--ink2)}
+.verdict{background:var(--glass);border:1px solid var(--line);border-left:4px solid var(--pink);border-radius:12px;padding:18px 22px;margin:26px 0}
+.verdict h2{margin-top:0}
+table{width:100%;border-collapse:collapse;background:var(--glass);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.92rem}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} th{font-size:.8rem;color:var(--ink2);font-weight:700;background:#e6ecea}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap} tr.fav td{background:#fff} .sub{font-size:.78rem;color:var(--ink3)}
+.tag{display:inline-block;margin-left:8px;font-size:.72rem;padding:1px 8px;border-radius:999px;background:var(--soft);color:#9d0f53;font-weight:700}
+.bar{height:5px;background:var(--line);border-radius:3px;margin-top:4px} .bar i{display:block;height:100%;background:var(--pink);border-radius:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px} .ex{background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.ex h4{margin:0 0 6px} .ex p{font-size:.93rem;margin:0} .drop{text-decoration:line-through;color:var(--ink3)}
+.tbl-wrap{overflow-x:auto} code{font-size:.88em;background:var(--glass);border:1px solid var(--line);padding:1px 5px;border-radius:4px}
+</style></head><body><div class="wrap">
+<p class="fine">Pipette · investigación interna · 28 de septiembre de 2026</p>
+<h1>Qué IA usar para los resúmenes</h1>
+<p class="lead">Probamos 18 modelos con las mismas instrucciones de producción sobre 20 papers reales de 13 campos. Jev verificó cada oración contra el abstract, sumamos un control de números y medimos legibilidad y costo con los precios oficiales.</p>
+
+<div class="verdict">
+<h2>Recomendación: Kimi K2.5 por Amazon Bedrock</h2>
+<ul>
+<li><b>Calidad:</b> 20 de 20 papers con resumen publicable y 87% de oraciones verificadas, en el grupo de punta junto a Llama 4 Maverick y Claude Sonnet 5.</li>
+<li><b>Claridad:</b> explica sin perder datos concretos y es de los que menos siglas deja sin explicar. El castellano es natural.</li>
+<li><b>Costo:</b> alrededor de US$ 1 por mes con los precios oficiales de AWS.</li>
+<li><b>Operación:</b> corre dentro de la misma cuenta de AWS que ya usa Pipette. No hay cuentas ni keys nuevas: la Lambda se autentica con su rol. Los datos no salen de AWS hacia el proveedor del modelo.</li>
+<li><b>Respaldo:</b> si Kimi falla un día, Llama 4 Maverick (95% de oraciones verificadas, US$ 0,25 por mes) toma el lugar automáticamente.</li>
+</ul>
+<p class="fine">Claude Sonnet 5 escribe muy bien, pero no salió mejor en las métricas, cuesta unas cinco veces más y requiere una cuenta y una key de Anthropic, porque Bedrock no lo tiene habilitado para esta cuenta.</p>
+</div>
+
+<h2>Resultados</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Modelo</th><th>Dónde corre</th><th>Publicables</th><th>Oraciones verificadas</th><th>Legibilidad</th><th>Siglas por oración</th><th>Palabras por oración</th><th>Latencia</th><th>Costo por mes</th></tr></thead>
+<tbody><tr class="fav">
+<td><b>Llama 4 Maverick</b><span class="tag">alternativa</span><div class="sub">Meta (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">95%<div class="bar"><i style="width:95%"></i></div></td>
+<td class="n">36.3</td>
+<td class="n">0.26</td>
+<td class="n">15.8</td>
+<td class="n">1.9 s</td>
+<td class="n"><b>US$ 0.25</b></td>
+</tr><tr class="fav">
+<td><b>Claude Sonnet 5</b><span class="tag">tu elección anterior</span><div class="sub">Anthropic</div></td>
+<td>API de Anthropic *</td>
+<td class="n">20/20</td>
+<td class="n">89%<div class="bar"><i style="width:89%"></i></div></td>
+<td class="n">34.7</td>
+<td class="n">0.28</td>
+<td class="n">22.4</td>
+<td class="n">50.3 s</td>
+<td class="n"><b>US$ 5.26</b></td>
+</tr><tr class="">
+<td><b>Nemotron Nano 3 30B</b><div class="sub">NVIDIA (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">89%<div class="bar"><i style="width:89%"></i></div></td>
+<td class="n">26.3</td>
+<td class="n">0.48</td>
+<td class="n">17.7</td>
+<td class="n">2.9 s</td>
+<td class="n"><b>US$ 0.10</b></td>
+</tr><tr class="fav">
+<td><b>Kimi K2.5</b><span class="tag">recomendado</span><div class="sub">Moonshot (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">87%<div class="bar"><i style="width:87%"></i></div></td>
+<td class="n">35.1</td>
+<td class="n">0.22</td>
+<td class="n">16.6</td>
+<td class="n">3.8 s</td>
+<td class="n"><b>US$ 1.04</b></td>
+</tr><tr class="">
+<td><b>GLM-4.7</b><div class="sub">Z.ai (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">86%<div class="bar"><i style="width:86%"></i></div></td>
+<td class="n">48.0</td>
+<td class="n">0.08</td>
+<td class="n">12.6</td>
+<td class="n">4.1 s</td>
+<td class="n"><b>US$ 0.66</b></td>
+</tr><tr class="">
+<td><b>Qwen3 Next 80B</b><div class="sub">Alibaba (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">86%<div class="bar"><i style="width:86%"></i></div></td>
+<td class="n">27.0</td>
+<td class="n">0.38</td>
+<td class="n">18.5</td>
+<td class="n">8.3 s</td>
+<td class="n"><b>US$ 0.40</b></td>
+</tr><tr class="">
+<td><b>Gemma 3 12B</b><div class="sub">Google (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">86%<div class="bar"><i style="width:86%"></i></div></td>
+<td class="n">34.5</td>
+<td class="n">0.31</td>
+<td class="n">16.2</td>
+<td class="n">6.8 s</td>
+<td class="n"><b>US$ 0.12</b></td>
+</tr><tr class="">
+<td><b>Qwen3 32B</b><div class="sub">Alibaba (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">82%<div class="bar"><i style="width:82%"></i></div></td>
+<td class="n">38.6</td>
+<td class="n">0.25</td>
+<td class="n">16.4</td>
+<td class="n">2.8 s</td>
+<td class="n"><b>US$ 0.21</b></td>
+</tr><tr class="">
+<td><b>gpt-oss 120B</b><div class="sub">OpenAI (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">81%<div class="bar"><i style="width:81%"></i></div></td>
+<td class="n">18.8</td>
+<td class="n">0.57</td>
+<td class="n">20.6</td>
+<td class="n">11.6 s</td>
+<td class="n"><b>US$ 0.96</b></td>
+</tr><tr class="">
+<td><b>DeepSeek V3.2</b><div class="sub">DeepSeek (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">20/20</td>
+<td class="n">80%<div class="bar"><i style="width:80%"></i></div></td>
+<td class="n">52.8</td>
+<td class="n">0.16</td>
+<td class="n">15.0</td>
+<td class="n">4.5 s</td>
+<td class="n"><b>US$ 0.65</b></td>
+</tr><tr class="">
+<td><b>Amazon Nova 2 Lite</b><div class="sub">Amazon</div></td>
+<td>Bedrock</td>
+<td class="n">19/20</td>
+<td class="n">85%<div class="bar"><i style="width:85%"></i></div></td>
+<td class="n">44.4</td>
+<td class="n">0.26</td>
+<td class="n">14.6</td>
+<td class="n">2.3 s</td>
+<td class="n"><b>US$ 0.69</b></td>
+</tr><tr class="">
+<td><b>Gemma 3 27B</b><div class="sub">Google (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">19/20</td>
+<td class="n">84%<div class="bar"><i style="width:84%"></i></div></td>
+<td class="n">35.8</td>
+<td class="n">0.27</td>
+<td class="n">17.3</td>
+<td class="n">11.1 s</td>
+<td class="n"><b>US$ 0.21</b></td>
+</tr><tr class="">
+<td><b>Mistral Large 3</b><div class="sub">Mistral (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">19/20</td>
+<td class="n">70%<div class="bar"><i style="width:70%"></i></div></td>
+<td class="n">45.7</td>
+<td class="n">0.25</td>
+<td class="n">16.7</td>
+<td class="n">3.0 s</td>
+<td class="n"><b>US$ 0.58</b></td>
+</tr><tr class="">
+<td><b>gpt-oss 20B</b><div class="sub">OpenAI (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">18/20</td>
+<td class="n">78%<div class="bar"><i style="width:78%"></i></div></td>
+<td class="n">29.8</td>
+<td class="n">0.53</td>
+<td class="n">17.8</td>
+<td class="n">4.2 s</td>
+<td class="n"><b>US$ 0.46</b></td>
+</tr><tr class="">
+<td><b>Amazon Nova Micro</b><div class="sub">Amazon</div></td>
+<td>Bedrock</td>
+<td class="n">18/20</td>
+<td class="n">77%<div class="bar"><i style="width:77%"></i></div></td>
+<td class="n">34.3</td>
+<td class="n">0.27</td>
+<td class="n">15.2</td>
+<td class="n">1.4 s</td>
+<td class="n"><b>US$ 0.04</b></td>
+</tr><tr class="">
+<td><b>GLM-4.7 Flash</b><div class="sub">Z.ai (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">17/20</td>
+<td class="n">73%<div class="bar"><i style="width:73%"></i></div></td>
+<td class="n">45.2</td>
+<td class="n">0.22</td>
+<td class="n">15.5</td>
+<td class="n">5.2 s</td>
+<td class="n"><b>US$ 0.12</b></td>
+</tr><tr class="">
+<td><b>Claude Haiku 4.5</b><div class="sub">Anthropic</div></td>
+<td>API de Anthropic o Bedrock *</td>
+<td class="n">17/20</td>
+<td class="n">69%<div class="bar"><i style="width:69%"></i></div></td>
+<td class="n">15.5</td>
+<td class="n">0.27</td>
+<td class="n">18.1</td>
+<td class="n">69.6 s</td>
+<td class="n"><b>US$ 1.81</b></td>
+</tr><tr class="">
+<td><b>Ministral 3 14B</b><div class="sub">Mistral (abierto)</div></td>
+<td>Bedrock</td>
+<td class="n">15/20</td>
+<td class="n">63%<div class="bar"><i style="width:63%"></i></div></td>
+<td class="n">38.4</td>
+<td class="n">0.27</td>
+<td class="n">19.2</td>
+<td class="n">2.9 s</td>
+<td class="n"><b>US$ 0.14</b></td>
+</tr></tbody></table></div>
+<ul class="fine">
+<li><b>Publicables:</b> papers con al menos dos oraciones que pasaron todos los controles.</li>
+<li><b>Oraciones verificadas:</b> porcentaje que pasa los tres controles: respaldo en el abstract según Jev, fidelidad de la traducción según Jev, y números presentes en el abstract.</li>
+<li><b>Legibilidad:</b> índice Flesch en inglés, más alto es más fácil. Los abstracts originales promedian 6.</li>
+<li><b>Costo:</b> 20 resúmenes por día con los tokens medidos y los precios oficiales on-demand de us-east-1. Claude, con precios de la API de Anthropic.</li>
+<li><b>*</b> Claude Sonnet 5 y Haiku 4.5 corrieron a través de Claude Code, que suma su propio prompt de sistema. Eso los pone en desventaja, sobre todo a Haiku, y su latencia no es comparable.</li>
+</ul>
+
+<h2>Lo que muestran los ejemplos</h2>
+<p>El porcentaje de verificación premia a los modelos que copian el vocabulario del abstract. Por eso leímos los resúmenes:</p>
+<ul>
+<li><b>Kimi K2.5, Claude Sonnet 5 y Gemma 3 12B</b> explican sin perder datos: dicen qué es un "tipping event" en vez de dejar la sigla.</li>
+<li><b>Llama 4 Maverick</b> es el más fiel, pero simplifica menos y escribe menos oraciones (3,8 por paper).</li>
+<li><b>Nemotron, Qwen3 Next y gpt-oss</b> dejan siglas técnicas sin explicar (AMOC, ARF, GCMs). Qwen3 Next además escribió "política pública pública".</li>
+<li><b>GLM-4.7 y DeepSeek</b> son los más simples, pero pierden precisión.</li>
+</ul>
+<h3>Un mismo paper, en castellano: “AI-written admissions essays are widespread but penalized”</h3>
+<p class="fine">Tachado: oraciones que no pasaron los controles y no se publicarían.</p>
+<div class="grid"><div class='ex'><h4>Kimi K2.5</h4><p><span class='drop'>Los autores estudiaron casi 7,500 solicitudes a un programa de maestría en políticas públicas de Estados Unidos de 2020 a 2025.</span> <span class=''>En 2025, la mayoría de los solicitantes envió al menos un ensayo principalmente generado por IA, aunque esto estaba prohibido.</span> <span class=''>Después del lanzamiento de ChatGPT en noviembre de 2022, la calidad de escritura de los ensayos mejoró.</span> <span class=''>Sin embargo, los solicitantes que usaron IA fueron admitidos con menos frecuencia que los no usuarios similares.</span> <span class=''>En un experimento, los oficiales de admisiones a menudo reconocieron la escritura de IA y calificaron los ensayos sospechosos de ser de IA más bajo que los humanos.</span> </p></div><div class='ex'><h4>Llama 4 Maverick</h4><p><span class='drop'>Los autores analizaron casi 7.500 solicitudes a un programa de maestría en EE. UU. entre 2020 y 2025.</span> <span class=''>La mayoría de los solicitantes en 2025 presentaron al menos un ensayo que fue escrito principalmente por IA.</span> <span class=''>Los solicitantes que usaron IA para escribir sus ensayos fueron admitidos con menos frecuencia que aquellos que no lo hicieron.</span> <span class=''>Los oficiales de admisiones a menudo reconocieron los ensayos escritos por IA y les dieron una calificación más baja que a los escritos por humanos.</span> </p></div><div class='ex'><h4>Claude Sonnet 5</h4><p><span class='drop'>Investigadores estudiaron casi 7.500 solicitudes de admisión a un programa de maestría en políticas públicas en Estados Unidos para ver cómo se usa la IA en los ensayos de admisión.</span> <span class=''>En el ciclo de admisiones de 2025, la mayoría de los postulantes presentó al menos un ensayo generado principalmente por IA, aunque su uso estaba explícitamente prohibido.</span> <span class=''>Después de que ChatGPT estuvo disponible en noviembre de 2022, la calidad de escritura de los ensayos mejoró.</span> <span class=''>Sin embargo, los postulantes cuyos ensayos fueron escritos por IA fueron admitidos con menos frecuencia que postulantes comparables que no la usaron.</span> <span class=''>En un experimento aparte, los responsables de admisiones a menudo pudieron reconocer los ensayos escritos por IA y los calificaron más bajo que los que creían escritos por humanos.</span> </p></div><div class='ex'><h4>Gemma 3 12B</h4><p><span class='drop'>Los investigadores estudiaron casi 7,500 solicitudes a un programa de maestría en los Estados Unidos.</span> <span class=''>Encontraron que la mayoría de los solicitantes en 2025 usaron IA para escribir al menos un ensayo, a pesar de que estaba prohibido.</span> <span class=''>El uso de la IA mejoró la calidad de los ensayos, según los autores.</span> <span class=''>Sin embargo, los solicitantes que usaron IA fueron admitidos con menos frecuencia que aquellos que no lo hicieron.</span> <span class=''>Los oficiales de admisión a menudo podían identificar los ensayos escritos por IA y los calificaron con menor puntuación.</span> </p></div><div class='ex'><h4>GLM-4.7</h4><p><span class=''>Los autores estudiaron solicitudes a un programa de maestría en Estados Unidos.</span> <span class=''>La mayoría de los solicitantes en 2025 enviaron ensayos escritos mayormente por IA.</span> <span class=''>La IA mejoró la calidad de escritura de los ensayos.</span> <span class=''>Sin embargo, los solicitantes que usaron IA fueron admitidos menos a menudo que otros solicitantes.</span> <span class=''>Los oficiales a menudo reconocían la escritura de la IA y le daban puntajes más bajos.</span> </p></div></div>
+
+<h2>Opciones que no pudimos probar</h2>
+<p>Estas se usan con cuenta y key propias de cada proveedor. Precios oficiales por millón de tokens y costo estimado para nuestro volumen:</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Modelo</th><th>Entrada</th><th>Salida</th><th>Por mes</th><th>Notas</th></tr></thead><tbody>
+<tr><td><b>OpenAI gpt-6-luna</b></td><td class="n">0,10</td><td class="n">0,50</td><td class="n">US$ 0,35</td><td>El más barato del mercado. Sin medición pública de alucinación todavía.</td></tr>
+<tr><td><b>OpenAI gpt-5.4-nano</b></td><td class="n">0,20</td><td class="n">1,25</td><td class="n">US$ 0,83</td><td>3,1% de alucinación en el ranking de Vectara, el segundo mejor.</td></tr>
+<tr><td><b>Google Gemini 3.1 Flash-Lite</b></td><td class="n">0,25</td><td class="n">1,50</td><td class="n">US$ 1,00</td><td>8,2% en Vectara. El plan gratuito usa los datos para entrenar.</td></tr>
+<tr><td><b>Mistral Small 4</b></td><td class="n">0,15</td><td class="n">0,60</td><td class="n">US$ 0,45</td><td>Europeo. Sin medición de alucinación.</td></tr>
+<tr><td><b>Claude Haiku 4.5</b></td><td class="n">1,00</td><td class="n">5,00</td><td class="n">US$ 3,50</td><td>9,8% en Vectara. AWS anuncia su retiro para octubre de 2026.</td></tr>
+<tr><td><b>Claude Sonnet 5</b></td><td class="n">2,00</td><td class="n">10,00</td><td class="n">US$ 5–9</td><td>Su tokenizador cuenta ~30% más tokens.</td></tr>
+<tr><td><b>DeepSeek (API directa)</b></td><td class="n">0,15–0,30</td><td class="n">0,60–1,20</td><td class="n">US$ 0,45–0,90</td><td>Descartado: entrena con los datos y los guarda en China. Por Bedrock no aplica.</td></tr>
+</tbody></table></div>
+<p class="fine">Fuentes: páginas oficiales de precios de cada proveedor y el ranking de alucinación de Vectara (actualizado el 22-09-2026). El ranking mide resúmenes en inglés sin citas, así que no predice directamente nuestro caso.</p>
+
+<h2>Correr un modelo propio</h2>
+<p>No conviene con este volumen. Estas son las opciones realistas:</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Opción</th><th>Por mes</th><th>Armado</th><th>Problema principal</th></tr></thead><tbody>
+<tr><td>Tu PC (RTX 2060, Qwen3 8B)</td><td class="n">~US$ 0,30 de luz</td><td>2–4 h</td><td>La PC tiene que estar prendida a la hora del lote y compite con tu trabajo.</td></tr>
+<tr><td>GPU en AWS solo durante el lote (g4dn, spot)</td><td class="n">~US$ 6–10</td><td>1–2 días</td><td>Cuotas, interrupciones del spot y mantenimiento de la imagen.</td></tr>
+<tr><td>GPU serverless (Modal, crédito gratis)</td><td class="n">US$ 0–5</td><td>4–8 h</td><td>Depende de que siga el plan gratuito.</td></tr>
+<tr><td>VPS barato con CPU (Hetzner)</td><td class="n">~€2–21</td><td>1 día</td><td>Lento: alrededor de una hora por lote.</td></tr>
+<tr><td>Raspberry Pi</td><td class="n">—</td><td>—</td><td>No es viable: solo entran modelos chicos que alucinan más. Además ya tiene problemas de alimentación.</td></tr>
+</tbody></table></div>
+<p>Los modelos que entran en hardware modesto, como Qwen3 8B o Gemma 3 12B, alucinan algo más que los pagos baratos. Por Bedrock ya estamos usando esos mismos modelos abiertos, pero alojados por AWS, por centavos y sin mantener nada.</p>
+
+<h2>Advertencias</h2>
+<ul>
+<li>Veinte papers es una muestra chica. Sirve para descartar y elegir, no para afirmar diferencias de uno o dos puntos.</li>
+<li>La lectura cualitativa la hizo Claude, que puede tener sesgo a favor de Claude. Por eso la recomendación se apoya en las métricas y los ejemplos están a la vista.</li>
+<li>Los controles de producción siguen activos con cualquier modelo: lo que no pasa no se publica.</li>
+</ul>
+
+<h2>Cómo se hizo</h2>
+<p class="fine">Scripts en <code>qa/summary_bench.py</code> y <code>qa/bench_report.py</code> del repo. Los resultados crudos de cada modelo, con cada oración y sus puntajes, están en <code>qa/bench/</code>. Costo total de la prueba: menos de US$ 1 en Bedrock y centavos en Jev.</p>
+</div></body></html>

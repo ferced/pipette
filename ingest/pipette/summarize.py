@@ -10,6 +10,7 @@ Pipette's promise is that readers see the authors' words first. Summaries theref
 """
 import json
 import os
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -132,15 +133,31 @@ def check(sentences, draft_sentences):
             },
         }
     answers = jev.ask(state, questions)["answers"]
+    abstract = " ".join(sentences)
     for k, c in enumerate(clean):
         c["support"] = round(float(answers[f"support_{k}"]["noul"]), 2)
         c["translation"] = round(float(answers[f"translation_{k}"]["noul"]), 2)
+        c["numbers_ok"] = numbers_ok(c["en"], abstract)
     return clean
 
 
+_NUM = re.compile(r"\d+(?:[.,]\d+)*")
+
+
+def _numbers(text):
+    return {n.replace(",", "") for n in _NUM.findall(text)}
+
+
+def numbers_ok(sentence, abstract):
+    """Every number in the summary sentence must appear literally in the abstract.
+    A deterministic check on top of Jev: numbers are where paraphrase goes wrong most easily."""
+    return _numbers(sentence) <= _numbers(abstract)
+
+
 def keep(checked):
-    """Sentences that pass both checks, in order."""
-    return [c for c in checked if c["support"] >= SUPPORT_MIN and c["translation"] >= TRANSLATION_MIN]
+    """Sentences that pass every check, in order."""
+    return [c for c in checked
+            if c["support"] >= SUPPORT_MIN and c["translation"] >= TRANSLATION_MIN and c.get("numbers_ok", True)]
 
 
 def summarize_record(rec, client=None, log=print):

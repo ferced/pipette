@@ -1,0 +1,1242 @@
+{
+ "model": "qwen3-32b",
+ "model_id": "qwen.qwen3-32b-v1:0",
+ "runner": "bedrock",
+ "rows": [
+  {
+   "id": "arxiv-2609.22716",
+   "field": "ai",
+   "title": "ZIL: Zero-shot Image-to-LiDAR Registration",
+   "latency": 2.8,
+   "tokens_in": 735,
+   "tokens_out": 359,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Image-to-LiDAR registration finds the position of a camera image relative to a LiDAR point cloud.\",\n      \"es\": \"La registración de imagen a LiDAR encuentra la posición de una imagen de cámara relativa a una nube de puntos LiDAR.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"Current methods often fail when images and LiDAR data come from different times or new situations.\",\n      \"es\": \"Los métodos actuales suelen fallar cuando las imágenes y los datos LiDAR provienen de momentos diferentes o situaciones nuevas.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"ZIL is a new model that works without synchronized data and can handle new situations.\",\n      \"es\": \"ZIL es un nuevo modelo que funciona sin datos sincronizados y puede manejar situaciones nuevas.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"ZIL improves accuracy by predicting 3D coordinates without needing extra labels.\",\n      \"es\": \"ZIL mejora la precisión al predecir coordenadas 3D sin necesidad de etiquetas adicionales.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"ZIL outperforms previous methods by up to 87% in position accuracy and 76% in rotation accuracy.\",\n      \"es\": \"ZIL supera a los métodos anteriores en hasta un 87% en precisión de posición y un 76% en precisión de rotación.\",\n      \"sources\": [6]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Image-to-LiDAR registration finds the position of a camera image relative to a LiDAR point cloud.",
+     "es": "La registración de imagen a LiDAR encuentra la posición de una imagen de cámara relativa a una nube de puntos LiDAR.",
+     "sources": [
+      0
+     ],
+     "support": 0.96,
+     "translation": 0.9
+    },
+    {
+     "en": "Current methods often fail when images and LiDAR data come from different times or new situations.",
+     "es": "Los métodos actuales suelen fallar cuando las imágenes y los datos LiDAR provienen de momentos diferentes o situaciones nuevas.",
+     "sources": [
+      1
+     ],
+     "support": 0.71,
+     "translation": 0.96
+    },
+    {
+     "en": "ZIL is a new model that works without synchronized data and can handle new situations.",
+     "es": "ZIL es un nuevo modelo que funciona sin datos sincronizados y puede manejar situaciones nuevas.",
+     "sources": [
+      2
+     ],
+     "support": 0.66,
+     "translation": 0.95
+    },
+    {
+     "en": "ZIL improves accuracy by predicting 3D coordinates without needing extra labels.",
+     "es": "ZIL mejora la precisión al predecir coordenadas 3D sin necesidad de etiquetas adicionales.",
+     "sources": [
+      4
+     ],
+     "support": 0.94,
+     "translation": 0.95
+    },
+    {
+     "en": "ZIL outperforms previous methods by up to 87% in position accuracy and 76% in rotation accuracy.",
+     "es": "ZIL supera a los métodos anteriores en hasta un 87% en precisión de posición y un 76% en precisión de rotación.",
+     "sources": [
+      6
+     ],
+     "support": 0.84,
+     "translation": 0.92
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.24182",
+   "field": "chemistry",
+   "title": "Ferroelectric switching of odd-parity magnon spin splitting",
+   "latency": 2.4,
+   "tokens_in": 763,
+   "tokens_out": 387,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"The study shows room-temperature evidence of odd-parity magnon spin splitting controlled by ferroelectric switching in BiFeO3.\",\n      \"es\": \"El estudio muestra evidencia a temperatura ambiente de una división de espín de magnones de paridad impar controlada por conmutación ferroeléctrica en BiFeO3.\",\n      \"sources\": [5, 6, 8]\n    },\n    {\n      \"en\": \"Odd-parity spin textures in magnons were previously unconfirmed experimentally.\",\n      \"es\": \"Las texturas de espín de paridad impar en magnones no habían sido confirmadas experimentalmente antes.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"The study uses symmetry analysis and spin-wave calculations to explain the odd-parity splitting.\",\n      \"es\": \"El estudio usa análisis de simetría y cálculos de ondas de espín para explicar la división de paridad impar.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"The magnon spin splitting is used to control a perpendicular ferromagnet and perform XNOR logic-in-memory operations.\",\n      \"es\": \"La división de espín de los magnones se usa para controlar un ferromagnetismo perpendicular y realizar operaciones lógicas XNOR en la memoria.\",\n      \"sources\": [9]\n    },\n    {\n      \"en\": \"This work expands odd-parity spin splitting from electronic states to bosonic collective modes.\",\n      \"es\": \"Este trabajo amplía la división de espín de paridad impar desde estados electrónicos a modos colectivos bosónicos.\",\n      \"sources\": [10]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The study shows room-temperature evidence of odd-parity magnon spin splitting controlled by ferroelectric switching in BiFeO3.",
+     "es": "El estudio muestra evidencia a temperatura ambiente de una división de espín de magnones de paridad impar controlada por conmutación ferroeléctrica en BiFeO3.",
+     "sources": [
+      5,
+      6,
+      8
+     ],
+     "support": 0.9,
+     "translation": 0.96
+    },
+    {
+     "en": "Odd-parity spin textures in magnons were previously unconfirmed experimentally.",
+     "es": "Las texturas de espín de paridad impar en magnones no habían sido confirmadas experimentalmente antes.",
+     "sources": [
+      2
+     ],
+     "support": 0.75,
+     "translation": 0.9
+    },
+    {
+     "en": "The study uses symmetry analysis and spin-wave calculations to explain the odd-parity splitting.",
+     "es": "El estudio usa análisis de simetría y cálculos de ondas de espín para explicar la división de paridad impar.",
+     "sources": [
+      6
+     ],
+     "support": 0.93,
+     "translation": 0.96
+    },
+    {
+     "en": "The magnon spin splitting is used to control a perpendicular ferromagnet and perform XNOR logic-in-memory operations.",
+     "es": "La división de espín de los magnones se usa para controlar un ferromagnetismo perpendicular y realizar operaciones lógicas XNOR en la memoria.",
+     "sources": [
+      9
+     ],
+     "support": 0.91,
+     "translation": 0.83
+    },
+    {
+     "en": "This work expands odd-parity spin splitting from electronic states to bosonic collective modes.",
+     "es": "Este trabajo amplía la división de espín de paridad impar desde estados electrónicos a modos colectivos bosónicos.",
+     "sources": [
+      10
+     ],
+     "support": 0.98,
+     "translation": 0.96
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22519",
+   "field": "computing",
+   "title": "The Choreographic Genome: Amplifying the Silent Structure of Text into Dance",
+   "latency": 2.2,
+   "tokens_in": 798,
+   "tokens_out": 320,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"The researchers created a tool that turns text into dance by focusing on the structure of the text, not its meaning.\",\n      \"es\": \"Los investigadores crearon una herramienta que convierte el texto en danza enfocándose en la estructura del texto, no en su significado.\",\n      \"sources\": [0, 1, 2, 3]\n    },\n    {\n      \"en\": \"They used a method that breaks down dance movements into 256 categories and maps text bytes to these categories.\",\n      \"es\": \"Usaron un método que descompone los movimientos de baile en 256 categorías y mapea los bytes del texto a estas categorías.\",\n      \"sources\": [4, 5]\n    },\n    {\n      \"en\": \"They tested this with different texts, showing each produces a unique dance and some scripts create more movement per character.\",\n      \"es\": \"Probaron esto con diferentes textos, mostrando que cada uno produce una danza única y algunos scripts generan más movimiento por carácter.\",\n      \"sources\": [7]\n    },\n    {\n      \"en\": \"The goal is not to create a new benchmark, but to question what we consider important in text analysis.\",\n      \"es\": \"El objetivo no es crear un nuevo estándar, sino cuestionar qué consideramos importante en el análisis de texto.\",\n      \"sources\": [8]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "The researchers created a tool that turns text into dance by focusing on the structure of the text, not its meaning.",
+     "es": "Los investigadores crearon una herramienta que convierte el texto en danza enfocándose en la estructura del texto, no en su significado.",
+     "sources": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "support": 0.78,
+     "translation": 0.96
+    },
+    {
+     "en": "They used a method that breaks down dance movements into 256 categories and maps text bytes to these categories.",
+     "es": "Usaron un método que descompone los movimientos de baile en 256 categorías y mapea los bytes del texto a estas categorías.",
+     "sources": [
+      4,
+      5
+     ],
+     "support": 0.9,
+     "translation": 0.95
+    },
+    {
+     "en": "They tested this with different texts, showing each produces a unique dance and some scripts create more movement per character.",
+     "es": "Probaron esto con diferentes textos, mostrando que cada uno produce una danza única y algunos scripts generan más movimiento por carácter.",
+     "sources": [
+      7
+     ],
+     "support": 0.88,
+     "translation": 0.9
+    },
+    {
+     "en": "The goal is not to create a new benchmark, but to question what we consider important in text analysis.",
+     "es": "El objetivo no es crear un nuevo estándar, sino cuestionar qué consideramos importante en el análisis de texto.",
+     "sources": [
+      8
+     ],
+     "support": 0.79,
+     "translation": 0.86
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.23149",
+   "field": "earth",
+   "title": "ClimTip-GML: A global bias-corrected and downscaled dataset for assessing impacts of climate tipping events",
+   "latency": 2.4,
+   "tokens_in": 744,
+   "tokens_out": 321,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"The study introduces ClimTip-GML, a new climate dataset that corrects biases and increases resolution for assessing climate tipping events.\",\n      \"es\": \"El estudio presenta ClimTip-GML, un nuevo conjunto de datos climáticos que corrige sesgos y aumenta la resolución para evaluar eventos climáticos críticos.\",\n      \"sources\": [0, 1]\n    },\n    {\n      \"en\": \"ClimTip-GML includes climate simulations at high resolution from three models, covering scenarios with and without tipping events.\",\n      \"es\": \"ClimTip-GML incluye simulaciones climáticas de alta resolución de tres modelos, cubriendo escenarios con y sin eventos críticos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"Machine learning techniques were used to correct biases and improve spatial variability in the dataset.\",\n      \"es\": \"Se usaron técnicas de aprendizaje automático para corregir sesgos y mejorar la variabilidad espacial en el conjunto de datos.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"The dataset improves impact assessments of tipping events like those in the Amazon rainforest or Atlantic circulation.\",\n      \"es\": \"El conjunto de datos mejora la evaluación de impactos de eventos críticos, como los de la selva amazónica o la circulación atlántica.\",\n      \"sources\": [5]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "The study introduces ClimTip-GML, a new climate dataset that corrects biases and increases resolution for assessing climate tipping events.",
+     "es": "El estudio presenta ClimTip-GML, un nuevo conjunto de datos climáticos que corrige sesgos y aumenta la resolución para evaluar eventos climáticos críticos.",
+     "sources": [
+      0,
+      1
+     ],
+     "support": 0.87,
+     "translation": 0.92
+    },
+    {
+     "en": "ClimTip-GML includes climate simulations at high resolution from three models, covering scenarios with and without tipping events.",
+     "es": "ClimTip-GML incluye simulaciones climáticas de alta resolución de tres modelos, cubriendo escenarios con y sin eventos críticos.",
+     "sources": [
+      2
+     ],
+     "support": 0.42,
+     "translation": 0.78
+    },
+    {
+     "en": "Machine learning techniques were used to correct biases and improve spatial variability in the dataset.",
+     "es": "Se usaron técnicas de aprendizaje automático para corregir sesgos y mejorar la variabilidad espacial en el conjunto de datos.",
+     "sources": [
+      3
+     ],
+     "support": 0.48,
+     "translation": 0.95
+    },
+    {
+     "en": "The dataset improves impact assessments of tipping events like those in the Amazon rainforest or Atlantic circulation.",
+     "es": "El conjunto de datos mejora la evaluación de impactos de eventos críticos, como los de la selva amazónica o la circulación atlántica.",
+     "sources": [
+      5
+     ],
+     "support": 0.88,
+     "translation": 0.74
+    }
+   ],
+   "kept": 2,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.15.751910",
+   "field": "ecology",
+   "title": "Single-nucleus profiling of social behaviour in a mutualistic reef fish",
+   "latency": 1.5,
+   "tokens_in": 674,
+   "tokens_out": 342,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"The study created a detailed map of brain cell activity in a reef fish known for complex social behaviors.\",\n      \"es\": \"El estudio creó un mapa detallado de la actividad de las células cerebrales en un pez de arrecife conocido por comportamientos sociales complejos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"Researchers analyzed about 67,000 brain cell nuclei to understand the brain structure and identify specific cell types linked to social behavior.\",\n      \"es\": \"Los investigadores analizaron aproximadamente 67,000 núcleos de células cerebrales para entender la estructura del cerebro e identificar tipos específicos de células vinculados al comportamiento social.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"The study found that different social behaviors, like interacting or observing, are linked to specific patterns of gene activity.\",\n      \"es\": \"El estudio encontró que diferentes comportamientos sociales, como interactuar u observar, están vinculados a patrones específicos de actividad genética.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"The results suggest that similar brain cell types and genetic patterns may support complex social behaviors in many vertebrates.\",\n      \"es\": \"Los resultados sugieren que tipos similares de células cerebrales y patrones genéticos podrían apoyar comportamientos sociales complejos en muchos vertebrados.\",\n      \"sources\": [5]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "The study created a detailed map of brain cell activity in a reef fish known for complex social behaviors.",
+     "es": "El estudio creó un mapa detallado de la actividad de las células cerebrales en un pez de arrecife conocido por comportamientos sociales complejos.",
+     "sources": [
+      2
+     ],
+     "support": 0.4,
+     "translation": 0.94
+    },
+    {
+     "en": "Researchers analyzed about 67,000 brain cell nuclei to understand the brain structure and identify specific cell types linked to social behavior.",
+     "es": "Los investigadores analizaron aproximadamente 67,000 núcleos de células cerebrales para entender la estructura del cerebro e identificar tipos específicos de células vinculados al comportamiento social.",
+     "sources": [
+      3
+     ],
+     "support": 0.84,
+     "translation": 0.91
+    },
+    {
+     "en": "The study found that different social behaviors, like interacting or observing, are linked to specific patterns of gene activity.",
+     "es": "El estudio encontró que diferentes comportamientos sociales, como interactuar u observar, están vinculados a patrones específicos de actividad genética.",
+     "sources": [
+      4
+     ],
+     "support": 0.9,
+     "translation": 0.93
+    },
+    {
+     "en": "The results suggest that similar brain cell types and genetic patterns may support complex social behaviors in many vertebrates.",
+     "es": "Los resultados sugieren que tipos similares de células cerebrales y patrones genéticos podrían apoyar comportamientos sociales complejos en muchos vertebrados.",
+     "sources": [
+      5
+     ],
+     "support": 0.82,
+     "translation": 0.92
+    }
+   ],
+   "kept": 3,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22594",
+   "field": "engineering",
+   "title": "Characterizing Wildlife Response to Biomimetic and Conventional Underwater Vehicles",
+   "latency": 2.4,
+   "tokens_in": 749,
+   "tokens_out": 296,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Researchers compared how fish react to two types of underwater robots and a human diver.\",\n      \"es\": \"Los investigadores compararon cómo reaccionan los peces frente a dos tipos de robots submarinos y un buzo.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"They found that both robots changed fish behavior, but the robot that looked like a sea turtle had a smaller effect.\",\n      \"es\": \"Encontraron que ambos robots cambiaron el comportamiento de los peces, pero el robot que se parecía a una tortuga marina tuvo un efecto menor.\",\n      \"sources\": [5, 6]\n    },\n    {\n      \"en\": \"The study also found that fish reacted more strongly to the human diver than to the robots.\",\n      \"es\": \"El estudio también encontró que los peces reaccionaron con más intensidad frente al buzo que frente a los robots.\",\n      \"sources\": [7]\n    },\n    {\n      \"en\": \"This is the first dataset comparing how biomimetic and traditional robots affect wildlife behavior.\",\n      \"es\": \"Este es el primer conjunto de datos que compara cómo afectan los robots biomíméticos y tradicionales al comportamiento de la vida silvestre.\",\n      \"sources\": [8]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "Researchers compared how fish react to two types of underwater robots and a human diver.",
+     "es": "Los investigadores compararon cómo reaccionan los peces frente a dos tipos de robots submarinos y un buzo.",
+     "sources": [
+      3
+     ],
+     "support": 0.9,
+     "translation": 0.96
+    },
+    {
+     "en": "They found that both robots changed fish behavior, but the robot that looked like a sea turtle had a smaller effect.",
+     "es": "Encontraron que ambos robots cambiaron el comportamiento de los peces, pero el robot que se parecía a una tortuga marina tuvo un efecto menor.",
+     "sources": [
+      5,
+      6
+     ],
+     "support": 0.37,
+     "translation": 0.96
+    },
+    {
+     "en": "The study also found that fish reacted more strongly to the human diver than to the robots.",
+     "es": "El estudio también encontró que los peces reaccionaron con más intensidad frente al buzo que frente a los robots.",
+     "sources": [
+      7
+     ],
+     "support": 0.33,
+     "translation": 0.95
+    },
+    {
+     "en": "This is the first dataset comparing how biomimetic and traditional robots affect wildlife behavior.",
+     "es": "Este es el primer conjunto de datos que compara cómo afectan los robots biomíméticos y tradicionales al comportamiento de la vida silvestre.",
+     "sources": [
+      8
+     ],
+     "support": 0.71,
+     "translation": 0.74
+    }
+   ],
+   "kept": 2,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.14.751595",
+   "field": "health",
+   "title": "Visualizing micro- nanoplastics in the human brain: Early evidence for roles in microvascular pathology",
+   "latency": 1.7,
+   "tokens_in": 832,
+   "tokens_out": 324,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Researchers looked for plastics in human brain samples because they found strange particles in blood vessels.\",\n      \"es\": \"Los investigadores buscaron plásticos en muestras de cerebro humano porque encontraron partículas extrañas en vasos sanguíneos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"They used special tests to check if these particles were plastics and found 10 different types.\",\n      \"es\": \"Usaron pruebas especiales para ver si estas partículas eran plásticos y encontraron 10 tipos diferentes.\",\n      \"sources\": [3, 4]\n    },\n    {\n      \"en\": \"Fluorescent particles similar to polyethylene and polypropylene were found on blood vessel walls in the brain.\",\n      \"es\": \"Se encontraron partículas fluorescentes similares al polietileno y al polipropileno en las paredes de los vasos sanguíneos del cerebro.\",\n      \"sources\": [11]\n    },\n    {\n      \"en\": \"These findings suggest that plastics may be present in the brain and could be linked to blood vessel issues.\",\n      \"es\": \"Estos hallazgos sugieren que los plásticos podrían estar presentes en el cerebro y podrían estar relacionados con problemas en los vasos sanguíneos.\",\n      \"sources\": [12, 14]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "Researchers looked for plastics in human brain samples because they found strange particles in blood vessels.",
+     "es": "Los investigadores buscaron plásticos en muestras de cerebro humano porque encontraron partículas extrañas en vasos sanguíneos.",
+     "sources": [
+      2
+     ],
+     "support": 0.47,
+     "translation": 0.96
+    },
+    {
+     "en": "They used special tests to check if these particles were plastics and found 10 different types.",
+     "es": "Usaron pruebas especiales para ver si estas partículas eran plásticos y encontraron 10 tipos diferentes.",
+     "sources": [
+      3,
+      4
+     ],
+     "support": 0.68,
+     "translation": 0.95
+    },
+    {
+     "en": "Fluorescent particles similar to polyethylene and polypropylene were found on blood vessel walls in the brain.",
+     "es": "Se encontraron partículas fluorescentes similares al polietileno y al polipropileno en las paredes de los vasos sanguíneos del cerebro.",
+     "sources": [
+      11
+     ],
+     "support": 0.66,
+     "translation": 0.92
+    },
+    {
+     "en": "These findings suggest that plastics may be present in the brain and could be linked to blood vessel issues.",
+     "es": "Estos hallazgos sugieren que los plásticos podrían estar presentes en el cerebro y podrían estar relacionados con problemas en los vasos sanguíneos.",
+     "sources": [
+      12,
+      14
+     ],
+     "support": 0.24,
+     "translation": 0.87
+    }
+   ],
+   "kept": 2,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.25964",
+   "field": "life",
+   "title": "Simulation and Analysis of Solute Transport in Multi-Lymphangion Lymphatic Vessels",
+   "latency": 2.3,
+   "tokens_in": 828,
+   "tokens_out": 394,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"The lymphatic system, a network of vessels and organs, has not been studied for molecular communication uses, even though it has features that make it a good option.\",\n      \"es\": \"El sistema linfático, una red de vasos y órganos, no ha sido estudiado para usos de comunicación molecular, a pesar de tener características que lo hacen una buena opción.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"These features include slower flow, simpler fluid, and direct access to lymph nodes.\",\n      \"es\": \"Estas características incluyen un flujo más lento, un fluido más simple y acceso directo a los ganglios linfáticos.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"Researchers created a simulation to study how substances move through the lymphatic system.\",\n      \"es\": \"Los investigadores crearon una simulación para estudiar cómo se mueven las sustancias a través del sistema linfático.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"The simulation shows that substance concentrations in the lymphatic system change in bursts over time, which matches what is seen in living organisms.\",\n      \"es\": \"La simulación muestra que las concentraciones de sustancias en el sistema linfático cambian en ráfagas con el tiempo, lo que coincide con lo observado en organismos vivos.\",\n      \"sources\": [4, 5]\n    },\n    {\n      \"en\": \"The simulation helps understand how substance movement can be used for communication in the lymphatic system.\",\n      \"es\": \"La simulación ayuda a entender cómo el movimiento de sustancias puede usarse para comunicación en el sistema linfático.\",\n      \"sources\": [7]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "The lymphatic system, a network of vessels and organs, has not been studied for molecular communication uses, even though it has features that make it a good option.",
+     "es": "El sistema linfático, una red de vasos y órganos, no ha sido estudiado para usos de comunicación molecular, a pesar de tener características que lo hacen una buena opción.",
+     "sources": [
+      0
+     ],
+     "support": 0.92,
+     "translation": 0.96
+    },
+    {
+     "en": "These features include slower flow, simpler fluid, and direct access to lymph nodes.",
+     "es": "Estas características incluyen un flujo más lento, un fluido más simple y acceso directo a los ganglios linfáticos.",
+     "sources": [
+      1
+     ],
+     "support": 0.93,
+     "translation": 0.94
+    },
+    {
+     "en": "Researchers created a simulation to study how substances move through the lymphatic system.",
+     "es": "Los investigadores crearon una simulación para estudiar cómo se mueven las sustancias a través del sistema linfático.",
+     "sources": [
+      3
+     ],
+     "support": 0.85,
+     "translation": 0.97
+    },
+    {
+     "en": "The simulation shows that substance concentrations in the lymphatic system change in bursts over time, which matches what is seen in living organisms.",
+     "es": "La simulación muestra que las concentraciones de sustancias en el sistema linfático cambian en ráfagas con el tiempo, lo que coincide con lo observado en organismos vivos.",
+     "sources": [
+      4,
+      5
+     ],
+     "support": 0.92,
+     "translation": 0.96
+    },
+    {
+     "en": "The simulation helps understand how substance movement can be used for communication in the lymphatic system.",
+     "es": "La simulación ayuda a entender cómo el movimiento de sustancias puede usarse para comunicación en el sistema linfático.",
+     "sources": [
+      7
+     ],
+     "support": 0.77,
+     "translation": 0.97
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.25894",
+   "field": "math",
+   "title": "Relegation, promotion and the components of scoring in water polo",
+   "latency": 3.9,
+   "tokens_in": 705,
+   "tokens_out": 430,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"The study focuses on how relegation decisions are made in European water polo leagues.\",\n      \"es\": \"El estudio se enfoca en cómo se toman las decisiones de relegación en las ligas europeas de waterpolo.\",\n      \"sources\": [0, 1]\n    },\n    {\n      \"en\": \"In Italy's league, one club is relegated for finishing last and another through a three-match play-out.\",\n      \"es\": \"En la liga italiana, un club es relegado por terminar último y otro a través de un play-out de tres partidos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"The study compares four methods to set prior records for newly promoted clubs.\",\n      \"es\": \"El estudio compara cuatro métodos para establecer registros previos para clubes recién promovidos.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"A new model breaks down scoring into different components like even-strength and man-up situations.\",\n      \"es\": \"Un nuevo modelo descompone el marcador en componentes como situaciones de igualdad y ventaja numérica.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"The model can predict relegation better than the league table and shows the play-out is nearly random.\",\n      \"es\": \"El modelo puede predecir la relegación mejor que la tabla del campeonato y muestra que el play-out es casi aleatorio.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"Promoted clubs start below league average in most scoring areas, but knowing how they were promoted doesn't improve forecasts.\",\n      \"es\": \"Los clubes promovidos comienzan por debajo del promedio del campeonato en la mayoría de las áreas de anotación, pero saber cómo fueron promovidos no mejora las predicciones.\",\n      \"sources\": [7]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 6,
+   "valid": 6,
+   "checked": [
+    {
+     "en": "The study focuses on how relegation decisions are made in European water polo leagues.",
+     "es": "El estudio se enfoca en cómo se toman las decisiones de relegación en las ligas europeas de waterpolo.",
+     "sources": [
+      0,
+      1
+     ],
+     "support": 0.61,
+     "translation": 0.95
+    },
+    {
+     "en": "In Italy's league, one club is relegated for finishing last and another through a three-match play-out.",
+     "es": "En la liga italiana, un club es relegado por terminar último y otro a través de un play-out de tres partidos.",
+     "sources": [
+      2
+     ],
+     "support": 0.82,
+     "translation": 0.92
+    },
+    {
+     "en": "The study compares four methods to set prior records for newly promoted clubs.",
+     "es": "El estudio compara cuatro métodos para establecer registros previos para clubes recién promovidos.",
+     "sources": [
+      3
+     ],
+     "support": 0.89,
+     "translation": 0.89
+    },
+    {
+     "en": "A new model breaks down scoring into different components like even-strength and man-up situations.",
+     "es": "Un nuevo modelo descompone el marcador en componentes como situaciones de igualdad y ventaja numérica.",
+     "sources": [
+      4
+     ],
+     "support": 0.91,
+     "translation": 0.89
+    },
+    {
+     "en": "The model can predict relegation better than the league table and shows the play-out is nearly random.",
+     "es": "El modelo puede predecir la relegación mejor que la tabla del campeonato y muestra que el play-out es casi aleatorio.",
+     "sources": [
+      6
+     ],
+     "support": 0.85,
+     "translation": 0.93
+    },
+    {
+     "en": "Promoted clubs start below league average in most scoring areas, but knowing how they were promoted doesn't improve forecasts.",
+     "es": "Los clubes promovidos comienzan por debajo del promedio del campeonato en la mayoría de las áreas de anotación, pero saber cómo fueron promovidos no mejora las predicciones.",
+     "sources": [
+      7
+     ],
+     "support": 0.82,
+     "translation": 0.92
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.17.751377",
+   "field": "neuro",
+   "title": "Chemogenetic activation of hypothalamic oxytocin neurons reorients face exploration toward the eyes in macaques",
+   "latency": 2.8,
+   "tokens_in": 761,
+   "tokens_out": 321,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Oxytocin influences social behavior in many species.\",\n      \"es\": \"La oxitocina influye en el comportamiento social en muchas especies.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"Researchers used a method to activate oxytocin neurons in specific brain areas of macaques.\",\n      \"es\": \"Los investigadores usaron un método para activar neuronas de oxitocina en áreas específicas del cerebro de macacos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"They tracked how the monkeys explored blurred face images with their fingers.\",\n      \"es\": \"Siguieron cómo los monos exploraban imágenes borrosas de rostros con sus dedos.\",\n      \"sources\": [3, 4]\n    },\n    {\n      \"en\": \"Activation made the monkeys focus more on the eyes during face exploration.\",\n      \"es\": \"La activación hizo que los monos se enfocaran más en los ojos durante la exploración de rostros.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"This study shows that oxytocin neurons in the brain affect how primates visually explore faces.\",\n      \"es\": \"Este estudio muestra que las neuronas de oxitocina en el cerebro afectan cómo los primates exploran visualmente rostros.\",\n      \"sources\": [7]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Oxytocin influences social behavior in many species.",
+     "es": "La oxitocina influye en el comportamiento social en muchas especies.",
+     "sources": [
+      0
+     ],
+     "support": 0.88,
+     "translation": 0.95
+    },
+    {
+     "en": "Researchers used a method to activate oxytocin neurons in specific brain areas of macaques.",
+     "es": "Los investigadores usaron un método para activar neuronas de oxitocina en áreas específicas del cerebro de macacos.",
+     "sources": [
+      2
+     ],
+     "support": 0.89,
+     "translation": 0.97
+    },
+    {
+     "en": "They tracked how the monkeys explored blurred face images with their fingers.",
+     "es": "Siguieron cómo los monos exploraban imágenes borrosas de rostros con sus dedos.",
+     "sources": [
+      3,
+      4
+     ],
+     "support": 0.81,
+     "translation": 0.93
+    },
+    {
+     "en": "Activation made the monkeys focus more on the eyes during face exploration.",
+     "es": "La activación hizo que los monos se enfocaran más en los ojos durante la exploración de rostros.",
+     "sources": [
+      5
+     ],
+     "support": 0.9,
+     "translation": 0.96
+    },
+    {
+     "en": "This study shows that oxytocin neurons in the brain affect how primates visually explore faces.",
+     "es": "Este estudio muestra que las neuronas de oxitocina en el cerebro afectan cómo los primates exploran visualmente rostros.",
+     "sources": [
+      7
+     ],
+     "support": 0.9,
+     "translation": 0.96
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22579",
+   "field": "physics",
+   "title": "Gliders on Aperiodic Monotilings: Cellular Automata on the Hat and Spectre",
+   "latency": 3.5,
+   "tokens_in": 694,
+   "tokens_out": 520,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"In 2023, the hat and spectre monotiles were discovered to tile the plane only aperiodically.\",\n      \"es\": \"En 2023, se descubrieron los monotiles sombrero y espectro que solo pueden teselar el plano de manera aperiódica.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"Researchers studied cellular automata on these tilings using patches generated by finite-state transducers.\",\n      \"es\": \"Investigadores estudiaron autómatas celulares en estos teselados usando parches generados por transductores de estado finito.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"Exhaustive and evolutionary searches found no gliders, only mortal travelers, in edge-adjacency semi-totalistic rules.\",\n      \"es\": \"Búsquedas exhaustivas y evolutivas encontraron solo viajeros mortales, no gliders, en reglas semi-totales de adyacencia de bordes.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"By extending rule space to vertex neighborhoods and priority-table rules, gliders were discovered on both tilings.\",\n      \"es\": \"Al extender el espacio de reglas a vecindarios de vértices y reglas de tabla de prioridad, se descubrieron gliders en ambos teselados.\",\n      \"sources\": [3, 4]\n    },\n    {\n      \"en\": \"Gliders move at constant speed and heading, with directions quantized onto a six-spoke compass.\",\n      \"es\": \"Los gliders se mueven a velocidad y dirección constantes, con direcciones cuantificadas en una brújula de seis radios.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"Both rule-space extensions were shown to be necessary for glider discovery.\",\n      \"es\": \"Ambas extensiones del espacio de reglas resultaron necesarias para el descubrimiento de gliders.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"All results can be replayed in an interactive essay provided with the study.\",\n      \"es\": \"Todos los resultados se pueden reproducir en un ensayo interactivo incluido con el estudio.\",\n      \"sources\": [7]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 7,
+   "valid": 7,
+   "checked": [
+    {
+     "en": "In 2023, the hat and spectre monotiles were discovered to tile the plane only aperiodically.",
+     "es": "En 2023, se descubrieron los monotiles sombrero y espectro que solo pueden teselar el plano de manera aperiódica.",
+     "sources": [
+      0
+     ],
+     "support": 0.95,
+     "translation": 0.78
+    },
+    {
+     "en": "Researchers studied cellular automata on these tilings using patches generated by finite-state transducers.",
+     "es": "Investigadores estudiaron autómatas celulares en estos teselados usando parches generados por transductores de estado finito.",
+     "sources": [
+      1
+     ],
+     "support": 0.62,
+     "translation": 0.95
+    },
+    {
+     "en": "Exhaustive and evolutionary searches found no gliders, only mortal travelers, in edge-adjacency semi-totalistic rules.",
+     "es": "Búsquedas exhaustivas y evolutivas encontraron solo viajeros mortales, no gliders, en reglas semi-totales de adyacencia de bordes.",
+     "sources": [
+      2
+     ],
+     "support": 0.91,
+     "translation": 0.84
+    },
+    {
+     "en": "By extending rule space to vertex neighborhoods and priority-table rules, gliders were discovered on both tilings.",
+     "es": "Al extender el espacio de reglas a vecindarios de vértices y reglas de tabla de prioridad, se descubrieron gliders en ambos teselados.",
+     "sources": [
+      3,
+      4
+     ],
+     "support": 0.92,
+     "translation": 0.88
+    },
+    {
+     "en": "Gliders move at constant speed and heading, with directions quantized onto a six-spoke compass.",
+     "es": "Los gliders se mueven a velocidad y dirección constantes, con direcciones cuantificadas en una brújula de seis radios.",
+     "sources": [
+      5
+     ],
+     "support": 0.13,
+     "translation": 0.77
+    },
+    {
+     "en": "Both rule-space extensions were shown to be necessary for glider discovery.",
+     "es": "Ambas extensiones del espacio de reglas resultaron necesarias para el descubrimiento de gliders.",
+     "sources": [
+      6
+     ],
+     "support": 0.76,
+     "translation": 0.88
+    },
+    {
+     "en": "All results can be replayed in an interactive essay provided with the study.",
+     "es": "Todos los resultados se pueden reproducir en un ensayo interactivo incluido con el estudio.",
+     "sources": [
+      7
+     ],
+     "support": 0.84,
+     "translation": 0.83
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22549",
+   "field": "society",
+   "title": "AI-written admissions essays are widespread but penalized",
+   "latency": 2.6,
+   "tokens_in": 698,
+   "tokens_out": 436,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"AI is changing higher education, especially the application process, but its use and effects are not well understood.\",\n      \"es\": \"La inteligencia artificial está cambiando la educación superior, especialmente el proceso de aplicación, pero su uso y efectos no están bien comprendidos.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"A study of nearly 7,500 applications to a U.S. master's program found that most applicants used AI to write essays despite a ban.\",\n      \"es\": \"Un estudio de casi 7,500 aplicaciones a un programa de maestría en Estados Unidos encontró que la mayoría de los solicitantes usó la IA para escribir ensayos a pesar de un boicot.\",\n      \"sources\": [1, 2]\n    },\n    {\n      \"en\": \"AI-written essays improved in quality after ChatGPT was introduced, but applicants using AI were less likely to be admitted.\",\n      \"es\": \"Los ensayos escritos por IA mejoraron en calidad después de la introducción de ChatGPT, pero los solicitantes que usaban IA tenían menos probabilidades de ser admitidos.\",\n      \"sources\": [3, 4]\n    },\n    {\n      \"en\": \"Admissions officers often recognized AI-written essays and rated them lower than essays they believed were written by humans.\",\n      \"es\": \"Los oficiales de admisiones a menudo reconocieron los ensayos escritos por IA y los calificaron más bajo que los ensayos que creían escritos por humanos.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"This suggests AI is changing both how essays are written and how they are evaluated in admissions processes.\",\n      \"es\": \"Esto sugiere que la IA está cambiando tanto cómo se escriben los ensayos como cómo se evalúan en los procesos de admisión.\",\n      \"sources\": [6]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "AI is changing higher education, especially the application process, but its use and effects are not well understood.",
+     "es": "La inteligencia artificial está cambiando la educación superior, especialmente el proceso de aplicación, pero su uso y efectos no están bien comprendidos.",
+     "sources": [
+      0
+     ],
+     "support": 0.89,
+     "translation": 0.97
+    },
+    {
+     "en": "A study of nearly 7,500 applications to a U.S. master's program found that most applicants used AI to write essays despite a ban.",
+     "es": "Un estudio de casi 7,500 aplicaciones a un programa de maestría en Estados Unidos encontró que la mayoría de los solicitantes usó la IA para escribir ensayos a pesar de un boicot.",
+     "sources": [
+      1,
+      2
+     ],
+     "support": 0.76,
+     "translation": 0.24
+    },
+    {
+     "en": "AI-written essays improved in quality after ChatGPT was introduced, but applicants using AI were less likely to be admitted.",
+     "es": "Los ensayos escritos por IA mejoraron en calidad después de la introducción de ChatGPT, pero los solicitantes que usaban IA tenían menos probabilidades de ser admitidos.",
+     "sources": [
+      3,
+      4
+     ],
+     "support": 0.77,
+     "translation": 0.95
+    },
+    {
+     "en": "Admissions officers often recognized AI-written essays and rated them lower than essays they believed were written by humans.",
+     "es": "Los oficiales de admisiones a menudo reconocieron los ensayos escritos por IA y los calificaron más bajo que los ensayos que creían escritos por humanos.",
+     "sources": [
+      5
+     ],
+     "support": 0.9,
+     "translation": 0.96
+    },
+    {
+     "en": "This suggests AI is changing both how essays are written and how they are evaluated in admissions processes.",
+     "es": "Esto sugiere que la IA está cambiando tanto cómo se escriben los ensayos como cómo se evalúan en los procesos de admisión.",
+     "sources": [
+      6
+     ],
+     "support": 0.93,
+     "translation": 0.92
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.22433",
+   "field": "space",
+   "title": "Direct imaging of sub-parsec binary SMBHs in the central galaxy of the NGC 5044 group",
+   "latency": 1.6,
+   "tokens_in": 799,
+   "tokens_out": 308,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Scientists studied a galaxy called NGC 5044 to find two supermassive black holes close together.\",\n      \"es\": \"Los científicos estudiaron una galaxia llamada NGC 5044 para encontrar dos agujeros negros supermasivos muy cercanos.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"They used a special radio telescope to take images at different frequencies.\",\n      \"es\": \"Usaron un telescopio de radio especial para tomar imágenes a diferentes frecuencias.\",\n      \"sources\": [4, 6]\n    },\n    {\n      \"en\": \"They found two bright, changing radio sources just 0.38 parsecs apart, the closest such pair seen directly.\",\n      \"es\": \"Encontraron dos fuentes de radio brillantes y cambiantes separadas por solo 0.38 parsecs, el par más cercano visto directamente.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"This discovery supports the idea that large galaxies in clusters might often host such black hole pairs.\",\n      \"es\": \"Este descubrimiento respalda la idea de que las galaxias grandes en cúmulos podrían albergar con frecuencia tales pares de agujeros negros.\",\n      \"sources\": [8]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 4,
+   "valid": 4,
+   "checked": [
+    {
+     "en": "Scientists studied a galaxy called NGC 5044 to find two supermassive black holes close together.",
+     "es": "Los científicos estudiaron una galaxia llamada NGC 5044 para encontrar dos agujeros negros supermasivos muy cercanos.",
+     "sources": [
+      4
+     ],
+     "support": 0.23,
+     "translation": 0.95
+    },
+    {
+     "en": "They used a special radio telescope to take images at different frequencies.",
+     "es": "Usaron un telescopio de radio especial para tomar imágenes a diferentes frecuencias.",
+     "sources": [
+      4,
+      6
+     ],
+     "support": 0.74,
+     "translation": 0.96
+    },
+    {
+     "en": "They found two bright, changing radio sources just 0.38 parsecs apart, the closest such pair seen directly.",
+     "es": "Encontraron dos fuentes de radio brillantes y cambiantes separadas por solo 0.38 parsecs, el par más cercano visto directamente.",
+     "sources": [
+      6
+     ],
+     "support": 0.86,
+     "translation": 0.9
+    },
+    {
+     "en": "This discovery supports the idea that large galaxies in clusters might often host such black hole pairs.",
+     "es": "Este descubrimiento respalda la idea de que las galaxias grandes en cúmulos podrían albergar con frecuencia tales pares de agujeros negros.",
+     "sources": [
+      8
+     ],
+     "support": 0.45,
+     "translation": 0.92
+    }
+   ],
+   "kept": 2,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.24391",
+   "field": "ai",
+   "title": "NAVIR: Neuromorphic Audio-Visual Speech Recognition for Robust Human-Robot Interaction on Edge Hardware",
+   "latency": 3.4,
+   "tokens_in": 865,
+   "tokens_out": 378,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Voice-controlled systems struggle in noisy industrial areas because sound-only speech recognition is affected by noise.\",\n      \"es\": \"Los sistemas controlados por voz tienen dificultades en zonas industriales ruidosas porque la reconocimiento del habla basado solo en sonido se ve afectado por el ruido.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"NAVIR is a new system that uses both sound and visual cues for speech recognition, designed for neuromorphic processors.\",\n      \"es\": \"NAVIR es un nuevo sistema que usa tanto sonido como pistas visuales para el reconocimiento del habla, diseñado para procesadores neuromórficos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"NAVIR splits processing into parts for visual and audio data, then combines them with a lightweight model.\",\n      \"es\": \"NAVIR divide el procesamiento en partes para datos visuales y auditivos, y luego las combina con un modelo ligero.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"The system achieved lower word error rates in noisy conditions and high command accuracy in industrial tasks.\",\n      \"es\": \"El sistema logró tasas de error de palabras más bajas en condiciones ruidosas y alta precisión en comandos industriales.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"NAVIR uses less energy than other systems and is the first of its kind on neuromorphic hardware.\",\n      \"es\": \"NAVIR consume menos energía que otros sistemas y es el primero de su tipo en hardware neuromórfico.\",\n      \"sources\": [7, 8]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Voice-controlled systems struggle in noisy industrial areas because sound-only speech recognition is affected by noise.",
+     "es": "Los sistemas controlados por voz tienen dificultades en zonas industriales ruidosas porque la reconocimiento del habla basado solo en sonido se ve afectado por el ruido.",
+     "sources": [
+      0
+     ],
+     "support": 0.91,
+     "translation": 0.87
+    },
+    {
+     "en": "NAVIR is a new system that uses both sound and visual cues for speech recognition, designed for neuromorphic processors.",
+     "es": "NAVIR es un nuevo sistema que usa tanto sonido como pistas visuales para el reconocimiento del habla, diseñado para procesadores neuromórficos.",
+     "sources": [
+      2
+     ],
+     "support": 0.79,
+     "translation": 0.95
+    },
+    {
+     "en": "NAVIR splits processing into parts for visual and audio data, then combines them with a lightweight model.",
+     "es": "NAVIR divide el procesamiento en partes para datos visuales y auditivos, y luego las combina con un modelo ligero.",
+     "sources": [
+      3
+     ],
+     "support": 0.92,
+     "translation": 0.92
+    },
+    {
+     "en": "The system achieved lower word error rates in noisy conditions and high command accuracy in industrial tasks.",
+     "es": "El sistema logró tasas de error de palabras más bajas en condiciones ruidosas y alta precisión en comandos industriales.",
+     "sources": [
+      5
+     ],
+     "support": 0.9,
+     "translation": 0.91
+    },
+    {
+     "en": "NAVIR uses less energy than other systems and is the first of its kind on neuromorphic hardware.",
+     "es": "NAVIR consume menos energía que otros sistemas y es el primero de su tipo en hardware neuromórfico.",
+     "sources": [
+      7,
+      8
+     ],
+     "support": 0.65,
+     "translation": 0.93
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.25075",
+   "field": "chemistry",
+   "title": "Multimodal Visual Sensing of Temperature and Pressure: From Spectroscopic Readout to Multiple Linear Regression-Enhanced RGB Analysis",
+   "latency": 2.8,
+   "tokens_in": 749,
+   "tokens_out": 386,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Researchers created a material that can sense both temperature and pressure by adjusting its composition.\",\n      \"es\": \"Los investigadores crearon un material que puede detectar tanto temperatura como presión ajustando su composición.\",\n      \"sources\": [0, 1]\n    },\n    {\n      \"en\": \"Different parts of the material react uniquely to temperature and pressure, allowing multiple ways to read the data.\",\n      \"es\": \"Partes diferentes del material reaccionan de manera única a la temperatura y la presión, permitiendo múltiples formas de leer los datos.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"Using color changes and a math method called multiple linear regression, they mapped temperature and pressure accurately.\",\n      \"es\": \"Usando cambios de color y un método matemático llamado regresión lineal múltiple, mapearon la temperatura y la presión con precisión.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"This method improved sensitivity: temperature sensitivity increased to 8.8% per degree, and pressure sensitivity to nearly 721% per gigapascal.\",\n      \"es\": \"Este método mejoró la sensibilidad: la sensibilidad a la temperatura aumentó a 8.8% por grado, y la sensibilidad a la presión a casi 721% por gigapascales.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"This is the first time this math method has been used for pressure sensing with color-based imaging.\",\n      \"es\": \"Esta es la primera vez que se usa este método matemático para detectar presión con imágenes basadas en color.\",\n      \"sources\": [5]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Researchers created a material that can sense both temperature and pressure by adjusting its composition.",
+     "es": "Los investigadores crearon un material que puede detectar tanto temperatura como presión ajustando su composición.",
+     "sources": [
+      0,
+      1
+     ],
+     "support": 0.9,
+     "translation": 0.95
+    },
+    {
+     "en": "Different parts of the material react uniquely to temperature and pressure, allowing multiple ways to read the data.",
+     "es": "Partes diferentes del material reaccionan de manera única a la temperatura y la presión, permitiendo múltiples formas de leer los datos.",
+     "sources": [
+      2
+     ],
+     "support": 0.92,
+     "translation": 0.96
+    },
+    {
+     "en": "Using color changes and a math method called multiple linear regression, they mapped temperature and pressure accurately.",
+     "es": "Usando cambios de color y un método matemático llamado regresión lineal múltiple, mapearon la temperatura y la presión con precisión.",
+     "sources": [
+      3
+     ],
+     "support": 0.39,
+     "translation": 0.69
+    },
+    {
+     "en": "This method improved sensitivity: temperature sensitivity increased to 8.8% per degree, and pressure sensitivity to nearly 721% per gigapascal.",
+     "es": "Este método mejoró la sensibilidad: la sensibilidad a la temperatura aumentó a 8.8% por grado, y la sensibilidad a la presión a casi 721% por gigapascales.",
+     "sources": [
+      4
+     ],
+     "support": 0.89,
+     "translation": 0.94
+    },
+    {
+     "en": "This is the first time this math method has been used for pressure sensing with color-based imaging.",
+     "es": "Esta es la primera vez que se usa este método matemático para detectar presión con imágenes basadas en color.",
+     "sources": [
+      5
+     ],
+     "support": 0.82,
+     "translation": 0.86
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.24134",
+   "field": "computing",
+   "title": "Monet: Measuring the Ecosystem of Open-Source Text-to-Image Models Tailored for Harmful Services",
+   "latency": 2.8,
+   "tokens_in": 792,
+   "tokens_out": 398,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Researchers studied harmful open-source text-to-image models called Monets, which are designed for harmful purposes.\",\n      \"es\": \"Investigadores estudiaron modelos de texto a imagen de código abierto llamados Monets, diseñados con propósitos perjudiciales.\",\n      \"sources\": [0, 3]\n    },\n    {\n      \"en\": \"They found 23,947 Monets across eight major platforms, some with over 19 million downloads.\",\n      \"es\": \"Encontraron 23,947 Monets en ocho plataformas principales, algunos con más de 19 millones de descargas.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"These models spread across platforms and avoid bans by using tactics like keyword hiding and model safeguards.\",\n      \"es\": \"Estos modelos se propagan entre plataformas y evitan las prohibiciones usando tácticas como ocultar palabras clave y protecciones del modelo.\",\n      \"sources\": [5, 6]\n    },\n    {\n      \"en\": \"Monets are used in commercial efforts, including account farming and image generation services, raising child safety concerns.\",\n      \"es\": \"Los Monets se usan en esfuerzos comerciales, incluyendo la creación de cuentas y servicios de generación de imágenes, lo que plantea preocupaciones por la seguridad infantil.\",\n      \"sources\": [7]\n    },\n    {\n      \"en\": \"The study shows that current defenses are limited and suggests the need for shared strategies and better safeguards.\",\n      \"es\": \"El estudio muestra que las defensas actuales son limitadas y sugiere la necesidad de estrategias compartidas y mejores protecciones.\",\n      \"sources\": [8]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Researchers studied harmful open-source text-to-image models called Monets, which are designed for harmful purposes.",
+     "es": "Investigadores estudiaron modelos de texto a imagen de código abierto llamados Monets, diseñados con propósitos perjudiciales.",
+     "sources": [
+      0,
+      3
+     ],
+     "support": 0.69,
+     "translation": 0.91
+    },
+    {
+     "en": "They found 23,947 Monets across eight major platforms, some with over 19 million downloads.",
+     "es": "Encontraron 23,947 Monets en ocho plataformas principales, algunos con más de 19 millones de descargas.",
+     "sources": [
+      4
+     ],
+     "support": 0.93,
+     "translation": 0.93
+    },
+    {
+     "en": "These models spread across platforms and avoid bans by using tactics like keyword hiding and model safeguards.",
+     "es": "Estos modelos se propagan entre plataformas y evitan las prohibiciones usando tácticas como ocultar palabras clave y protecciones del modelo.",
+     "sources": [
+      5,
+      6
+     ],
+     "support": 0.82,
+     "translation": 0.85
+    },
+    {
+     "en": "Monets are used in commercial efforts, including account farming and image generation services, raising child safety concerns.",
+     "es": "Los Monets se usan en esfuerzos comerciales, incluyendo la creación de cuentas y servicios de generación de imágenes, lo que plantea preocupaciones por la seguridad infantil.",
+     "sources": [
+      7
+     ],
+     "support": 0.57,
+     "translation": 0.73
+    },
+    {
+     "en": "The study shows that current defenses are limited and suggests the need for shared strategies and better safeguards.",
+     "es": "El estudio muestra que las defensas actuales son limitadas y sugiere la necesidad de estrategias compartidas y mejores protecciones.",
+     "sources": [
+      8
+     ],
+     "support": 0.9,
+     "translation": 0.92
+    }
+   ],
+   "kept": 4,
+   "publishable": true
+  },
+  {
+   "id": "doi-10.1038_s41586-026-11040-2",
+   "field": "earth",
+   "title": "Agricultural liming is a carbon sink in the Mississippi River Basin",
+   "latency": 3.1,
+   "tokens_in": 790,
+   "tokens_out": 419,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Adding carbonate minerals to farmland, called agricultural liming, is done to reduce soil acidification.\",\n      \"es\": \"Agregar minerales carbonatados a la tierra de cultivo, llamado limado agrícola, se hace para reducir la acidificación del suelo.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"Liming increases crop yields but is also seen as a source of carbon dioxide emissions.\",\n      \"es\": \"El limado aumenta los rendimientos de cultivo, pero también se ve como una fuente de emisiones de dióxido de carbono.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"In the Mississippi River Basin, liming has acted as a net carbon sink over the past century.\",\n      \"es\": \"En la cuenca del río Mississippi, el limado ha actuado como un sumidero neto de carbono en el último siglo.\",\n      \"sources\": [2, 8]\n    },\n    {\n      \"en\": \"About 90% of the potential CO2 removal from liming since 1900 has been realized, with a delay due to soil and water processes.\",\n      \"es\": \"Aproximadamente el 90% del potencial de eliminación de CO2 del limado desde 1900 se ha logrado, con un retraso debido a procesos del suelo y el agua.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Managing soil pH through liming can reduce greenhouse gas emissions and improve crop yields and soil health.\",\n      \"es\": \"Administrar el pH del suelo mediante el limado puede reducir las emisiones de gases de efecto invernadero y mejorar los rendimientos y la salud del suelo.\",\n      \"sources\": [7]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "Adding carbonate minerals to farmland, called agricultural liming, is done to reduce soil acidification.",
+     "es": "Agregar minerales carbonatados a la tierra de cultivo, llamado limado agrícola, se hace para reducir la acidificación del suelo.",
+     "sources": [
+      0
+     ],
+     "support": 0.95,
+     "translation": 0.93
+    },
+    {
+     "en": "Liming increases crop yields but is also seen as a source of carbon dioxide emissions.",
+     "es": "El limado aumenta los rendimientos de cultivo, pero también se ve como una fuente de emisiones de dióxido de carbono.",
+     "sources": [
+      1
+     ],
+     "support": 0.93,
+     "translation": 0.95
+    },
+    {
+     "en": "In the Mississippi River Basin, liming has acted as a net carbon sink over the past century.",
+     "es": "En la cuenca del río Mississippi, el limado ha actuado como un sumidero neto de carbono en el último siglo.",
+     "sources": [
+      2,
+      8
+     ],
+     "support": 0.97,
+     "translation": 0.96
+    },
+    {
+     "en": "About 90% of the potential CO2 removal from liming since 1900 has been realized, with a delay due to soil and water processes.",
+     "es": "Aproximadamente el 90% del potencial de eliminación de CO2 del limado desde 1900 se ha logrado, con un retraso debido a procesos del suelo y el agua.",
+     "sources": [
+      3
+     ],
+     "support": 0.86,
+     "translation": 0.87
+    },
+    {
+     "en": "Managing soil pH through liming can reduce greenhouse gas emissions and improve crop yields and soil health.",
+     "es": "Administrar el pH del suelo mediante el limado puede reducir las emisiones de gases de efecto invernadero y mejorar los rendimientos y la salud del suelo.",
+     "sources": [
+      7
+     ],
+     "support": 0.79,
+     "translation": 0.96
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "biorxiv-2026.09.21.753189",
+   "field": "ecology",
+   "title": "Rising water is an underappreciated driver of forest mortality",
+   "latency": 3.7,
+   "tokens_in": 739,
+   "tokens_out": 501,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"Forests can die from drowning as well as from burning and drying out due to climate change.\",\n      \"es\": \"Los bosques pueden morir por ahogamiento, así como por incendios y sequías causadas por el cambio climático.\",\n      \"sources\": [0]\n    },\n    {\n      \"en\": \"Warming is increasing the length and strength of both droughts and floods around the world.\",\n      \"es\": \"El calentamiento está aumentando la duración y la intensidad de sequías e inundaciones en todo el mundo.\",\n      \"sources\": [1]\n    },\n    {\n      \"en\": \"Using high-resolution images and deep learning, researchers mapped over 260 million dead trees in the U.S. from 2012 to 2023.\",\n      \"es\": \"Usando imágenes de alta resolución y aprendizaje profundo, los investigadores mapearon más de 260 millones de árboles muertos en EE.UU. entre 2012 y 2023.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"More than half of tree deaths near coasts were in high-elevation wetlands and low-lying forests prone to flooding.\",\n      \"es\": \"Más de la mitad de las muertes de árboles cerca de las costas ocurrieron en humedales de elevación alta y bosques bajos propensos a inundaciones.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Tree deaths doubled or tripled in some areas due to rising water levels and increased rainfall or saltwater intrusion.\",\n      \"es\": \"Las muertes de árboles se duplicaron o triplicaron en algunas zonas debido a niveles crecientes de agua y lluvias intensas o intrusión de agua salada.\",\n      \"sources\": [5]\n    },\n    {\n      \"en\": \"The study shows that rising water is a major but overlooked cause of forest death that needs more attention.\",\n      \"es\": \"El estudio muestra que el aumento del agua es una causa importante pero ignorada de la muerte de bosques que necesita más atención.\",\n      \"sources\": [6]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 6,
+   "valid": 6,
+   "checked": [
+    {
+     "en": "Forests can die from drowning as well as from burning and drying out due to climate change.",
+     "es": "Los bosques pueden morir por ahogamiento, así como por incendios y sequías causadas por el cambio climático.",
+     "sources": [
+      0
+     ],
+     "support": 0.79,
+     "translation": 0.92
+    },
+    {
+     "en": "Warming is increasing the length and strength of both droughts and floods around the world.",
+     "es": "El calentamiento está aumentando la duración y la intensidad de sequías e inundaciones en todo el mundo.",
+     "sources": [
+      1
+     ],
+     "support": 0.92,
+     "translation": 0.95
+    },
+    {
+     "en": "Using high-resolution images and deep learning, researchers mapped over 260 million dead trees in the U.S. from 2012 to 2023.",
+     "es": "Usando imágenes de alta resolución y aprendizaje profundo, los investigadores mapearon más de 260 millones de árboles muertos en EE.UU. entre 2012 y 2023.",
+     "sources": [
+      3
+     ],
+     "support": 0.74,
+     "translation": 0.85
+    },
+    {
+     "en": "More than half of tree deaths near coasts were in high-elevation wetlands and low-lying forests prone to flooding.",
+     "es": "Más de la mitad de las muertes de árboles cerca de las costas ocurrieron en humedales de elevación alta y bosques bajos propensos a inundaciones.",
+     "sources": [
+      4
+     ],
+     "support": 0.87,
+     "translation": 0.92
+    },
+    {
+     "en": "Tree deaths doubled or tripled in some areas due to rising water levels and increased rainfall or saltwater intrusion.",
+     "es": "Las muertes de árboles se duplicaron o triplicaron en algunas zonas debido a niveles crecientes de agua y lluvias intensas o intrusión de agua salada.",
+     "sources": [
+      5
+     ],
+     "support": 0.83,
+     "translation": 0.89
+    },
+    {
+     "en": "The study shows that rising water is a major but overlooked cause of forest death that needs more attention.",
+     "es": "El estudio muestra que el aumento del agua es una causa importante pero ignorada de la muerte de bosques que necesita más atención.",
+     "sources": [
+      6
+     ],
+     "support": 0.79,
+     "translation": 0.93
+    }
+   ],
+   "kept": 6,
+   "publishable": true
+  },
+  {
+   "id": "arxiv-2609.23950",
+   "field": "engineering",
+   "title": "ORION-CMR: On-scanner Reporting with Integrated Foundation Model for End-to-End Cardiac MRI Analysis and Interpretation",
+   "latency": 3.0,
+   "tokens_in": 777,
+   "tokens_out": 404,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"ORION-CMR is a new system for analyzing heart MRI scans using artificial intelligence.\",\n      \"es\": \"ORION-CMR es un nuevo sistema para analizar escáneres de resonancia magnética cardíaca usando inteligencia artificial.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"It was trained on over 12 million heart MRI images and can perform multiple tasks like detecting heart function and disease types.\",\n      \"es\": \"Se entrenó con más de 12 millones de imágenes de resonancia magnética cardíaca y puede realizar múltiples tareas, como detectar la función cardíaca y tipos de enfermedad.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"ORION-CMR was tested on 68 patients with different heart conditions and performed better than previous models.\",\n      \"es\": \"ORION-CMR se probó en 68 pacientes con diferentes condiciones cardíacas y funcionó mejor que modelos anteriores.\",\n      \"sources\": [4, 5]\n    },\n    {\n      \"en\": \"It correctly identified normal versus abnormal scans with high accuracy and generated reports that matched expert opinions about 81% of the time.\",\n      \"es\": \"Identificó correctamente escáneres normales versus anormales con alta precisión y generó informes que coincidían con las opiniones de expertos alrededor del 81% del tiempo.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"This system shows that real-time heart MRI analysis and report generation is possible with AI.\",\n      \"es\": \"Este sistema muestra que el análisis y generación de informes de resonancia magnética cardíaca en tiempo real es posible con inteligencia artificial.\",\n      \"sources\": [7]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 5,
+   "valid": 5,
+   "checked": [
+    {
+     "en": "ORION-CMR is a new system for analyzing heart MRI scans using artificial intelligence.",
+     "es": "ORION-CMR es un nuevo sistema para analizar escáneres de resonancia magnética cardíaca usando inteligencia artificial.",
+     "sources": [
+      2
+     ],
+     "support": 0.8,
+     "translation": 0.95
+    },
+    {
+     "en": "It was trained on over 12 million heart MRI images and can perform multiple tasks like detecting heart function and disease types.",
+     "es": "Se entrenó con más de 12 millones de imágenes de resonancia magnética cardíaca y puede realizar múltiples tareas, como detectar la función cardíaca y tipos de enfermedad.",
+     "sources": [
+      3
+     ],
+     "support": 0.87,
+     "translation": 0.95
+    },
+    {
+     "en": "ORION-CMR was tested on 68 patients with different heart conditions and performed better than previous models.",
+     "es": "ORION-CMR se probó en 68 pacientes con diferentes condiciones cardíacas y funcionó mejor que modelos anteriores.",
+     "sources": [
+      4,
+      5
+     ],
+     "support": 0.81,
+     "translation": 0.94
+    },
+    {
+     "en": "It correctly identified normal versus abnormal scans with high accuracy and generated reports that matched expert opinions about 81% of the time.",
+     "es": "Identificó correctamente escáneres normales versus anormales con alta precisión y generó informes que coincidían con las opiniones de expertos alrededor del 81% del tiempo.",
+     "sources": [
+      6
+     ],
+     "support": 0.78,
+     "translation": 0.92
+    },
+    {
+     "en": "This system shows that real-time heart MRI analysis and report generation is possible with AI.",
+     "es": "Este sistema muestra que el análisis y generación de informes de resonancia magnética cardíaca en tiempo real es posible con inteligencia artificial.",
+     "sources": [
+      7
+     ],
+     "support": 0.92,
+     "translation": 0.92
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  },
+  {
+   "id": "doi-10.1038_s41586-026-11058-6",
+   "field": "health",
+   "title": "The anthropogenic fingerprint on emerging infectious diseases",
+   "latency": 3.4,
+   "tokens_in": 809,
+   "tokens_out": 468,
+   "raw": "```json\n{\n  \"sentences\": [\n    {\n      \"en\": \"The study looks at how human activities affect the spread of infectious diseases.\",\n      \"es\": \"El estudio examina cómo las actividades humanas afectan la propagación de enfermedades infecciosas.\",\n      \"sources\": [0, 1]\n    },\n    {\n      \"en\": \"Researchers analyzed 58,319 outbreak records for 32 diseases to see how 16 factors influence where outbreaks happen.\",\n      \"es\": \"Los investigadores analizaron 58,319 registros de brotes para 32 enfermedades para ver cómo 16 factores influyen en dónde ocurren los brotes.\",\n      \"sources\": [2]\n    },\n    {\n      \"en\": \"Outbreak risks are highest in areas where people, livestock, and forests coexist in fragmented ecosystems.\",\n      \"es\": \"Los riesgos de brotes son más altos en áreas donde conviven personas, ganado y bosques en ecosistemas fragmentados.\",\n      \"sources\": [3]\n    },\n    {\n      \"en\": \"Factors like reduced rainfall strongly affect vector-borne diseases like dengue and Lyme disease.\",\n      \"es\": \"Factores como la reducción de la lluvia afectan fuertemente enfermedades transmitidas por vectores como la dengue y la enfermedad de Lyme.\",\n      \"sources\": [4]\n    },\n    {\n      \"en\": \"Access to healthcare strongly affects outbreak reporting, with reports dropping by 32% for each hour farther from a health facility.\",\n      \"es\": \"El acceso a la atención médica afecta fuertemente el informe de brotes, con una disminución del 32% por cada hora más lejos de un centro de salud.\",\n      \"sources\": [6]\n    },\n    {\n      \"en\": \"The study shows that different diseases have different causes, so no single strategy can prevent all outbreaks.\",\n      \"es\": \"El estudio muestra que diferentes enfermedades tienen causas distintas, por lo que ninguna estrategia única puede prevenir todos los brotes.\",\n      \"sources\": [7]\n    }\n  ]\n}\n```",
+   "json_ok": true,
+   "drafted": 6,
+   "valid": 6,
+   "checked": [
+    {
+     "en": "The study looks at how human activities affect the spread of infectious diseases.",
+     "es": "El estudio examina cómo las actividades humanas afectan la propagación de enfermedades infecciosas.",
+     "sources": [
+      0,
+      1
+     ],
+     "support": 0.55,
+     "translation": 0.97
+    },
+    {
+     "en": "Researchers analyzed 58,319 outbreak records for 32 diseases to see how 16 factors influence where outbreaks happen.",
+     "es": "Los investigadores analizaron 58,319 registros de brotes para 32 enfermedades para ver cómo 16 factores influyen en dónde ocurren los brotes.",
+     "sources": [
+      2
+     ],
+     "support": 0.91,
+     "translation": 0.93
+    },
+    {
+     "en": "Outbreak risks are highest in areas where people, livestock, and forests coexist in fragmented ecosystems.",
+     "es": "Los riesgos de brotes son más altos en áreas donde conviven personas, ganado y bosques en ecosistemas fragmentados.",
+     "sources": [
+      3
+     ],
+     "support": 0.89,
+     "translation": 0.94
+    },
+    {
+     "en": "Factors like reduced rainfall strongly affect vector-borne diseases like dengue and Lyme disease.",
+     "es": "Factores como la reducción de la lluvia afectan fuertemente enfermedades transmitidas por vectores como la dengue y la enfermedad de Lyme.",
+     "sources": [
+      4
+     ],
+     "support": 0.78,
+     "translation": 0.74
+    },
+    {
+     "en": "Access to healthcare strongly affects outbreak reporting, with reports dropping by 32% for each hour farther from a health facility.",
+     "es": "El acceso a la atención médica afecta fuertemente el informe de brotes, con una disminución del 32% por cada hora más lejos de un centro de salud.",
+     "sources": [
+      6
+     ],
+     "support": 0.8,
+     "translation": 0.86
+    },
+    {
+     "en": "The study shows that different diseases have different causes, so no single strategy can prevent all outbreaks.",
+     "es": "El estudio muestra que diferentes enfermedades tienen causas distintas, por lo que ninguna estrategia única puede prevenir todos los brotes.",
+     "sources": [
+      7
+     ],
+     "support": 0.87,
+     "translation": 0.94
+    }
+   ],
+   "kept": 5,
+   "publishable": true
+  }
+ ]
+}
