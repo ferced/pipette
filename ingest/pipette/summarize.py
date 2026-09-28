@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 
 from . import jev
 
-MODEL = os.environ.get("SUMMARY_MODEL", "claude-opus-5")
+MODEL = os.environ.get("SUMMARY_MODEL", "claude-sonnet-5")
 SUPPORT_MIN = 0.65
 TRANSLATION_MIN = 0.6
 MIN_SENTENCES = 2
@@ -70,14 +70,12 @@ def draft(title, sentences, client=None):
 
     client = client or anthropic.Anthropic(max_retries=4, timeout=120.0)
     try:
-        response = client.beta.messages.create(
+        response = client.messages.create(
             model=MODEL,
             max_tokens=4000,
             system=SYSTEM,
             messages=[{"role": "user", "content": _user_message(title, sentences)}],
             output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
-            betas=["server-side-fallback-2026-07-01"],
-            fallbacks="default",
         )
     except anthropic.APIStatusError as e:
         return None, f"api {e.status_code}"

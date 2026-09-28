@@ -84,7 +84,7 @@ For each paper, Pipette sends the title and the abstract (as numbered sentences)
 rank = appeal + 0.9·advance + 0.4·practical − 2.4·max(0, hype − 0.5) − 0.25·level
 ```
 
-For the edition, `ingest/pipette/summarize.py` asks Claude (`claude-opus-5`, low effort, structured output) for 3 to 5 short sentences in English and Spanish, each citing the abstract sentences it relies on. Jev then checks every sentence against its sources and every translation against its English sentence; failures are removed and a summary needs at least two surviving sentences. Summaries turn on when the Lambda has `ANTHROPIC_API_KEY`; the exact instructions are published in `method.json`.
+For the edition, `ingest/pipette/summarize.py` asks Claude (`claude-sonnet-5`, low effort, structured output) for 3 to 5 short sentences in English and Spanish, each citing the abstract sentences it relies on. Jev then checks every sentence against its sources and every translation against its English sentence; failures are removed and a summary needs at least two surviving sentences. Summaries turn on when the Lambda has `ANTHROPIC_API_KEY`; the exact instructions are published in `method.json`.
 
 Papers flagged for overclaiming (hype ≥ 0.6) are left out of the edition, and the edition allows at most 3 papers per field and 2 per topic. A weekday means about 2,000 papers, four million input tokens and roughly **US$0.17** of model usage.
 
