@@ -1,0 +1,17 @@
+name: A paper was labeled wrong
+description: Pipette picked the wrong topic, main sentence, kind of paper or another label
+labels: [labels]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Paper on Pipette
+      placeholder: https://pipette.day/p/...
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What Pipette said, and what you expected
+    validations:
+      required: true

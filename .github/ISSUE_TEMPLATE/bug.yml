@@ -1,0 +1,19 @@
+name: Something is broken
+description: A page, filter or feature does not work as expected
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page
+      placeholder: https://pipette.day/...
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device

@@ -1,0 +1,11 @@
+name: Idea or new source
+description: Suggest a feature, a journal or a preprint server
+labels: [idea]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What problem does it solve for readers?
+    validations:
+      required: true

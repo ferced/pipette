@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.key
+__pycache__/
+.vercel/
+ingest/build/
+ingest/out/
+*.zip
+qa/*.png
+ingest/*.log
+ingest/out-run-*.log
+qa/*.json
+qa/*.log

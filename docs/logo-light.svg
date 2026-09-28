@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80" role="img" aria-label="Pipette">
+  <g transform="translate(4 4) scale(2.25)">
+    <g transform="translate(1 -2) rotate(28 12 24)">
+      <rect x="7.5" y="0.8" width="9" height="9.6" rx="4.5" fill="#14201c"/>
+      <rect x="9.6" y="9.2" width="4.8" height="1.8" rx="0.6" fill="#14201c" opacity="0.55"/>
+      <path d="M10 11.4h4v8.2l-1.35 4.4h-1.3L10 19.6z" fill="#14201c"/>
+    </g>
+    <path d="M13 24.6c0 0-2.55 2.75-2.55 4.35a2.55 2.55 0 0 0 5.1 0c0-1.6-2.55-4.35-2.55-4.35z" fill="#c2186b"/>
+  </g>
+  <text x="84" y="55" font-family="'Atkinson Hyperlegible Next','Atkinson Hyperlegible',Inter,'Segoe UI',Helvetica,Arial,sans-serif" font-size="44" font-weight="700" letter-spacing="-1.2" fill="#14201c">pipette</text>
+</svg>

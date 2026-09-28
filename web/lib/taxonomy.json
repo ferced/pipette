@@ -1,0 +1,160 @@
+{
+  "fields": [
+    {"id": "ai", "en": "AI & machine learning", "es": "IA y aprendizaje automático", "color": "#7B4FD6",
+     "topics": [
+       {"id": "llm", "en": "Language models", "es": "Modelos de lenguaje", "d": "Large language models, text generation, NLP, chatbots, prompting, fine-tuning of language models"},
+       {"id": "agents", "en": "Agents & reasoning", "es": "Agentes y razonamiento", "d": "AI agents that plan, use tools or act; reasoning, math or code-solving by AI"},
+       {"id": "vision", "en": "Computer vision", "es": "Visión por computadora", "d": "Understanding images, video, 3D scenes; detection, segmentation, recognition"},
+       {"id": "generative", "en": "Image, video & audio generation", "es": "Generación de imagen, video y audio", "d": "Diffusion models and other generators of images, video, 3D or sound"},
+       {"id": "rl", "en": "Reinforcement learning", "es": "Aprendizaje por refuerzo", "d": "Learning from rewards, decision making, control policies, bandits"},
+       {"id": "safety", "en": "Safety, alignment & fairness", "es": "Seguridad, alineación y equidad", "d": "AI safety, alignment, interpretability, bias, fairness, privacy of models, misuse"},
+       {"id": "theory", "en": "Learning theory & optimization", "es": "Teoría del aprendizaje y optimización", "d": "Mathematical analysis of learning, generalization, optimization algorithms for training"},
+       {"id": "efficiency", "en": "Efficiency & hardware", "es": "Eficiencia y hardware", "d": "Making models smaller, faster or cheaper; compression, quantization, accelerators"},
+       {"id": "aiscience", "en": "AI for science & medicine", "es": "IA para ciencia y medicina", "d": "Machine learning applied to biology, chemistry, physics, climate or healthcare"},
+       {"id": "speech", "en": "Speech & audio", "es": "Voz y audio", "d": "Speech recognition, speech synthesis, music and audio understanding"},
+       {"id": "retrieval", "en": "Search & recommendation", "es": "Búsqueda y recomendación", "d": "Information retrieval, recommender systems, retrieval-augmented generation"},
+       {"id": "evaluation", "en": "Benchmarks & evaluation", "es": "Benchmarks y evaluación", "d": "New benchmarks, datasets or methods for measuring what AI systems can do"},
+       {"id": "mlother", "en": "Other machine learning", "es": "Otro aprendizaje automático", "d": "Graphs, time series, tabular data, federated learning and other ML methods"}
+     ]},
+    {"id": "computing", "en": "Computing", "es": "Computación", "color": "#3767C9",
+     "topics": [
+       {"id": "security", "en": "Security & privacy", "es": "Seguridad y privacidad", "d": "Cybersecurity, cryptography, attacks, defenses, privacy"},
+       {"id": "systems", "en": "Systems & networks", "es": "Sistemas y redes", "d": "Distributed systems, cloud, operating systems, networking, databases infrastructure"},
+       {"id": "software", "en": "Software & programming", "es": "Software y programación", "d": "Software engineering, programming languages, compilers, verification, code tools"},
+       {"id": "algorithms", "en": "Algorithms & complexity", "es": "Algoritmos y complejidad", "d": "Design and analysis of algorithms, computational complexity, data structures"},
+       {"id": "hci", "en": "Human–computer interaction", "es": "Interacción humano-computadora", "d": "How people use technology, interfaces, user studies, accessibility"},
+       {"id": "data", "en": "Data & databases", "es": "Datos y bases de datos", "d": "Data management, query processing, data mining"},
+       {"id": "graphics", "en": "Graphics & multimedia", "es": "Gráficos y multimedia", "d": "Computer graphics, rendering, geometry processing, multimedia"},
+       {"id": "compother", "en": "Other computing", "es": "Otra computación", "d": "Other computer science"}
+     ]},
+    {"id": "engineering", "en": "Robotics & engineering", "es": "Robótica e ingeniería", "color": "#1F8A9E",
+     "topics": [
+       {"id": "robots", "en": "Robots & autonomy", "es": "Robots y autonomía", "d": "Robots, drones, self-driving vehicles, manipulation, locomotion"},
+       {"id": "control", "en": "Control systems", "es": "Sistemas de control", "d": "Control theory and engineering of dynamic systems"},
+       {"id": "signal", "en": "Signals & communications", "es": "Señales y comunicaciones", "d": "Signal processing, wireless communication, radar, 6G"},
+       {"id": "imaging", "en": "Imaging & sensing", "es": "Imágenes y sensores", "d": "Image and video processing, sensors, medical imaging reconstruction"},
+       {"id": "power", "en": "Power & energy systems", "es": "Sistemas de energía", "d": "Electrical grids, power electronics, energy systems engineering"},
+       {"id": "engother", "en": "Other engineering", "es": "Otra ingeniería", "d": "Other engineering"}
+     ]},
+    {"id": "math", "en": "Math & statistics", "es": "Matemática y estadística", "color": "#8A6D1F",
+     "topics": [
+       {"id": "algebra", "en": "Algebra & number theory", "es": "Álgebra y teoría de números", "d": "Algebra, number theory, representation theory, algebraic geometry"},
+       {"id": "geometry", "en": "Geometry & topology", "es": "Geometría y topología", "d": "Differential geometry, topology, geometric analysis"},
+       {"id": "analysis", "en": "Analysis & PDEs", "es": "Análisis y EDP", "d": "Real and complex analysis, differential equations, dynamical systems"},
+       {"id": "probability", "en": "Probability", "es": "Probabilidad", "d": "Probability theory, stochastic processes, random structures"},
+       {"id": "statistics", "en": "Statistics", "es": "Estadística", "d": "Statistical methods, inference, data analysis methodology"},
+       {"id": "combinatorics", "en": "Combinatorics & discrete math", "es": "Combinatoria y matemática discreta", "d": "Combinatorics, graph theory, discrete structures"},
+       {"id": "numerical", "en": "Numerical methods", "es": "Métodos numéricos", "d": "Numerical analysis, scientific computing"},
+       {"id": "optimization", "en": "Optimization", "es": "Optimización", "d": "Mathematical optimization and operations research"},
+       {"id": "mathother", "en": "Other mathematics", "es": "Otra matemática", "d": "Logic, mathematical physics and other mathematics"}
+     ]},
+    {"id": "physics", "en": "Physics", "es": "Física", "color": "#E07A1F",
+     "topics": [
+       {"id": "quantum", "en": "Quantum physics & computing", "es": "Física y computación cuántica", "d": "Quantum information, quantum computers, entanglement, quantum optics"},
+       {"id": "condensed", "en": "Condensed matter", "es": "Materia condensada", "d": "Solids, superconductors, magnetism, topological materials, electrons in materials"},
+       {"id": "particles", "en": "Particles & fields", "es": "Partículas y campos", "d": "Particle physics, colliders, string theory, quantum field theory, dark matter particles"},
+       {"id": "nuclear", "en": "Nuclear physics", "es": "Física nuclear", "d": "Atomic nuclei, nuclear reactions, fusion"},
+       {"id": "optics", "en": "Optics & photonics", "es": "Óptica y fotónica", "d": "Light, lasers, photonic devices"},
+       {"id": "fluids", "en": "Fluids, plasma & complex systems", "es": "Fluidos, plasma y sistemas complejos", "d": "Fluid dynamics, turbulence, plasma physics, nonlinear and complex systems"},
+       {"id": "statmech", "en": "Statistical & soft-matter physics", "es": "Física estadística y materia blanda", "d": "Statistical mechanics, active matter, soft matter, biophysics"},
+       {"id": "applied", "en": "Applied physics & devices", "es": "Física aplicada y dispositivos", "d": "Devices, instrumentation, accelerators, applied physics"},
+       {"id": "physother", "en": "Other physics", "es": "Otra física", "d": "Other physics"}
+     ]},
+    {"id": "space", "en": "Space & cosmos", "es": "Espacio y cosmos", "color": "#1E3A8A",
+     "topics": [
+       {"id": "cosmology", "en": "Cosmology", "es": "Cosmología", "d": "The universe as a whole, dark energy, dark matter, the early universe, cosmic microwave background"},
+       {"id": "galaxies", "en": "Galaxies", "es": "Galaxias", "d": "Galaxies, their formation and evolution, quasars"},
+       {"id": "stars", "en": "Stars & the Sun", "es": "Estrellas y el Sol", "d": "Stars, stellar evolution, the Sun, supernovae"},
+       {"id": "planets", "en": "Planets & exoplanets", "es": "Planetas y exoplanetas", "d": "Exoplanets, the solar system, asteroids, comets, planet formation, astrobiology"},
+       {"id": "extreme", "en": "Black holes & gravitational waves", "es": "Agujeros negros y ondas gravitacionales", "d": "Black holes, neutron stars, gravitational waves, high-energy astrophysics"},
+       {"id": "gravity", "en": "Gravity theory", "es": "Teoría de la gravedad", "d": "General relativity, modified gravity, quantum gravity"},
+       {"id": "instruments", "en": "Telescopes & methods", "es": "Telescopios y métodos", "d": "Telescopes, instruments, surveys, data analysis methods in astronomy"}
+     ]},
+    {"id": "chemistry", "en": "Chemistry & materials", "es": "Química y materiales", "color": "#0F7B5F",
+     "topics": [
+       {"id": "materials", "en": "Materials", "es": "Materiales", "d": "New materials, their structure and properties"},
+       {"id": "catalysis", "en": "Catalysis & reactions", "es": "Catálisis y reacciones", "d": "Catalysts, chemical reactions, synthesis"},
+       {"id": "energymat", "en": "Batteries & energy materials", "es": "Baterías y materiales energéticos", "d": "Batteries, solar cells, fuel cells, hydrogen"},
+       {"id": "molecular", "en": "Molecular & computational chemistry", "es": "Química molecular y computacional", "d": "Molecules, spectroscopy, quantum chemistry calculations"},
+       {"id": "polymers", "en": "Polymers & soft materials", "es": "Polímeros y materiales blandos", "d": "Polymers, plastics, gels, soft materials"},
+       {"id": "nano", "en": "Nanomaterials", "es": "Nanomateriales", "d": "Nanoparticles, 2D materials, nanotechnology"},
+       {"id": "chemother", "en": "Other chemistry", "es": "Otra química", "d": "Other chemistry"}
+     ]},
+    {"id": "earth", "en": "Earth & climate", "es": "Tierra y clima", "color": "#2F7D32",
+     "topics": [
+       {"id": "climate", "en": "Climate & atmosphere", "es": "Clima y atmósfera", "d": "Climate change, weather, atmosphere, air quality"},
+       {"id": "oceans", "en": "Oceans & water", "es": "Océanos y agua", "d": "Oceans, ice, rivers, groundwater, the water cycle"},
+       {"id": "geology", "en": "Geology & geophysics", "es": "Geología y geofísica", "d": "Earth's interior, rocks, tectonics, volcanoes, earthquakes"},
+       {"id": "sustainability", "en": "Energy & sustainability", "es": "Energía y sustentabilidad", "d": "Renewable energy, emissions, sustainability, food and land use"},
+       {"id": "earthother", "en": "Other earth science", "es": "Otra ciencia de la Tierra", "d": "Other earth science"}
+     ]},
+    {"id": "life", "en": "Biology", "es": "Biología", "color": "#C08A1E",
+     "topics": [
+       {"id": "genetics", "en": "Genetics & genomics", "es": "Genética y genómica", "d": "Genes, genomes, DNA sequencing, gene regulation, heredity"},
+       {"id": "cell", "en": "Cell & molecular biology", "es": "Biología celular y molecular", "d": "How cells work, proteins, organelles, signaling"},
+       {"id": "microbes", "en": "Microbes & viruses", "es": "Microbios y virus", "d": "Bacteria, viruses, fungi, microbiome"},
+       {"id": "immunology", "en": "Immunology", "es": "Inmunología", "d": "The immune system"},
+       {"id": "development", "en": "Development & stem cells", "es": "Desarrollo y células madre", "d": "Embryos, development, stem cells, regeneration, aging biology"},
+       {"id": "structural", "en": "Biochemistry & structure", "es": "Bioquímica y estructura", "d": "Protein structure, enzymes, biochemistry, biophysics"},
+       {"id": "bioinfo", "en": "Bioinformatics", "es": "Bioinformática", "d": "Computational biology, bioinformatics tools, systems biology"},
+       {"id": "plants", "en": "Plants & agriculture", "es": "Plantas y agro", "d": "Plant biology, crops, agriculture"},
+       {"id": "cancerbio", "en": "Cancer biology", "es": "Biología del cáncer", "d": "Biology of tumors and cancer mechanisms"},
+       {"id": "bioeng", "en": "Bioengineering", "es": "Bioingeniería", "d": "Synthetic biology, bioengineering, biotechnology, gene editing tools"},
+       {"id": "lifeother", "en": "Other biology", "es": "Otra biología", "d": "Other biology"}
+     ]},
+    {"id": "neuro", "en": "Brain & mind", "es": "Cerebro y mente", "color": "#8F5E3B",
+     "topics": [
+       {"id": "circuits", "en": "Neurons & circuits", "es": "Neuronas y circuitos", "d": "Neurons, synapses, neural circuits, brain anatomy and physiology"},
+       {"id": "cognition", "en": "Cognition & behavior", "es": "Cognición y conducta", "d": "Perception, memory, learning, decision making, behavior"},
+       {"id": "braindisease", "en": "Brain disorders", "es": "Enfermedades del cerebro", "d": "Neurological and neurodegenerative diseases, brain injury"},
+       {"id": "compneuro", "en": "Computational neuroscience", "es": "Neurociencia computacional", "d": "Models of the brain, neural data analysis, brain-computer interfaces"},
+       {"id": "psychology", "en": "Psychology", "es": "Psicología", "d": "Human psychology, personality, social psychology, mental processes"}
+     ]},
+    {"id": "health", "en": "Medicine & health", "es": "Medicina y salud", "color": "#D63A2F",
+     "topics": [
+       {"id": "infectious", "en": "Infectious disease", "es": "Enfermedades infecciosas", "d": "Infections, vaccines, epidemics, antimicrobial resistance"},
+       {"id": "cardiometabolic", "en": "Heart & metabolism", "es": "Corazón y metabolismo", "d": "Cardiovascular disease, diabetes, obesity, kidney disease"},
+       {"id": "oncology", "en": "Cancer care", "es": "Tratamiento del cáncer", "d": "Cancer diagnosis, treatment and outcomes in patients"},
+       {"id": "mental", "en": "Mental health", "es": "Salud mental", "d": "Depression, anxiety, psychiatric disorders, addiction"},
+       {"id": "public", "en": "Public health", "es": "Salud pública", "d": "Epidemiology, population health, health policy, health systems"},
+       {"id": "treatments", "en": "Treatments & drugs", "es": "Tratamientos y fármacos", "d": "Drugs, therapies, surgery, clinical trials of treatments"},
+       {"id": "diagnostics", "en": "Diagnostics & imaging", "es": "Diagnóstico e imágenes", "d": "Diagnosis, biomarkers, medical imaging, screening"},
+       {"id": "lifespan", "en": "Children, aging & reproduction", "es": "Infancia, envejecimiento y reproducción", "d": "Pediatrics, pregnancy, reproduction, aging, dementia care"},
+       {"id": "healthother", "en": "Other medicine", "es": "Otra medicina", "d": "Other medicine and health"}
+     ]},
+    {"id": "ecology", "en": "Ecology & evolution", "es": "Ecología y evolución", "color": "#4D7C0F",
+     "topics": [
+       {"id": "ecosystems", "en": "Ecosystems & biodiversity", "es": "Ecosistemas y biodiversidad", "d": "Ecosystems, species interactions, biodiversity"},
+       {"id": "evolution", "en": "Evolution", "es": "Evolución", "d": "Evolutionary biology, natural selection, phylogenetics"},
+       {"id": "animals", "en": "Animal behavior", "es": "Comportamiento animal", "d": "Animal behavior, zoology"},
+       {"id": "conservation", "en": "Conservation", "es": "Conservación", "d": "Conservation, extinction, protecting species and habitats"},
+       {"id": "paleo", "en": "Fossils & deep time", "es": "Fósiles y tiempo profundo", "d": "Paleontology, fossils, ancient life, human origins"}
+     ]},
+    {"id": "society", "en": "Economy & society", "es": "Economía y sociedad", "color": "#6B7280",
+     "topics": [
+       {"id": "economics", "en": "Economics", "es": "Economía", "d": "Economics, labor, trade, development economics"},
+       {"id": "finance", "en": "Finance", "es": "Finanzas", "d": "Financial markets, quantitative finance, risk"},
+       {"id": "policy", "en": "Policy & governance", "es": "Políticas y gobierno", "d": "Public policy, regulation, governance, law"},
+       {"id": "social", "en": "Society & networks", "es": "Sociedad y redes", "d": "Social behavior, social networks, opinion dynamics, cities"},
+       {"id": "techsociety", "en": "Technology & society", "es": "Tecnología y sociedad", "d": "Effects of technology and AI on people, work and society, education"}
+     ]}
+  ],
+  "kinds": [
+    {"id": "method", "en": "New method", "es": "Método nuevo", "d": "The paper introduces a new method, model, algorithm, technique, device or design and shows how well it works."},
+    {"id": "finding", "en": "New finding", "es": "Hallazgo nuevo", "d": "The paper reports a new observation, measurement or experimental result about the natural, living or social world."},
+    {"id": "theory", "en": "Theory", "es": "Teoría", "d": "The paper proves theorems or develops a theoretical or mathematical framework."},
+    {"id": "resource", "en": "Dataset or tool", "es": "Datos o herramienta", "d": "The paper's main contribution is a new dataset, benchmark, software tool, database or catalogue for others to use."},
+    {"id": "review", "en": "Review", "es": "Revisión", "d": "The paper reviews, surveys or synthesizes existing research, including meta-analyses."},
+    {"id": "perspective", "en": "Perspective", "es": "Opinión", "d": "The paper argues a position, proposes an agenda or discusses ideas without presenting new results."}
+  ],
+  "evidence": [
+    {"id": "proof", "en": "Mathematical proof", "es": "Demostración matemática", "d": "Mathematical proof or formal derivation."},
+    {"id": "computation", "en": "Simulation or modeling", "es": "Simulación o modelo", "d": "Computer simulations, numerical calculations or theoretical modeling."},
+    {"id": "benchmark", "en": "Computational experiments", "es": "Experimentos computacionales", "d": "Experiments that run software or AI models on datasets or benchmarks."},
+    {"id": "lab", "en": "Lab experiments", "es": "Experimentos de laboratorio", "d": "Physical experiments in a laboratory, including cells, tissues, animals, materials or devices."},
+    {"id": "observation", "en": "Real-world data", "es": "Datos del mundo real", "d": "Analysis of observational or real-world data: telescope observations, field measurements, health records, surveys or cohorts."},
+    {"id": "trial", "en": "Clinical trial", "es": "Ensayo clínico", "d": "A randomized controlled trial or other prospective clinical trial in humans."},
+    {"id": "synthesis", "en": "Synthesis of studies", "es": "Síntesis de estudios", "d": "A synthesis of previously published studies: systematic review, meta-analysis or literature review."},
+    {"id": "none", "en": "No new evidence", "es": "Sin evidencia nueva", "d": "No new evidence: argument, opinion or proposal only."}
+  ]
+}
