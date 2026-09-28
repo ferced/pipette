@@ -8,8 +8,11 @@ rm -rf build && mkdir -p build/pipette
 cp handler.py build/
 cp pipette/*.py build/pipette/
 cp ../shared/taxonomy.json ../shared/journals.json build/pipette/
-# Third-party code for the Lambda runtime (python3.12 on arm64), e.g. the Anthropic SDK.
-python -m pip install -q --disable-pip-version-check -r requirements.txt --target build   --platform manylinux2014_aarch64 --implementation cp --python-version 3.12 --only-binary=:all:
+# Third-party code for the Lambda runtime (python3.12 on arm64), only if requirements.txt lists any.
+if grep -qvE '^\s*(#|$)' requirements.txt 2>/dev/null; then
+  python -m pip install -q --disable-pip-version-check -r requirements.txt --target build \
+    --platform manylinux2014_aarch64 --implementation cp --python-version 3.12 --only-binary=:all:
+fi
 python - "$OUT" <<'PY'
 import os, sys, zipfile
 out = sys.argv[1]

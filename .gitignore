@@ -16,3 +16,4 @@ qa/*.json
 qa/*.log
 qa/localdata/
 qa/summary-dryrun/
+infra/*.key

@@ -142,7 +142,7 @@ class Summaries(unittest.TestCase):
 
     def test_off_without_a_key(self):
         import os
-        old = {k: os.environ.pop(k, None) for k in ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN")}
+        old = {k: os.environ.pop(k, None) for k in ("SUMMARIES",)}
         try:
             self.assertEqual(self.s.summarize_records([{"id": "x"}], log=lambda *_: None), 0)
         finally:

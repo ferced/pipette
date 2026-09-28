@@ -44,6 +44,21 @@ def run_day(day, store, limit=None, log=print):
     return {"day": day, "total": ed["total"] if ed else 0}
 
 
+def notify_site(log=print):
+    """Ask pipette.day to drop its cached data (see web/app/api/revalidate)."""
+    import urllib.request
+
+    url, secret = os.environ.get("REVALIDATE_URL"), os.environ.get("REVALIDATE_SECRET")
+    if not url or not secret:
+        return
+    req = urllib.request.Request(url, method="POST", headers={"Authorization": f"Bearer {secret}"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            log(f"[site] revalidated: HTTP {r.status}")
+    except Exception as e:  # the site refreshes on its own later anyway
+        log(f"[site] revalidate failed: {e}")
+
+
 def summarize_day(day, store, log=print, force=False):
     """Adds summaries to an already published edition, without re-reading any paper."""
     ed = store.get(f"v1/days/{day}/edition.json")
@@ -56,19 +71,24 @@ def summarize_day(day, store, log=print, force=False):
         if p.get("summary"):
             store.put(f"v1/p/{p['id']}.json", p, max_age=86400)
     store.put(f"v1/days/{day}/edition.json", ed, max_age=600)
+    current = store.get("v1/method.json") or {}
+    store.put("v1/method.json", {**enrich.method_doc(), "model_version": current.get("model_version", jev.MODEL)}, max_age=3600)
     return {"day": day, "summarized": done, "candidates": len(todo)}
 
 
 def lambda_handler(event, context):
     event = event or {}
     if event.get("selftest"):
-        import anthropic
-
-        return {"anthropic": anthropic.__version__, "summaries": summarize.enabled(), "model": summarize.MODEL}
+        model = summarize.MODELS[int(event.get("model", 0))]
+        drafted, name = summarize.draft("Test", ["Water boils at 100 degrees Celsius at sea level.", "Salt raises the boiling point."], model=model)
+        return {"summaries": summarize.enabled(), "models": [n for _, n, _ in summarize.MODELS],
+                "bedrock": name, "draft_ok": drafted is not None}
     store = publish.Store(bucket=os.environ["BUCKET"])
     if event.get("summarize"):
         days = event["summarize"] if isinstance(event["summarize"], list) else [event["summarize"]]
-        return [summarize_day(d, store, force=bool(event.get("force"))) for d in days]
+        result = [summarize_day(d, store, force=bool(event.get("force"))) for d in days]
+        notify_site()
+        return result
     if event.get("backfill"):
         n = int(event["backfill"])
         today = datetime.now(timezone.utc)
@@ -81,7 +101,9 @@ def lambda_handler(event, context):
             if ed and (ed.get("by_source", {}).get("arxiv") or not weekday):
                 return [{"day": day, "skipped": "complete"}]
         days = [day]
-    return [run_day(d, store) for d in days]
+    result = [run_day(d, store) for d in days]
+    notify_site()
+    return result
 
 
 if __name__ == "__main__":

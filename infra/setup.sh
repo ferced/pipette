@@ -40,7 +40,7 @@ echo "== Lambda ${FUNCTION}"
 aws lambda create-function --region "$REGION" --function-name "$FUNCTION" --runtime python3.12 --architectures arm64 \
   --handler handler.lambda_handler --timeout 900 --memory-size 1024 \
   --role "arn:aws:iam::${ACCOUNT_ID}:role/pipette-ingest-lambda" --zip-file "fileb://$TMP/lambda.zip" \
-  --environment "Variables={BUCKET=${BUCKET},JEV_API_KEY=${JEV_API_KEY},JEV_WORKERS=12,INDEXNOW_KEY=${INDEXNOW_KEY}}" >/dev/null
+  --environment "Variables={BUCKET=${BUCKET},JEV_API_KEY=${JEV_API_KEY},JEV_WORKERS=12,INDEXNOW_KEY=${INDEXNOW_KEY},SUMMARIES=on}" >/dev/null
 
 echo "== Schedules (06:00 and 12:00 UTC)"
 aws scheduler create-schedule --region "$REGION" --name pipette-daily --schedule-expression "cron(0 6 * * ? *)" \

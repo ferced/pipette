@@ -89,7 +89,7 @@ def method_doc():
 
     doc = {
         "summary": {
-            "model": summarize.MODEL,
+            "model": " → ".join(name for _, name, _ in summarize.MODELS),
             "rules": summarize.SYSTEM,
             "checks": [
                 f"Every English sentence must be supported by the abstract sentences it cites (Jev, probability at least {summarize.SUPPORT_MIN}).",

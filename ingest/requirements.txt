@@ -1,1 +1,1 @@
-anthropic>=1.8,<2
+# boto3 is provided by the AWS Lambda Python runtime; nothing else is needed.

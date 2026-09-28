@@ -3,6 +3,9 @@ import type { DayIndex, Edition, Method, Paper, SiteIndex } from "./types";
 
 const DATA_URL = process.env.DATA_URL || "https://pipette-day-data.s3.us-east-1.amazonaws.com";
 const DATA_DIR = process.env.DATA_DIR;
+/** Every fetch of Pipette's data carries this tag; /api/revalidate invalidates it after each daily run. */
+export const DATA_TAG = "pipette-data";
+const MEM_TTL = 120;
 
 // Small in-process cache. Day files can exceed the 2 MB limit of the Next data cache,
 // so large files are memoized here instead.
@@ -10,7 +13,8 @@ const mem = new Map<string, { at: number; value: unknown }>();
 
 async function load<T>(path: string, ttl: number): Promise<T | null> {
   const hit = mem.get(path);
-  if (hit && Date.now() - hit.at < ttl * 1000) return hit.value as T;
+  // Memory is per server instance and cannot be revalidated remotely, so keep it short.
+  if (hit && Date.now() - hit.at < Math.min(ttl, MEM_TTL) * 1000) return hit.value as T;
   let value: T | null = null;
   if (DATA_DIR) {
     const fs = await import("node:fs/promises");
@@ -21,7 +25,7 @@ async function load<T>(path: string, ttl: number): Promise<T | null> {
       value = null;
     }
   } else {
-    const res = await fetch(`${DATA_URL}/${path}`, { next: { revalidate: ttl } }).catch(() => null);
+    const res = await fetch(`${DATA_URL}/${path}`, { next: { revalidate: ttl, tags: [DATA_TAG] } }).catch(() => null);
     value = res && res.ok ? ((await res.json()) as T) : null;
   }
   if (value !== null) mem.set(path, { at: Date.now(), value });
