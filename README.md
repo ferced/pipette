@@ -44,7 +44,7 @@ It never rewrites science. For each paper it quotes **the sentence of the abstra
 
 ## What's inside
 
-| | |
+| Feature | What it does |
 |---|---|
 | **Daily edition** | 8 to 20 papers across fields, chosen for broad interest, a real step forward and careful claims. |
 | **The whole day** | Every paper, filterable by field, topic, kind of contribution, evidence, reading level, peer review and code. |
