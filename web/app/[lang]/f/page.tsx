@@ -7,7 +7,8 @@ import { getRecent } from "@/lib/data";
 import { FIELDS, href, isLang, num } from "@/lib/i18n";
 import { breadcrumbs, pageMeta, url, WEBSITE_ID } from "@/lib/seo";
 
-export const revalidate = 3600;
+// New data arrives through /api/revalidate; this is only the fallback.
+export const revalidate = 21600;
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/f">): Promise<Metadata> {
   const { lang } = await params;

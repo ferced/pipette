@@ -7,6 +7,9 @@ export const isLang = (s: string): s is Lang => s === "en" || s === "es";
 /** Prefix a path for a language. English lives at the root. */
 export const href = (lang: Lang, path: string) => (lang === "en" ? path : `/es${path === "/" ? "" : path}`);
 
+/** Stands for the newest day in /d/latest/all, so links to it need no data. */
+export const LATEST = "latest";
+
 type Field = (typeof tax.fields)[number];
 export const FIELDS: Field[] = tax.fields;
 export const FIELD = Object.fromEntries(tax.fields.map((f) => [f.id, f])) as Record<string, Field>;

@@ -15,7 +15,8 @@ import { fromPaper, permalink, signals } from "@/lib/entry";
 import { texPlain } from "@/lib/tex";
 import type { Lang, Paper } from "@/lib/types";
 
-export const revalidate = 86400;
+// A paper does not change once published; the ingest revalidates it by tag if it ever does.
+export const revalidate = 2592000;
 export const dynamicParams = true;
 export function generateStaticParams() {
   return [];

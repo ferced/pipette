@@ -6,7 +6,8 @@ import { fieldName, href } from "@/lib/i18n";
 import type { DayIndex, Lang } from "@/lib/types";
 import { texPlain } from "@/lib/tex";
 
-export const DATA_BASE = process.env.NEXT_PUBLIC_DATA_BASE || "/data";
+/** Where the browser reads the JSON files: CloudFront in front of the S3 bucket, never through Vercel. */
+export const DATA_BASE = process.env.NEXT_PUBLIC_DATA_BASE || "https://dd9whsc1nc4yy.cloudfront.net";
 
 type Props = {
   codes: string; // one char per paper: field index as a letter, uppercase when it made the edition

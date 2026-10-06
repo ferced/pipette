@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { href, t } from "@/lib/i18n";
+import { LATEST, href, t } from "@/lib/i18n";
 import type { Lang } from "@/lib/types";
 import { bibtex, type Entry } from "@/lib/entry";
 
@@ -90,12 +90,12 @@ export function usePublicPath() {
   return p.replace(/^\/en(?=\/|$)/, "") || "/";
 }
 
-export function NavLinks({ lang, latest }: { lang: Lang; latest: string }) {
+export function NavLinks({ lang }: { lang: Lang }) {
   const path = usePublicPath();
   const d = t(lang);
   const items: [string, string][] = [
     [href(lang, "/"), d.nav_today],
-    [href(lang, `/d/${latest}/all`), d.nav_explore],
+    [href(lang, `/d/${LATEST}/all`), d.nav_explore],
     [href(lang, "/f"), lang === "es" ? "Campos" : "Fields"],
     [href(lang, "/foryou"), d.nav_foryou],
     [href(lang, "/saved"), d.nav_saved],

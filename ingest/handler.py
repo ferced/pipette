@@ -18,6 +18,8 @@ from pipette import enrich, indexnow, jev, publish, sources, summarize  # noqa: 
 
 def run_day(day, store, limit=None, log=print):
     t0 = time.time()
+    # A day published before (refresh, backfill): its paper pages are cached on the site and must be revalidated.
+    republished = store.get(f"v1/days/{day}/edition.json") is not None
     papers = sources.fetch_all(day, log=log)
     if limit:
         papers = papers[:limit]
@@ -41,22 +43,31 @@ def run_day(day, store, limit=None, log=print):
         ids = [p["id"] for p in papers if p.get("field")]
         indexnow.ping(indexnow.urls_for_day(day, ids, sorted(ed["by_field"].keys())), log=log)
     log(f"[{day}] done in {time.time()-t0:.0f}s")
-    return {"day": day, "total": ed["total"] if ed else 0}
+    changed = [p["id"] for p in papers] if republished and ed else []
+    return {"day": day, "total": ed["total"] if ed else 0, "changed": changed}
 
 
-def notify_site(log=print):
-    """Ask pipette.day to drop its cached data (see web/app/api/revalidate)."""
+def notify_site(days, papers=(), log=print):
+    """Ask pipette.day to drop its cached copies of what this run rewrote (see web/app/api/revalidate).
+    Only those days and papers: invalidating everything makes crawlers re-render every page, and that
+    is what got the Vercel team blocked in October 2026."""
+    import json
     import urllib.request
 
     url, secret = os.environ.get("REVALIDATE_URL"), os.environ.get("REVALIDATE_SECRET")
     if not url or not secret:
         return
-    req = urllib.request.Request(url, method="POST", headers={"Authorization": f"Bearer {secret}"})
-    try:
-        with urllib.request.urlopen(req, timeout=20) as r:
-            log(f"[site] revalidated: HTTP {r.status}")
-    except Exception as e:  # the site refreshes on its own later anyway
-        log(f"[site] revalidate failed: {e}")
+    body = json.dumps({"days": sorted(set(days)), "papers": sorted(set(papers))}).encode()
+    headers = {"Authorization": f"Bearer {secret}", "Content-Type": "application/json"}
+    for attempt in range(3):
+        req = urllib.request.Request(url, data=body, method="POST", headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                log(f"[site] revalidated {len(days)} days, {len(papers)} papers: HTTP {r.status}")
+                return
+        except Exception as e:  # the site refreshes on its own later anyway
+            log(f"[site] revalidate failed (attempt {attempt + 1}): {e}")
+            time.sleep(5 * (attempt + 1))
 
 
 def summarize_day(day, store, log=print, force=False):
@@ -73,7 +84,8 @@ def summarize_day(day, store, log=print, force=False):
     store.put(f"v1/days/{day}/edition.json", ed, max_age=600)
     current = store.get("v1/method.json") or {}
     store.put("v1/method.json", {**enrich.method_doc(), "model_version": current.get("model_version", jev.MODEL)}, max_age=3600)
-    return {"day": day, "summarized": done, "candidates": len(todo)}
+    changed = [p["id"] for p in todo if p.get("summary")]
+    return {"day": day, "summarized": done, "candidates": len(todo), "changed": changed}
 
 
 def lambda_handler(event, context):
@@ -87,7 +99,7 @@ def lambda_handler(event, context):
     if event.get("summarize"):
         days = event["summarize"] if isinstance(event["summarize"], list) else [event["summarize"]]
         result = [summarize_day(d, store, force=bool(event.get("force"))) for d in days]
-        notify_site()
+        notify_site(days, [i for r in result for i in r["changed"]])
         return result
     if event.get("backfill"):
         n = int(event["backfill"])
@@ -102,7 +114,7 @@ def lambda_handler(event, context):
                 return [{"day": day, "skipped": "complete"}]
         days = [day]
     result = [run_day(d, store) for d in days]
-    notify_site()
+    notify_site(days, [i for r in result if r for i in r["changed"]])
     return result
 
 

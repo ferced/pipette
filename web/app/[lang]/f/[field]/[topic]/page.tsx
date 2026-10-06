@@ -9,7 +9,8 @@ import { breadcrumbs, pageMeta, url, WEBSITE_ID } from "@/lib/seo";
 import { permalink } from "@/lib/entry";
 import { texPlain } from "@/lib/tex";
 
-export const revalidate = 3600;
+// New data arrives through /api/revalidate; this is only the fallback.
+export const revalidate = 21600;
 export const dynamicParams = false;
 export function generateStaticParams() {
   return FIELDS.flatMap((f) => f.topics.map((t) => ({ field: f.id, topic: t.id })));

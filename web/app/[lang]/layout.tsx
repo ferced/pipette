@@ -6,7 +6,6 @@ import "katex/dist/katex.min.css";
 import "../globals.css";
 import { Wordmark } from "@/components/Logo";
 import { LangSwitch, NavLinks, SearchBox, ThemeToggle } from "@/components/client";
-import { getSiteIndex } from "@/lib/data";
 import { FIELDS, href, isLang, t } from "@/lib/i18n";
 import { SITE } from "@/lib/entry";
 import { FERCED, WEBSITE_ID } from "@/lib/seo";
@@ -56,8 +55,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const { lang } = await params;
   if (!isLang(lang)) notFound();
   const d = t(lang);
-  const idx = await getSiteIndex();
-  const latest = idx?.latest ?? "";
+  // No data reads here: whatever the layout fetches, every page inherits (its revalidate time and its
+  // cache tags), and with tens of thousands of paper pages that turns each daily run into a re-render of all.
   const siteLd = [
     {
       "@type": "WebSite",
@@ -85,7 +84,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
             <Link href={href(lang, "/")} className="brand" aria-label="Pipette">
               <Wordmark />
             </Link>
-            <NavLinks lang={lang} latest={latest} />
+            <NavLinks lang={lang} />
             <div className="tools">
               <SearchBox lang={lang} />
               <LangSwitch lang={lang} />

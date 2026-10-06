@@ -145,8 +145,11 @@ Open http://localhost:3000.
    After changing `ingest/`, rebuild with `ingest/package.sh` and upload with `aws lambda update-function-code`.
    AI summaries are on when the Lambda has `SUMMARIES=on` (set by `setup.sh`). Backfill recent editions with
    `aws lambda invoke --function-name pipette-ingest --payload '{"summarize":["2026-09-25"]}' --cli-binary-format raw-in-base64-out out.json`.
-2. **Vercel**: import `web/` as a Next.js project and set `DATA_URL` (your bucket's URL), `JEV_API_KEY` (used only by For you) and `REVALIDATE_SECRET`. `next.config.ts` proxies `/data/*` to the bucket. Give the Lambda `REVALIDATE_URL=https://<your domain>/api/revalidate` and the same `REVALIDATE_SECRET`, so every run refreshes the site's cached data immediately.
-3. Point your domain at Vercel and submit `/sitemap.xml` to Google Search Console.
+2. **CloudFront** in front of the bucket (origin: the bucket's S3 endpoint, managed policies `CachingOptimized` and `SimpleCORS`). Browsers read the JSON files from there, never through Vercel.
+3. **Vercel**: import `web/` as a Next.js project and set `DATA_URL` (your bucket's URL, read by the server), `NEXT_PUBLIC_DATA_BASE` (your CloudFront URL, read by browsers), `JEV_API_KEY` (used only by For you) and `REVALIDATE_SECRET`. `next.config.ts` redirects `/data/*` to CloudFront. Give the Lambda `REVALIDATE_URL=https://<your domain>/api/revalidate` and the same `REVALIDATE_SECRET`, so every run refreshes exactly the days and papers it rewrote.
+
+   Keep it cheap: on Vercel, every page re-render is billed as Fast Origin Transfer (10 GB a month on Hobby), and crawlers ask for every paper page. So nothing that every page renders (the layout) reads data, paper pages keep for 30 days, and the Lambda never invalidates the whole site.
+4. Point your domain at Vercel and submit `/sitemap.xml` to Google Search Console.
 
 Change `SITE` in `web/lib/entry.ts` and `ingest/pipette/indexnow.py` to your own domain.
 

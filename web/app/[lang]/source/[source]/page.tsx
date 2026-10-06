@@ -10,7 +10,8 @@ import { permalink } from "@/lib/entry";
 import { texPlain } from "@/lib/tex";
 import type { Lang } from "@/lib/types";
 
-export const revalidate = 3600;
+// New data arrives through /api/revalidate; this is only the fallback.
+export const revalidate = 21600;
 export const dynamicParams = false;
 
 const SOURCES = {
