@@ -95,11 +95,12 @@ async def main():
         cookies = [c["name"] for c in await ctx.cookies()]
         ok(set(cookies) <= {"lang"}, f"cookies set: {cookies}")
 
-        # Third-party requests: none besides own origin
+        # Third-party requests: none besides own origin and Pipette's own data host (CloudFront)
         reqs = []
         pg.on("request", lambda r: reqs.append(r.url))
         await pg.goto(H + "/es", wait_until="networkidle")
-        foreign = {re.sub(r"^https?://([^/]+).*", r"\1", u) for u in reqs if not u.startswith(H) and not u.startswith("data:")}
+        own = (H, "data:", "https://dd9whsc1nc4yy.cloudfront.net/")
+        foreign = {re.sub(r"^https?://([^/]+).*", r"\1", u) for u in reqs if not u.startswith(own)}
         ok(not foreign, f"no third-party requests: {foreign or 'none'}")
 
         noise = [e for e in errs if "Encountered a script tag" not in e]

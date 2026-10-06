@@ -149,3 +149,55 @@ class Summaries(unittest.TestCase):
             for k, v in old.items():
                 if v is not None:
                     os.environ[k] = v
+
+
+class SiteRevalidation(unittest.TestCase):
+    """The site is told exactly what a run rewrote, never "everything": each stale page costs a re-render."""
+
+    def setUp(self):
+        import handler
+        from unittest import mock
+        self.h = handler
+        self.mock = mock
+
+    class Store:
+        bucket = None
+
+        def __init__(self, published):
+            self.published = published
+
+        def get(self, key):
+            return {"picks": []} if self.published else None
+
+    def run_day(self, published):
+        m = self.mock
+        papers = [{"id": "a", "field": "ai"}, {"id": "b", "field": "math"}]
+        with m.patch.object(self.h.sources, "fetch_all", return_value=papers), \
+             m.patch.object(self.h.enrich, "enrich_all", return_value=(papers, 0)), \
+             m.patch.object(self.h.enrich, "method_doc", return_value={}), \
+             m.patch.object(self.h.publish, "publish_day", return_value={"total": 2, "by_field": {}}):
+            return self.h.run_day("2026-10-02", self.Store(published), log=lambda *_: None)
+
+    def test_new_day_invalidates_no_papers(self):
+        self.assertEqual(self.run_day(published=False)["changed"], [])
+
+    def test_republished_day_invalidates_its_papers(self):
+        self.assertEqual(self.run_day(published=True)["changed"], ["a", "b"])
+
+    def test_notify_sends_days_and_papers(self):
+        import json
+        sent = []
+
+        class Resp:
+            status = 200
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+
+        def urlopen(req, timeout):
+            sent.append((req.get_header("Authorization"), json.loads(req.data)))
+            return Resp()
+
+        env = {"REVALIDATE_URL": "https://example.test/api/revalidate", "REVALIDATE_SECRET": "s"}
+        with self.mock.patch.dict(os.environ, env), self.mock.patch("urllib.request.urlopen", urlopen):
+            self.h.notify_site(["2026-10-02", "2026-10-02"], ["b", "a"], log=lambda *_: None)
+        self.assertEqual(sent, [("Bearer s", {"days": ["2026-10-02"], "papers": ["a", "b"]})])
