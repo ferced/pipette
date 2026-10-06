@@ -5,6 +5,11 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "Pipette — today's science, one drop at a time";
 
+// Two fixed images, drawn at build time instead of on every request.
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "es" }];
+}
+
 export default async function Image({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const es = lang === "es";

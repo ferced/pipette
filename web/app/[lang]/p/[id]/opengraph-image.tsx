@@ -8,6 +8,13 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "A paper on Pipette";
 
+// Rendered on first request and then kept, like the paper page. Without this every crawler hit
+// re-draws the PNG (CPU plus ~100 KB of origin transfer each time).
+export const revalidate = 2592000;
+export function generateStaticParams() {
+  return [];
+}
+
 export default async function Image({ params }: { params: Promise<{ lang: string; id: string }> }) {
   const { lang, id } = await params;
   const l = isLang(lang) ? lang : "en";
